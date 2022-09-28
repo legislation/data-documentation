@@ -146,18 +146,16 @@ You can specify the following sort orders for a legislation search/list using th
 
 |Name|Order|
 |---|---|
-|`published`|Sort by first publication date/time descending\*, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
+|`published`|<p>Sort by first publication date/time descending\*, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending <p>(\* If a correction slip has been issued for a document, the first publication date will be treated as the issuance date of the most recent correction slip for the document, not the date the document was originally published.)|
 |`title`|Sort by title ascending in alphabetical order, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`modified`|Sort by last modified date descending, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`created`|Default for search result and list feeds. Sort by category (EU, then primary, then secondary), then year descending, then enacted/made date descending|
 |`type`|Sort by legislation type ascending in alphabetical order (using the [long type code]()), then year descending, then enacted/made date descending|
-|"basic"|Default sort order for search result and list web pages. Also used if any other value apart from the above values is passed to the `sort` parameter, including an empty string. Sort by category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending)|
-
-\* If a correction slip has been issued for a document, the first publication date will be treated as the issuance date of the most recent correction slip for the document, not the date the document was originally published.
+|"Basic" sort order|Default sort order for search result and list web pages. Also used if any other value apart from the above values is passed to the `sort` parameter, including an empty string. Sort by category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending)|
 
 ## Identifier searches
 
-The [identifier search page](https://www.legislation.gov.uk/id) is there to help you to find the correct identifier URI for a piece of legislation, particularly if you are trying to create links from other documents. For example, Hansard contains records of speeches which often quote legislation, such as:
+The [identifier search page](https://www.legislation.gov.uk/id) is there to help you to find the correct identifier URI for a piece of legislation, particularly if you are trying to create links from other documents. For example, Hansard contains records of speeches which often quote legislation, such as the following contribution in a [debate on the 1993 Education Bill](https://hansard.parliament.uk/Lords/1993-06-14/debates/2624f9f9-3481-43f8-a80f-7b1dd595bba3/EducationBill?highlight=%22approved%20for%20appointment%20as%20auditors%20of%20that%20company%20by%20the%20audit%20commission%22#contribution-6bea8200-7902-46d2-8929-bc14dcc68e7a):
 
 > There is nothing new in the concept that auditors shall, in appropriate circumstances, be approved by the Audit Commission. The Transport Act 1985 provides that a public transport company shall appoint only auditors who, in addition to being qualified under the Companies Act, shall be, “approved for appointment as auditors of that company by the Audit Commission”.
 
@@ -234,11 +232,11 @@ then you can use the form to construct the URI for the item of legislation witho
 
 This will redirect you directly to the correct URI for the item of legislation.
 
-## Changes to legislation<a name="changes"></a>
+## Changes to legislation<a id="changes"></a>
 
 You can retrieve a feed of changes to legislation using a URI of the following form:
 
-`https://www.legislation.gov.uk/changes[/affected[/{type}[/{year}[/{number}]|{start-year}-{end-year}[/{number}]]]][/affecting[/{type}[/{year}[/{number}]|{start-year}-{end-year}[/{number}]]]]
+`https://www.legislation.gov.uk/changes[/affected[/{type}[/{year}[/{number}]|{start-year}-{end-year}[/{number}]]]][/affecting[/{type}[/{year}[/{number}]|{start-year}-{end-year}[/{number}]]]]`
 
 You can specify either one or both of the affected/affecting type, type and year, or type, year and number. Alternatively, you can substitute a range of years for the year.
 

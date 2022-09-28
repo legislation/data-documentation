@@ -40,16 +40,16 @@ An item of legislation is an individually identifiable legal text passed by a le
 
 Each item of legislation has an original version (although we do not always hold its text), or two original versions for dual-language legislation in English and Welsh. The original text of an item does not change,
 
-An item of legislation has two or more versions:
+An item of legislation has at least two versions:
 
  * An original version, or two original versions for dual-language legislation (one in English and one in Welsh). The text of the original version(s) does not change once it is passed, except that for secondary legislation the department or body who submitted the legislation may issue a correction slip to correct errors that do not substantially change the meaning of the text.
  * One or more revised versions. <!-- todo explain what a revised version is. should probably split these explanations out into separate paras but keep the bullet list to help structure -->
 
-An item of legislation may amend the text or modify the meaning of   and one or more revised versions. 
-
-Where we hold the text for a version, we make it available in one or more formats (XML and the formats we derive from it, or PDF). 
+Where we hold the text for a version, we make it available in one or more formats (XML and the formats we generate from it, or a static PDF). 
 
 We treat the item of legislation, its versions and the formats of those versions as separate (but related) things in separate categories.
+
+### FRBR (Functional Requirements for Bibliographic Records)
 
 We use a variant of the [FRBR model](https://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) to categorise our items, versions and formats. FRBR defines the concept of a “work” (an intellectual creation) separately from an “expression” (the realisation of a work, such as an edition of a book or an arrangement of a song) and a “manifestation” (the embodiment of an expression, such as a print or e-book version of an edition of a book, or a recording of an arrangement of a song). Under this model:
 
