@@ -1,0 +1,51 @@
+# Data Reuse Guide
+
+## Open data<a name="open-data"></a>
+
+The information on legislation.gov.uk is available for you to reuse for free, under a [permissive licence](), for commercial and non-commercial uses.
+
+You can download the following data from us in a variety of formats:
+
+ * legislation document data and text
+ * metadata—data about legislation
+ * amendments (changes) to legislation
+
+You can also search <!--TODO or query--> for legislation, or download lists of legislation.
+
+## Start using our data
+
+You can read get our data through one of two routes:
+
+ * through our **[data downloads](#data-downloads)** service, if you want to download all or a subset of our documents<!-- TODO or metadata-->, or
+ * via our website and **[API](#api)**, if you want fine-grained control over which data you download or you want to search our dataset<!--TODO query our dataset-->.
+ 
+You can find more information out about the different kinds of data we offer, including how to get and interpret them, in the [open data](#open-data) section above.
+
+<!--If you want a solution for a specific problem, you can read our [How do I…]() section, which includes instructions on how to do the following:
+
+ * [Get a list of all UK legislation]()
+ * [Download all UK legislation as XML, PDF or plain text]()
+ * [Get XML for an item of legislation or part of it]()-->
+
+### Data downloads<a name="data-downloads"></a>
+
+Our data downloads service provides ZIP files containing the text of legislation. They are available in the [Data section of our Research website](https://research.legislation.gov.uk/data).
+
+The ZIP files are available in the following formats:
+
+* XML in our CLML dialect and Akoma Ntoso (where available)
+* XHTML and HTML 5 (transformed from the source XML, only where it is available)
+* Plain text, both in full and limited to only the operative text<!--TODO link to explanation--> of the item (transformed from the source XML, only where it is available)
+* PDF (where an enacted/made or revised PDF is available)
+
+There are ZIPs available that contain all legislation available in the specified format, as well as smaller ZIPs that contain only legislation of a specific type, or type and year.
+
+### Online access via our API and website<a name="api"></a>
+
+Our website provides data for items of legislation in multiple formats, including [XML](). You can try: 
+ * appending `/data.xml` to the end of a legislation.gov.uk address to get the content as [XML]() (e.g. `https://www.legislation.gov.uk/asc/2021/4/part/1/data.xml`), or 
+ * appending `/data.feed` to the end of the address for a search or list page (before the `?` query string character, if it appears) to get the content of the results page as an [Atom]() feed (e.g. `https://www.legislation.gov.uk/nia/2013/data.feed?title=budget`).
+
+The website is usable as an [API](https://en.wikipedia.org/wiki/API) by applications that speak [HTTP](https://en.wikipedia.org/wiki/HTTP). All the features of the website are available via the API. 
+
+If you want to find out more about our API, we provide an [overview of the API](/api.md) that explains how it works and what features it offers.
