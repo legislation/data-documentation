@@ -100,19 +100,27 @@ In our data model, we map the FRBR concepts onto the following legislation conce
 
 #### Points in time
 
-<!-- TODO Add URIs -->
-
 Each newly published item (and each of its sections) has an enacted, made or created version that shows the text of the item as it was passed into law.
 
-For items we have updated or intend to update, the item and its sections will also have one or more edited or revised versions, each at a dated point in time. 
+For items we have updated or intend to update, the item and its sections will also have one or more edited or revised versions, each at a dated point in time. They will also have a "current" version (shown on the website as "latest available (revised)") which contains the same text and annotations as the latest point in time version.
 
 The date of the first revised version for a item or section of legislation is normally the day the item or section first comes fully or partly into force, and contains extent and commencement information about the sections of the item in addition to their text. If any amendments apply to the item at or immediately before the time it comes into force, the first dated version will also contain those amendments. There will then be a subsequent dated version on each day on which an amendment or commencement comes into force.
 
 For items of legislation published before our [base date]() of 1<sup>st</sup> February 1991, the first dated version will fall on that base date. This &ldquo;base date&rdquo; version will contain all amendments and commencements that applied as of the base date, as well as extent information.
 
-#### Geographical extents
+For example, the URI for the version dated 4<sup>th</sup> May 2022 of the Universal Credit Regulations is:
 
-<!-- TODO Add URIs -->
+`http://www.legislation.gov.uk/uksi/2013/376/2022-05-04`
+
+The URI for the version dated 4<sup>th</sup> May 2022 of Part 1 of those Regulations is:
+
+`http://www.legislation.gov.uk/uksi/2013/376/part/1/2022-05-04`
+
+The URI for the latest version of Part 1 of those Regulations (which at the time of writing was the same as the version dated 4<sup>th</sup> May 2022) is:
+
+`http://www.legislation.gov.uk/uksi/2013/376/part/1`
+
+#### Geographical extents
 
 An item or section may have different versions for different geographical extents at different points in time, because amendments to it only apply to some extents and not others. 
 
@@ -120,6 +128,20 @@ For example, an amendment may amend a provision only for England and Wales, even
 
  * one version for England and Wales, where the amendment is in force, and 
  * one version for Scotland, where the amendment is not in force.
+
+For example, section 3 of the Dogs Act 1906 began to diverge between the legal jurisdiction of England and Wales and the jurisdiction of Scotland on the 1<sup>st</sup> April 1992. The URI for the version of section 3 of that Act as it was in force on that date in England and Wales is:
+
+`http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/england+wales/1992-04-01`
+
+The URI for the version of section 3 of that Act as it was in force on that date in Scotland is:
+
+`http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/england+wales/1992-04-01`
+
+Section 3 was repealed in England and Wales on the 6<th>sup</th> April 2008, but is still in force in Scotland. The URI for the latest version of section 3 as it is in force in Scotland is:
+
+`http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/scotland`
+
+The URI for the latest version of the section for both jurisdictions, which returns the text of both versions, is `http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/`.
 
 #### Languages
 
