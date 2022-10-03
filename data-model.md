@@ -181,6 +181,12 @@ We also store some legislation in its original enacted or made version as PDF, a
 
 ## Effects (amendments and commencements)
 
+The text of an item of legislation may specify an amendment to another item of legislation (or, rarely, to itself). For example, [paragraph 7 of schedule 2 of the Civil Partnership (Scotland) Act 2020](https://www.legislation.gov.uk/asp/2020/15/schedule/2/paragraph/7) specifies the following amendment to the Marriage and Civil Partnership (Scotland) Act 2014:
+
+> (1) The Marriage and Civil Partnership (Scotland) Act 2014 is modified as follows.
+>
+> (2) In section 30 (renewed marriage or civil partnership following issue of full gender recognition certificate), in subsection (1)(b) for “both parties” substitute “a party (or both parties)”.
+
 When an item of legislation makes a change to one or more provisions of legislation, our editors record the change in our Editorial system as an *effect*. An effect is a record of the change that helps our editors track where (and when) to apply amendments and commencements, and helps our readers and data re-users find changes to legislation both before and after we have applied them.
 
 ### Effect data
