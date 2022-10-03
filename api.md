@@ -168,17 +168,14 @@ The API uses HTTP response codes as specified in [RFC 9110 (HTTP Semantics)](htt
 Most requests to the API should return `200 OK`. Some other common response codes the API returns are:
 
  * `300 Multiple Choices`: The API will return this code if you make a request to a URI that identifies more than one item or section of legislation (e.g. http://www.legislation.gov.uk/id/ukpga/1955/18 identifies both the Army Act 1955 and the Aliens' Employment Act 1955). The response will contain an HTML list with links to the different options.
- * `403 Forbidden`: The API will return this code if you exceed the rate limit (see the section on our [Fair Use Policy](#fair-use) above). Your application should slow down or stop making requests until it is under the rate limit again. The API also returns `403 Forbidden` if we have blocked requests from your IP address. If you continue to receive `403 Forbidden` responses to your requests, please [contact us](). 
  * `400 Bad Request`: The API will return this code if you make a request for an item of legislation and specify a year or number that is out of the acceptable range for that type of legislation. The API may also return this code if the request is malformed.
+ * `403 Forbidden`: The API will return this code if you exceed the rate limit (see the section on our [Fair Use Policy](#fair-use) above). Your application should slow down or stop making requests until it is under the rate limit again. The API also returns `403 Forbidden` if we have blocked requests from your IP address. If you continue to receive `403 Forbidden` responses to your requests, please [contact us](). 
  * `500 Internal Server Error`: The API may return this code if there is a temporary error within the service, or if it cannot process the requested document due to an error in the data. If you get this response more than once for a request to a specific resource, please [contact us]() with details of the resource.
  * `503 Service Unavailable` or `504 Gateway Timeout`: The API returns these codes if the legislation.gov.uk service is over capacity or is experiencing a temporary interruption of service. We recommend you wait at least 5 minutes before trying your request again. If you continue to receive this response for a request to a specific resource, please [contact us]() with details of the resource.
 
 ## An introduction to XML <a id="xml-intro"></a>
 
-The underlying format of most structured data on legislation.gov.uk is [XML](https://www.w3.org/XML/). We use XML because it is a good format for electronic publishing: 
-
- * XML allows a text document to contain arbitrary semantic markup and metadata.
- * We can transform XML documents into HTML, PDF and other formats using [XSL](https://www.w3.org/Style/XSL/).
+The underlying format of most structured data on legislation.gov.uk is [XML](https://www.w3.org/XML/). We use XML because it is a good format for electronic publishing. XML allows a text document to contain arbitrary semantic markup and metadata, and there are many applications that support XML workflows for editing, validation against schemas and transformation into other formats (such as HTML and PDF).
 
 ### Structure of an XML document
 
@@ -218,11 +215,15 @@ An XML document can declare the namespace of an element using the `xmlns` attrib
 An XML document can also declare that a prefix represents a particular namespace using the `xmlns:[NS]` attribute, where `[NS]` is the prefix to be used. In the below example, the root element declares prefixes that are used by descendent elements, and both the root `Legislation` element and its child `Primary` element are in the namespace `http://www.legislation.gov.uk/namespaces/legislation`, despite having different prefixes:
 
 ```
-<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:leg="http://www.legislation.gov.uk/namespaces/legislation" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" xmlns:dct="http://purl.org/dc/terms/">
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation"
+             xmlns:leg="http://www.legislation.gov.uk/namespaces/legislation" 
+             xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" 
+             xmlns:dct="http://purl.org/dc/terms/">
   <ukm:Metadata>
     <dct:valid>2022-09-30</dct:valid>
   </ukm:Metadata>
   <leg:Primary>...</leg:Primary>
+</Legislation>
 ```
  
 Note that different documents (and different elements within a document) may declare their own prefix for any namespace, or declare a namespace as the default one with no prefix. For example, various CLML documents use the `leg` and `ukl` namespaces to represent the `http://www.legislation.gov.uk/namespaces/legislation` namespace, but most declare it as the default namespace using `xmlns` and then do not use a prefix at all (and some documents use multiple prefixes for the same namespace in different places). Make sure when you parse XML that you are checking for both the local name and the actual *namespace*, not a prefix or just a local name.

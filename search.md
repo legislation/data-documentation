@@ -1,16 +1,5 @@
 # Search, lists and feeds
 
-<!-- TODO
-Clarify that a search on the website is directly related to a result feed
-  EXCEPT for default sort ordering (modified descending in feed VS type, year, number all descending on result page)
-Explain that there are two different ways to construct search URIs - /search and lists
-Explain that most (all?) search URIs will redirect to a corresponding list URI
-Break down the elements of the search and list URIs
-Explain the /new lists
-Consider investigating ukia search?
-EFFECTS LISTINGS
--->
-
 The Legislation website and API offer two types of searches for legislation:
 
  * listings enable you to find multiple items of legislation and information about them;
@@ -18,25 +7,23 @@ The Legislation website and API offer two types of searches for legislation:
 
 The website and API also allow you to get listings of [changes to legislation](#changes-to-legislation).
 
-## Listings
+## Common features
 
-<!-- 
-What is a listing : a list of items of legislation that match specified criteria
-The website's search results and "browse" pages both return listings
-Every listing (and search result feed) is available as a feed via /data.feed
-Sorting NB: sort on web page listings is type, year, number descending, whereas in feeds it's modified date descending
-Two ways of constructing the URI for a listing: /search and "simple" URIs
-Every /search URI redirects to a listing URI - you might still want to use /search for ease of construction though
-Almost all parameters for /search map to URI path components - except title and text, which are always query string components, and number when searching for a specific type and year (i.e. /[type]/[year]?number=[number])
-Components:
- - type(s) (1 or more types, 1 or more categories, combination)
- - year(s) (range, wildcard(s))
- - number(s) (range, wildcard(s) - note about search for fixed type year and number)
- - extent(s) (1 or more extent(s), exact or inclusive) (NB revised only)
- - point in time (NB revised only)
- - title
- - text (note about TOC highlight links)
--->
+### Formats
+
+Every list on the website of search results, or of legislation or changes to legislation, is available as a feed in [Atom]() XML format by appending `/data.feed` to the end of the path of the address of the search request or list page (before the "query string" part of the address, which if present begins with a `?` character). The HTML and Atom formats contain the same information, but presented differently. 
+
+### Paging
+
+The API *paginates* its responses to requests for lists or searches. This means that the API only returns a fixed number of items in each response. The default is 20, which you can change by adding `results-count=N` to the [query string](https://en.wikipedia.org/wiki/Query_string)). Where there are more pages left in the feed, the response will contain an `<atom:link rel="next">` element with a link to the next results page.
+
+### Sorting
+
+Lists and search results support various sort criteria. The lists of changes to legislation also allows you to specify the ordering of the results. The sections below describe the available sort criteria and ordering options.
+
+Note that the default sort order differs between the HTML view and the Atom feed, so make sure that if you want a specific sort order that you specify it explicitly in your request.
+
+## Listings
 
 The legislation.gov.uk website allows a user to get a list of legislation filtered by criteria such as title, type, year and text content. There are two ways to use this feature: the search form and the "browse" list pages of legislation, which both use the same underlying search functionality.
 
@@ -46,8 +33,6 @@ The legislation.gov.uk website allows a user to get a list of legislation filter
 The address of the results of a search or of a list is always the same, so you can save the address and return to it later to get up-to-date results for that search or list.
 
 For every search request, there is a corresponding list page that contains the results for that search. The response to a request for a valid `/search` URI is always a redirect to the corresponding list page. If possible, we recommend you directly request the list page for your search, as your application will need to make one less request to our API and thereby save time and bandwidth. However, we will continue to support both methods for searching for and listing legislation.
-
-Every list of legislation on the website, whether a search results page or otherwise, is available as a feed in [Atom]() XML format by appending `/data.feed` to the end of the path of the address of the search request or list page (before the "query string" part of the address, which if present begins with a `?` character). 
 
 For search requests, append `/data.feed` immediately after `/search` and before the `?` character. For example, the following search requests a list of legislation with type `ukpga` and title containing the word "finance":
 
@@ -95,7 +80,7 @@ A list page address has the following structure:
 
 `https://www.legislation.gov.uk/[{type}][/{year} or {start-year}-{end-year}}][/{number} or {start-number}-{end-number}]/[/{extent}|{point-in-time}]`
 
-A list page address may also have a query string, which may contain the `title`, `text` and/or `sort` parameters (and, where a single type and year are specified in the path, additionally a `number` parameter).
+A list page address may also have a query string, which may contain the `title`, `text` and/or `sort` parameters and, where a single type and year are specified in the path, additionally a `number` parameter. (If you want the API to return a *listing* with an item of legislation of a specific type, year and number you must specify the `number` parameter in the query string&mdash;otherwise the API will redirect you to the item of legislation itself.)
 
 The parameters permit the following values:
 
@@ -149,9 +134,45 @@ You can specify the following sort orders for a legislation search/list using th
 |`published`|<p>Sort by first publication date/time descending\*, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending <p>(\* If a correction slip has been issued for a document, the first publication date will be treated as the issuance date of the most recent correction slip for the document, not the date the document was originally published.)|
 |`title`|Sort by title ascending in alphabetical order, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`modified`|Sort by last modified date descending, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
-|`created`|Default for search result and list feeds. Sort by category (EU, then primary, then secondary), then year descending, then enacted/made date descending|
+|`created`|Sort by category (EU, then primary, then secondary), then year descending, then enacted/made date descending|
 |`type`|Sort by legislation type ascending in alphabetical order (using the [long type code]()), then year descending, then enacted/made date descending|
 |"Basic" sort order|Default sort order for search result and list web pages. Also used if any other value apart from the above values is passed to the `sort` parameter, including an empty string. Sort by category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending)|
+
+Note that the HTML and Atom view of the feeds have a different default sort order:
+
+ * When viewing the HTML view, the default sort order is "basic".
+ * When viewing the Atom view, the default sort order is `modified`.
+
+## New legislation listings
+
+The "new legislation" listings at [https://www.legislation.gov.uk/new](https://www.legislation.gov.uk/new) list newly published items of legislation by date and type, sorted in descending order of publication date and time. It does not include historical legislation newly uploaded to legislation.gov., which is published with a "silent" flag that hides it from the new legislation listings.
+
+The new legislation listings are available in Atom format at:
+
+ * `https://www.legislation.gov.uk/new/data.feed`, which is equivalent to `https://www.legislation.gov.uk/all/data.feed?sort=published` but with all items hidden that were published with the "silent" flag;
+ * `https://www.legislation.gov.uk/new/[yyyy-mm-dd]/data.feed`, which shows all items published on the specified date (except those with the "silent" flag);
+ * `https://www.legislation.gov.uk/new/[type]/[yyyy-mm-dd]/data.feed` which shows all items of the specified type published on the specified date (except those with the "silent" flag).
+
+These feeds support the same paging and sorting options as other legislation listings.
+
+## Impact Assessment listings
+
+The governments of the United Kingdom publish *impact assessments* (or IAs) for some items of legislation, and occasionally for policy areas where they plan to legislate.
+
+IA searches and listings support some additional query string parameters:
+
+|Parameter|Meaning|Permitted values|
+|---|---|---|
+|`stage`|The stage of the development of the legislation to which the IA relates.|One of `Options`, `Consultation`, `Development`, `Enactment`, `Final`, `Implementation`, `Post-Implementation`|
+|`department`|The department that authored the IA.|The full name of the department, [URL-encoded]() (e.g. DEFRA is specified as `Department%20for%20Environment%2C%20Food%20and%20Rural%20Affairs`)|
+
+Note that UKIA listings and searches do not support the following parameters or parameter values:
+
+ * extent (IAs do not have an extent as they are not legislation)
+ * version (IAs are not amended)
+ * number ranges (e.g. 1000-2000)
+ * number or year wildcards (e.g. `/ukia/*/100` or `/ukia/2015/\*-100`)
+
 
 ## Identifier searches
 
@@ -162,6 +183,8 @@ The [identifier search page](https://www.legislation.gov.uk/id) is there to help
 To mark up this information, it’s useful to be able to search based on the title of the legislation, with supporting information narrowing down the search. You can complete the form manually, or use it to create URIs of the form:
 
 `http://www.legislation.gov.uk/id?title={title}&type={type}&year={year}&number={number}`
+
+<!--TODO link to list of acceptable values for "type"-->
 
 Any of the fields may be missing from the search, but the more you specify, the greater the likelihood of uniquely identifying the legislation. If a single item of legislation is identified by the query, the response will be a `301 Moved Permanently` that redirects you to the correct URI for the legislation. If multiple items are identified by the query, you will get a `300 Multiple Choices` response that lists the possibilities in an XHTML document.
 
@@ -183,7 +206,7 @@ Words preceded by a '+' operator and not encapsulated in double quotes will matc
 
 `http://www.legislation.gov.uk/id?title=Transport+Act`
 
-Words preceded by a '-' operator and will match those titles that do not contain such a word. Multiple '-' operators will match those titles that do not contain all of the '-' operated words. For example, the folowing query will match any title that does not contain the word 'criminal' and the word 'law' but does contain the word 'act':
+Words preceded by a `-` operator and will match those titles that do not contain such a word. Multiple `-` operators will match those titles that do not contain all of the `-` operated words. For example, the folowing query will match any title that does not contain the word 'criminal' and the word 'law' but does contain the word 'act':
 
 `http://www.legislation.gov.uk/id?title=Act -criminal -law`
 
