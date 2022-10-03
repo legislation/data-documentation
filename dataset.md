@@ -97,7 +97,7 @@ As shown in the History of our Data Collection and Data Completeness sections, t
 
 New legislation is published on legislation.gov.uk simultaneously - as quickly as we can once we are authorised to publish it – which is generally within 48 hours of it being enacted, made or laid, and appears on the New Legislation page and feeds. Any document which is especially complex in terms of its size or its typography may take longer to prepare and, sometimes, we publish PDFs for some items of new legislation before XML is available. Data is sometimes altered after it is first published. This can occur in a few scenarios: a formal correction of the legislation (e.g. a correction slip); the correction of data versions to better represent the official PDF version; or a reprint/reissue of the relevant legislation item.
 
-It is possible to subscribe to the legislation feeds to get details of the latest legislation as soon as it is published without having to check the new legislation page each day. You can find more details about this service by reading the New Legislation page.
+It is possible to subscribe to the legislation feeds to get details of the latest legislation as soon as it is published without having to check the new legislation page each day. You can find more details about this service by reading the New Legislation page. <!--TI 15/9/22: Do we need to explain here how to subscribe to the feed, considering that many users do not seem to understand how it works? Or should we just improve the guide on the New Legislation page? -->
 
 For revised legislation, information about effects are extracted and added to the Changes to Legislation page as quickly as we can, although it can take up to six weeks if the document is large or if there is a high volume of new legislation (for more information see Our editorial practice and timescales). 
 
@@ -111,7 +111,8 @@ Legislation.gov.uk, by nature of its content, is subjected to an extremely large
 
 On the website, a Time to Live (TTL) mechanism has been implemented which determines how long the content can be cached before a check needs to be made for an updated version.
 
-New, as enacted legislation does not exist in the cache and therefore is always up to date, as well as all related summary pages on the website such as http://www.legislation.gov.uk/new, http://www.legislation.gov.uk/new/ukpga, http://www.legislation.gov.uk/ukpga, etc. where the cache is purged. 
+New, as enacted legislation does not exist in the cache and therefore is always up to date, as well as all related summary pages on the website such as http://www.legislation.gov.uk/new, http://www.legislation.gov.uk/new/ukpga, http://www.legislation.gov.uk/ukpga, etc. where the cache is purged. <!--TI 15/9/22: Not sure whether is this indeed the case? Also, which is the current caching strategy for publishing changes to existing legislation? Is the cache purged every time there is an update? 
+-->
 
 However, other pages on the website have different Time to Live rules, such as search pages where the TTL is set to 1 hour. As a consequence, this means that it could take up to an hour for search results to be reflected on the relevant pages – leading to a temporary displaying of out of date information. In these cases, in order to bypass the cache and load the latest version of a page, it is recommended to perform a hard refresh of the browser in use. 
 
