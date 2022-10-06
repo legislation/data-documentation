@@ -1,5 +1,55 @@
 # Overview of our dataset
 
+We publish the following data on legislation.gov.uk:
+
+ * The **original texts** of legislation as it was enacted, made, adopted or otherwise created
+ * The **revised texts** of legislation, as updated by the legislation.gov.uk Editorial team
+ * **Amendments** to legislation, where an item of legislation amends another item of legislation (or itself)
+
+We **only publish some legislation and amendments** on legislation.gov.uk.
+
+<!--
+<table>
+<thead><tr><th>Legislation we <b>do</b> publish<th>Legislation we <b>don't</b> publish</th></tr></thead>
+<tbody>
+<tr>
+<td>
+<ul>
+<li>Newly published primary and secondary legislation</li>
+<li>Most EU Regulations, Decisions and Directives</li>
+<li>All UK Public General Acts since 1988</li>
+<li>All UK Local Acts since 1991</li>
+<li>All UK Statutory Instruments since 1987, except for Local Statutory Instruments and non-prints</li>
+<li>All Local and non-print UK Statutory Instruments since 2011</li>
+<li>All Welsh Statutory Instruments, except for Local Statutory Instruments and non-prints</li>
+<li>All Local and non-print Welsh Statutory Instruments since 2011</li>
+<li>All Scottish Statutory Instruments, except for Local Statutory Instruments and non-prints</li>
+<li>All Local and non-print Scottish Statutory Instruments since 2007</li>
+<li>All Northern Ireland Statutory Rules since 1996, except for Local Statutory Instruments and non-prints</li>
+<li>All Local and non-print Northern Ireland Statutory Rules since 2011</li>
+<li>All Acts of Senedd Cymru</li>
+<li>All Acts and Measures of the National Assembly for Wales</li>
+<li>All Acts of the Scottish Parliament</li>
+<li>All Acts of the Northern Ireland Assembly</li>
+<li>Some older UK Statutory Instruments and NI Statutory Rules</li>
+<li>Some older Statutory Rules and Orders (UK and NI)</li>
+<li>Some older Local and non-print Statutory Instruments and Rules</li>
+<li>Some historical Acts from the UK, Great Britain, England, Scotland and Ireland</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Most Local Statutory Instruments and Rules</li>
+<li></li>
+<li></li>
+<li>Bye-laws</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+-->
+
 <!--TI 15/9/21: This is a general introduction to legislation.gov.uk – I guess it is not really needed here? -->
 
 The www.legislation.gov.uk website, owned and maintained by The National Archives, provides public access to UK legislation online. All new legislation made by UK parliaments, and government departments, in England, Wales, Scotland and Northern Ireland is submitted to The National Archives’ systems for publication on the www.legislation.gov.uk website and in print.
@@ -8,8 +58,7 @@ In addition to publication of new legislation, The National Archives is also res
 
 In this guide you can find information about how legislation.gov.uk works, what data we hold and how you can access and re-use our data. This guide is not only aimed at technical users or developers who want to get their hands on legislation data, but it is for anyone interested in understanding our data model and how the service works.
 
-
-## What Data is held on legislation.gov.uk
+## What data is held on legislation.gov.uk
 
 <!--TI 15/9/21: This whole section is already on the website, although I have slightly changed it – should we remove it? Keep the same version as the one online or change it considerably?-->
 
@@ -25,7 +74,6 @@ Legislation on legislation.gov.uk is provided in multiple different formats, suc
  * We also hold a list of changes to legislation, both applied and unapplied.
  * We hold all legislation in English, and we also hold most Welsh legislation in Welsh
  * There are some limitations in the data we hold – for example we do not hold all UK or EU legislation. You can find out more in the Limitations section.
-
 
 ## History of our data collection
 
