@@ -1,3 +1,5 @@
+<style type="text/css">* { font-size: 2rem }</style>
+
 # Origins of the data we hold
 
 The data we hold come from a number of sources:
