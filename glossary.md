@@ -6,9 +6,9 @@ The date to which the originating text of SLD had been revised and from which re
 
 The originating text of SLD was derived mainly from Statutes in Force (SIF), an earlier official edition of the revised statute book. The final revision of SIF incorporated all effects made by legislation enacted up to 1 February 1991, but the effects of a small number of consolidation Acts enacted after the basedate, in 1991 and 1992, were also incorporated.
 
-For the revised legislation of Northern Ireland there is a separate basedate of 1 January 2006. The originating text for this legislation is "The Northern Ireland Statutes Revised", the official edition of the revised statute book for Northern Ireland. The text is now incorporated into SLD revised with the effects of legislation made up to 31 December 2005.
+For the revised legislation of Northern Ireland there is a separate basedate of 1 January 2006. The originating text for this legislation is “The Northern Ireland Statutes Revised”, the official edition of the revised statute book for Northern Ireland. The text is now incorporated into SLD revised with the effects of legislation made up to 31 December 2005.
 
-## "coming into force" date
+## “coming into force” date
 
 The date on which a legislative provision or an effect comes into force. Also known as the commencement date.
 
@@ -16,7 +16,7 @@ The date on which a legislative provision or an effect comes into force. Also kn
 
 The coming into force of a provision or an effect.
 
-The commencement of a piece of legislation may be determined by a provision of the legislation itself, referred to as the "commencement provision", or it may be determined by a special type of Statutory Instrument known as a "Commencement Order".
+The commencement of a piece of legislation may be determined by a provision of the legislation itself, referred to as the “commencement provision”, or it may be determined by a special type of Statutory Instrument known as a “Commencement Order”.
 
 ## confers power
 
@@ -46,9 +46,9 @@ Each extent is represented by one of, or a combination of, England (E), Wales (W
 
 Every version of every provision, and every higher level of division, within a piece of legislation is assigned its own extent attribute.
 
-## "made" date
+## “made” date
 
-The date on which a Statutory Instrument, or other item of secondary legislation, is formally brought into being. It may come into force at a different date. Secondary legislation is usually said to be "made", as opposed to Acts and other primary legislation which are usually said to be "enacted". For this reason, the phrase "made or enacted" may be used in Help when referring to legislation generally.
+The date on which a Statutory Instrument, or other item of secondary legislation, is formally brought into being. It may come into force at a different date. Secondary legislation is usually said to be “made”, as opposed to Acts and other primary legislation which are usually said to be “enacted”. For this reason, the phrase “made or enacted” may be used in Help when referring to legislation generally.
 
 ## primary legislation
 
@@ -64,11 +64,11 @@ A version of a provision (or other level of division of legislation) with no sta
 
 ## revised legislation
 
-We use the terms "revise", "revised" and "revision" to refer to the editorial process of incorporating amendments and carrying through other effects into legislation.
+We use the terms “revise”, “revised” and “revision” to refer to the editorial process of incorporating amendments and carrying through other effects into legislation.
 
 ## secondary legislation
 
-Delegated legislation made by a person or body under authority contained in primary legislation. It is also referred to as "subordinate legislation"
+Delegated legislation made by a person or body under authority contained in primary legislation. It is also referred to as “subordinate legislation”
 
 ## section
 

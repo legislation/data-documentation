@@ -2,7 +2,7 @@
 
 ## Open data<a name="open-data"></a>
 
-The information on legislation.gov.uk is available for you to reuse **free of charge**, under a [permissive licence](), for commercial and non-commercial uses.
+The information on legislation.gov.uk is available for you to reuse **free of charge**, under a [permissive licence](licence.md), for commercial and non-commercial uses.
 
 You can download the following data from us in a variety of formats:
 
@@ -14,9 +14,9 @@ You can also search <!--TODO or query--> for legislation, or download lists of l
 
 ## Find out what data we have
 
-Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](/data.md), including limitations of the data in our dataset.
+Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](what-we-have.md), including limitations of the data in our dataset.
 
-We acquire new and historical legislation data from multiple sources. You can read about the [origins]() of the data in our dataset, including information about when we update our data. You can also read about how to track [updates]() to our data.
+We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates]() to our data.
 
 ## Start using our data
 
@@ -33,25 +33,35 @@ You can find more information out about the different kinds of data we offer, in
  * [Download all UK legislation as XML, PDF or plain text]()
  * [Get XML for an item of legislation or part of it]()-->
 
-### Data downloads<a name="data-downloads"></a>
+### Data downloads
 
-Our data downloads service provides ZIP files containing the text of legislation. They are available in the [Data section of our Research website](https://research.legislation.gov.uk/data).
+Our data downloads service provides ZIP files containing the text of legislation. They are available in the [Data section of our Research website]().
 
 The ZIP files are available in the following formats:
 
-* XML in our CLML dialect and Akoma Ntoso (where available)
-* XHTML and HTML 5 (transformed from the source XML, only where it is available)
+* [XML](/formats/xml.md) (where available) in our [CLML](/formats/xml.md#clml) dialect and [Akoma Ntoso](/formats/xml.md#akoma-ntsos)
+* [HTML](/formats/html.md) as XHTML and HTML5 (transformed from the source XML, only where it is available)
 * Plain text, both in full and limited to only the operative text<!--TODO link to explanation--> of the item (transformed from the source XML, only where it is available)
-* PDF (where an enacted/made or revised PDF is available)
+* [PDF](/formats/pdf.md) (where an enacted/made or revised PDF is available)
 
 There are ZIPs available that contain all legislation available in the specified format, as well as smaller ZIPs that contain only legislation of a specific type, or type and year.
 
 ### Online access via our API and website<a name="api"></a>
 
-Our website provides data for items of legislation in multiple formats, including [XML](). You can try: 
- * appending `/data.xml` to the end of a legislation.gov.uk address to get the content as [XML]() (e.g. `https://www.legislation.gov.uk/asc/2021/4/part/1/data.xml`), or 
- * appending `/data.feed` to the end of the address for a search or list page (before the `?` query string character, if it appears) to get the content of the results page as an [Atom]() feed (e.g. `https://www.legislation.gov.uk/nia/2013/data.feed?title=budget`).
+Our website provides data for items of legislation in multiple formats, including [XML](/formats/xml.md). You can try: 
+ * appending `/data.xml` to the end of a legislation.gov.uk address to get the content as [XML](/formats/xml.md) (e.g. `https://www.legislation.gov.uk/asc/2021/4/part/1/data.xml`), or 
+ * appending `/data.feed` to the end of the address for a search or list page (before the `?` query string character, if it appears) to get the content of the results page as an [Atom](/formats/atom.md) feed (e.g. `https://www.legislation.gov.uk/nia/2013/data.feed?title=budget`).
 
 The website is usable as an [API](https://en.wikipedia.org/wiki/API) by applications that speak [HTTP](https://en.wikipedia.org/wiki/HTTP). All the features of the website are available via the API. 
 
-If you want to find out more about our API, we provide an [overview of the API](/api.md) that explains how it works and what features it offers.
+If you want to find out more about our API, we provide an [overview of the API](/api/overview.md) that explains how it works and what features it offers.
+
+## Code, schemas and other resources
+
+You can find details about our code and schemas on the [More Resources](more-resources.md) page.
+
+## Contact us
+
+If you have any questions about using our data or API, please contact data.legislation@nationalarchives.gov.uk. We&rsquo;re happy to help with enquiries from individuals, business, organisations and government departments.
+
+You can also follow us on Twitter at [@legislation](https://twitter.com/legislation).

@@ -1,18 +1,20 @@
-# URIs
+# URI schema reference
 
-This page describes the URI scheme that is used on the Legislation API.
+This page describes the URI scheme that is used on the Legislation API. The Legislation API attempts to follow the guidance given in [Linked Data: Evolving the Web into a Global Data Space](http://linkeddatabook.com/editions/1.0/#htoc10).
 
-**The best way of finding out the URI for a particular piece of legislation is to [search](/developer/searching) for it. A search on the title of a piece of legislation will redirect you to the proper URI for that item of legislation without you having to construct the URI yourself.**
+## Legislation
 
-The Legislation API attempts to follow the guidance given in [How to Publish Linked Data on the Web](http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/). We define three levels of URIs:
+**The best way of finding out the URI for a particular piece of legislation is to [search](/api/search.md) for it. A search on the title of a piece of legislation will redirect you to the proper URI for that item of legislation without you having to construct the URI yourself.**
 
-*   [identifier URIs](/developer/uris#identifiers); for example, "The Transport Act 1985", `http://www.legislation.gov.uk/id/ukpga/1985/67`
-*   [document URIs](/developer/uris#documents); for example, "The current version of The Transport Act 1985" (as opposed to a previous version), `http://www.legislation.gov.uk/ukpga/1985/67`
-*   [representation URIs](/developer/uris#representations); for example, "The current version of The Transport Act 1985 in XML" (as opposed to an HTML document), `http://www.legislation.gov.uk/ukpga/1985/67/data.xml`
+We define three levels of URIs for legislation:
+
+*   [identifier URIs](#identifier-uris); for example, "The Transport Act 1985", `http://www.legislation.gov.uk/id/ukpga/1985/67`
+*   [document URIs](#document-uris); for example, "The current version of The Transport Act 1985" (as opposed to a previous version), `http://www.legislation.gov.uk/ukpga/1985/67`
+*   [representation URIs](#representation-uris); for example, "The current version of The Transport Act 1985 in XML" (as opposed to an HTML document), `http://www.legislation.gov.uk/ukpga/1985/67/data.xml`
 
 When you request an identifier URI, the response will usually be a `303 See Other` redirection to a document URI. When you request a document URI, you will usually get a `200 OK` response and a `Content-Location` header that will point to an appropriate representation URI based on the `Accept` headers that you use in the request.
 
-## Identifier URIs
+### Identifier URIs
 
 **We recommend that you link to identifier URIs.**
 
@@ -47,11 +49,11 @@ will result in a document containing
 </ul>
 ```
 
-### Legislation Types
+#### Legislation Types
 
-The legislation type codes are the same as those used on the Statute Law Database, and within the OPSI site. The list is:
+The legislation type codes used in the API are as follows:
 
-| Description | Document Main Type | URI abbreviation |
+|Description|Document Main Type|URI abbreviation|
 |---|---|---|
 | **Primary Legislation** |
 |UK Public General Acts|`UnitedKingdomPublicGeneralAct`|`ukpga`|
@@ -95,17 +97,19 @@ will result in a `301 Moved Permanently` response with a `Location` header point
 
 http://www.legislation.gov.uk/id/wsi/2002/808
 
-### Legislation Years
+#### Legislation Years
 
-The legislation year can be a calendar year or a [regnal year](http://en.wikipedia.org/wiki/Regnal_year). Calendar years can be used for legislation after 1963, but before that time legislation is unambiguously identified based on the year of reign of the monarch. For example:
+The legislation year can be a calendar year or a [regnal year](http://en.wikipedia.org/wiki/Regnal_year). For primary legislation, calendar years can be used for legislation enacted after 1963, but before that time legislation is unambiguously identified based on the year of reign of the monarch. (The only exception to this is Acts of the Old Scottish Parliament, which are all identified by calendar year.)
+
+For example:
 
 http://www.legislation.gov.uk/id/ukpga/1985/67
 
-identifies The Transport Act 1986 (c.67), and:
+identifies The Transport Act 1986 (c. 67), and:
 
 http://www.legislation.gov.uk/id/ukpga/Edw7/7/51
 
-identifies the Sheriff Courts (Scotland) Act 1907 (c.51). If you use a calendar year prior to 1963 within a URI, you will be redirected to the canonical identifier, which uses the regnal year. For example, requesting:
+identifies the Sheriff Courts (Scotland) Act 1907 (c. 51). If you use a calendar year prior to 1963 within a URI, you will be redirected to the canonical identifier, which uses the regnal year. For example, requesting:
 
 http://www.legislation.gov.uk/id/ukpga/1907/51
 
@@ -126,7 +130,7 @@ Could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 
 </ul>
 ```
 
-### Legislation Numbers
+#### Legislation Numbers
 
 The legislation number is an integer that reflects the legislation's chapter number according to the primary numbering sequence for the type. Legislation is sometimes assigned one or more secondary numbers. Secondary numbering schemes are:
 
@@ -146,7 +150,7 @@ will result in a `301 Moved Permanently` redirection to
 
 http://www.legislation.gov.uk/id/wsi/2002/808
 
-### Legislation Sections
+#### Legislation Sections
 
 You can refer to particular sections, articles, regulations and so on within a piece of legislation by appending `/{divisionName}/{number}` to the URI. For example, to refer to section 6 of the Road Traffic Regulation Act 1984, you can use
 
@@ -156,9 +160,8 @@ The name of the division that is used depends on the type of the legislation as 
 
 |Legislation Type|Division Name|
 |---|---|
-|Act, Scottish Bill|section|
-|UK Bill|clause|
-|Order in Council, Order of Council or Order|article|
+|Act, Scheme|section|
+|Order, Order in Council or Order of Council|article|
 |Regulations|regulation|
 |Rules|rule|
 
@@ -197,18 +200,20 @@ Note that these are URI keywords, and always in English regardless of the langua
 
 Requesting a division that does not exist within the legislation will result in a `404 Not Found` response.
 
-## Document URIs
+### Document URIs
 
 Document URIs are used to refer to particular documents on the web: versions of the legislation. Document URIs follow the template:
 
 http://www.legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]\[/{[authority](/developer/uris#authority)}\]\[/{[extent](/developer/uris#extent)}\]\[/{[version](/developer/uris#version)}\]
 
-### Legislation Authorities
+<!-- PA this is deprecated, may add back in if necessary
+
+#### Legislation Authorities
 
 The documents provided within the SLS API come from four possible sources, which may be reflected in the URI:
 
 |Publisher|URI abbreviation|Notes|
-|--- |--- |--- |
+|---|---|---|
 |Statute Law Database|sld|Revised versions of primary legislation; unrevised versions of secondary legislation. Revised and unrevised versions of Northern Ireland Acts and Orders in Council prior to 2006. See the description of [limitations](limitations.md) for more details.|
 |King's or Queen's Printer of Acts of Parliament|kqpap|Enacted/made versions of UK legislation since 1988.|
 |King's or Queen's Printer for Scotland|kqps|Enacted/made versions of Scottish legislation since 1988.|
@@ -236,9 +241,9 @@ The unrevised version of the Act from the Statute Law Database can be accessed a
 
 http://www.legislation.gov.uk/nia/2000/5/sld/enacted
 
-The text of this version will be the same as the Government Printer for Northern Ireland version, but may include annotations and links to other legislation.
+The text of this version will be the same as the Government Printer for Northern Ireland version, but may include annotations and links to other legislation. -->
 
-### Legislation Extents
+#### Legislation Extents
 
 To reference legislation as it extends to a particular country, append `/{country}`, where country is:
 
@@ -267,21 +272,21 @@ http://www.legislation.gov.uk/ukpga/1985/67/section/6/=england+wales
 
 which will request all version of Section 6 of The Transport Act 1985 that are applicable to both England and Wales.
 
-### Legislation Versions
+#### Legislation Versions
 
-Legislation versions fall into three general categories: [enacted/made versions](/developer/uris#enacted), [dated versions](/developer/uris#dated) and [prospective versions](/developer/uris#prospective).
+Legislation versions fall into three general categories: [enacted/made/adopted versions](/developer/uris#enacted), [dated versions](/developer/uris#dated) and [prospective versions](/developer/uris#prospective).
 
-#### Enacted/Made Versions
+##### Enacted/Made/Adopted Versions
 
-The enacted or made version of legislation reflects the text of the legislation when it becomes law. Primary legislation is "enacted" while the majority of secondary legislation is "made" (United Kingdom Church Instruments and Ministerial Orders are simply "created").
+The enacted, made or adopted version of legislation reflects the text of the legislation when it became law. Primary legislation is "enacted", while the majority of secondary legislation is "made" (United Kingdom Church Instruments and Ministerial Orders are simply "created") and legislation originating from the EU was "adopted".
 
-Using the keyword `enacted`, `made` or `created` at the end of a document URI provides the enacted or made version of the legislation, if such is available. The enacted version of legislation is not generally available for legislation prior to 1988.
+Using the keyword `enacted`, `made`, `created` or `adopted` at the end of a document URI provides the enacted or made version of the legislation, if such is available. The enacted version of legislation is often unavailable for legislation prior to 1988 (see our [origins](origins.md) page for an explanation).
 
 For example, the enacted version of the Childcare Act 2006 can be found at:
 
 http://www.legislation.gov.uk/ukpga/2006/21/enacted
 
-#### Dated Versions
+##### Dated Versions
 
 It is often helpful to know which parts of a piece of legislation are in force at a particular time. Often, particular sections of a piece of legislation do not come into force immediately (on the enactment date) but are brought into force later on, often through a commencement order (a particular kind of secondary legislation).
 
@@ -291,7 +296,7 @@ If no version is specified in a document URI, this is taken to refer to the vers
 
 http://www.legislation.gov.uk/ukpga/1985/67
 
-Indicates the current version of The Transport Act 1985, and will provide the most up to date version of the legislation available through the API. (This may not indicate the current state of the legislation, due to the [limitations](/developer/limitations) of the content available through this site.) In this case, the result will be the legislation as it stood on 1st April 2003, which is also accessible at the URI:
+Indicates the current version of The Transport Act 1985, and will provide the most up to date version of the legislation available through the API. (This may not indicate the current state of the legislation, due to the [limitations]() of the content available through this site.) In this case, the result will be the legislation as it stood on 1st April 2003, which is also accessible at the URI:
 
 http://www.legislation.gov.uk/ukpga/1985/67/2003-04-01
 
@@ -301,11 +306,11 @@ http://www.legislation.gov.uk/ukpga/1985/67/1997-06-01
 
 would refer to the version of The Transport Act 1985 that was in effect on 1st June 1997.
 
-Requesting a date that is prior to the [base date](/developer/limitations#base-date) of 1st February 1991 will result in a redirection to the legislation as it was on the base date.
+Requesting a date that is prior to the [base date]() of 1st February 1991 (or 1st January 2006 for NI legislation) will normally result in a redirection to the legislation as it was on the base date.
 
 Requesting a date that was prior to the enactment of the legislation results in `404 Not Found` response. Requests for sections that did not exist within a particular version will return you that section though the fact that it was not in force on that date will be indicated.
 
-#### Prospective Versions
+##### Prospective Versions
 
 At any point in time, there may be prospective sections within or amendments to a piece of legislation: planned sections or changes that have not come into force. Using `/prospective` instead of a date within the URI refers to the legislation that would be in force were all prospective sections and amendments in effect. For example, Part II of the Road Traffic Regulation Act 1984 has a prospective amendment from the Railways and Transport Safety Act 2003 (sections 108 and 120) that adds a Section 22B. The prospective version of that Part would be:
 
@@ -319,7 +324,7 @@ will return the section but that it is marked as being prospective, as does spec
 
 http://www.legislation.gov.uk/ukpga/1984/27/section/22B/prospective
 
-#### Explanatory Notes
+##### Explanatory Notes
 
 Explanatory Notes provide accessible information to readers who are not legally qualified and who have no specialised knowledge of the matters dealt with by the enacting legislation. They are intended to allow the reader to grasp what the Act sets out to achieve and place its effect in context. Using `/notes` at the end of a document URI provides the Explanatory Notes for that specific legislation. For example, the Explanatory Notes for the Communications Act 2003 would be:
 
@@ -331,7 +336,7 @@ http://www.legislation.gov.uk/ukpga/2003/21/section/50/notes
 
 If there are no Explanatory Notes or no Explanatory Note for a specific section exists then the uri will return a `404 Not Found` response, since it does not exist.
 
-## Representation URIs
+### Representation URIs
 
 Each document is available in multiple [formats](/developer/formats). The URI for a particular format follows the template:
 
@@ -339,10 +344,12 @@ http://www.legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/
 
 for legislation and
 
-http://www.legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]\[/{[notes](/developer/uris#ENs)}\]/data.ext
+http://www.legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]\[/{[notes](/developer/uris#ENs)}\]/data.\[ext\]
 
 for Explanatory Notes.
 
-where ext is the extension for the particular format.
+where \[ext\] is the extension for the particular format. Available formats and their extensions are listed on the [formats](formats/overview.md) page.
 
-The format provided as the result of a particular request on a [document URI](/developer/uris#documents) is determined through content negotiation based on the mime types used in the `Accept` header used by the client. Available formats, their mime types and their extensions are listed on the [formats](/developer/formats) page.
+The format provided as the result of a particular request on a [document URI](/developer/uris#documents) is determined through content negotiation based on the mime types used in the `Accept` header used by the client.
+
+<!--TODO explain PDF and image URIs-->
