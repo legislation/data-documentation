@@ -39,7 +39,7 @@ Our data downloads service provides ZIP files containing the text of legislation
 
 The ZIP files are available in the following formats:
 
-* [XML](/formats/xml.md) (where available) in our [CLML](/formats/xml.md#clml) dialect and [Akoma Ntoso](/formats/xml.md#akoma-ntsos)
+* [XML](/formats/xml.md) (where available) in our CLML dialect and Akoma Ntoso
 * [HTML](/formats/html.md) as XHTML and HTML5 (transformed from the source XML, only where it is available)
 * Plain text, both in full and limited to only the operative text<!--TODO link to explanation--> of the item (transformed from the source XML, only where it is available)
 * [PDF](/formats/pdf.md) (where an enacted/made or revised PDF is available)
