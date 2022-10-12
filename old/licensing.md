@@ -1,6 +1,8 @@
 Crown Copyright
 ===============
 
+<!-- NB This licence has been superseded by the OGL -->
+
 You are encouraged to use and re-use the information that is available on this site freely and flexibly, with only a few conditions.
 
 The licence below governs your access to and use of information on this site that are covered by either Crown Copyright or Crown Database Right.

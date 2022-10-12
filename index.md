@@ -14,7 +14,7 @@ You can also search <!--TODO or query--> for legislation, or download lists of l
 
 ## Find out what data we have
 
-Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](), including limitations of the data in our dataset.
+Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](/data.md), including limitations of the data in our dataset.
 
 We acquire new and historical legislation data from multiple sources. You can read about the [origins]() of the data in our dataset, including information about when we update our data. You can also read about how to track [updates]() to our data.
 
