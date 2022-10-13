@@ -1,6 +1,6 @@
 # Data Reuse Guide
 
-## Open data<a name="open-data"></a>
+## Open data
 
 The information on legislation.gov.uk is available for you to reuse **free of charge**, under a [permissive licence](licence.md), for commercial and non-commercial uses.
 
