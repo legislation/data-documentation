@@ -18,6 +18,10 @@ Our dataset **is not yet complete** and only contains data for some items of leg
 
 We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates]() to our data.
 
+## Understand our data
+
+Our [data model](/model/introduction.md) overview explains what our data represent and how to interpret them.
+
 ## Start using our data
 
 You can read get our data through one of two routes:
