@@ -17,7 +17,7 @@ We also use some custom elements on the feed, in the `http://www.legislation.gov
 
 ## Legislation feeds
 
-The feeds of legislation (for example, https://www.legislation.gov.uk/uksi/2020 lists all UK Statutory Instruments with a year of 2022) additionally have the following extra elements:
+The feeds of legislation (for example, https://www.legislation.gov.uk/uksi/2020 lists all UK Statutory Instruments with a year of 2020) additionally have the following extra elements:
 
 * `<opensearch:totalResults>` to indicate the total number of results found
 * `<leg:facets>` provides faceting information that can be used to guide further searches into the data. The `<leg:facetTypes>` child wraps possible further searches based on type, `<leg:facetYears>` on years and `<leg:facetHundreds>` on number. The items within these wrappers each have a type, year or hundred attribute that indicates the value for the facet; an href attribute that can be used to narrow the search; and a value attribute that indicates how many items of legislation have the given value. The total attribute on the `<leg:facetYear>` element indicates the total number of items within the year, regardless of the rest of the search.

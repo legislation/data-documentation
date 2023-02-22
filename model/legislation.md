@@ -107,7 +107,7 @@ The URI for the version of section 3 of that Act as it was in force on that date
 
 `http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/england+wales/1992-04-01`
 
-Section 3 was repealed in England and Wales on the 6<th>sup</th> April 2008, but is still in force in Scotland. The URI for the latest version of section 3 as it is in force in Scotland is:
+Section 3 was repealed in England and Wales on the 6<sup>th</sup> April 2008, but is still in force in Scotland. The URI for the latest version of section 3 as it is in force in Scotland is:
 
 `http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/scotland`
 
@@ -125,7 +125,13 @@ The corresponding URI for the enacted Welsh version of that Part 2 is:
 
 `http://www.legislation.gov.uk/anaw/2013/1/part/2/enacted/welsh`
 
-Currently, we do not hold revised versions of Welsh legislation. <!--TODO change when Welsh update is released-->
+We also publish some revised Welsh legislation in both English and Welsh. For example, the URI for the English version dated 7<sup>th</sup> June 2021 of section 4 of the Renting Homes (Fees etc.) (Wales) Act 2019 is:
+
+`https://www.legislation.gov.uk/anaw/2019/2/section/4/2021-06-07`
+
+The corresponding URI for the Welsh version dated the 7<sup>th</sup> June 2021 of that section 4 is:
+
+`https://www.legislation.gov.uk/anaw/2019/2/section/4/2021-06-07/welsh`
 
 ### Quashing
 

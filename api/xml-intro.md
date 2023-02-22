@@ -1,6 +1,6 @@
 # An introduction to XML
 
-The underlying format of most structured data on legislation.gov.uk is [XML](https://www.w3.org/XML/). We use XML because it is a good format for electronic publishing. XML allows a text document to contain arbitrary semantic markup and metadata, and there are many applications that support XML workflows for editing, validation against schemas and transformation into other formats (such as HTML and PDF).
+The underlying format of most structured data on legislation.gov.uk is [XML](https://www.w3.org/XML/). We use XML because it is a good format for electronic publishing and for marking up text with metadata. XML allows a text document to contain arbitrary semantic markup and metadata, and there are many applications that support XML workflows for editing, validation against schemas and transformation into other formats (such as HTML and PDF).
 
 ## Structure of an XML document
 
@@ -10,7 +10,7 @@ An XML document consists of a tree of nodes. The most common of these are elemen
 
 An element is denoted by either a pair of tags (e.g. `<Text>Hello</Text>`) or a single “self-closing” tag (e.g. `<Character Name="NonBreakingSpace"/>`). 
 
-An element may contain other nodes in between its opening and closing tags, such as text nodes (e.g. `Hello` in the first example above) or other elements. These child nodes may appear in an arbitrary order (e.g. `<A X="Y">1 <B>2 <C Z="/">3</C> 4</B></A>`). Elements cannot partially overlap with other elements (i.e. `<A>over<B></A>lap</B>` is not possible in XML).
+An element may contain other nodes in between its opening and closing tags, such as text nodes (e.g. `Hello` in the first example above) or other elements. These child nodes may appear in an arbitrary order (e.g. `<A X="Y">1 <B>2 <C Z="/">3</C> 4</B></A>`). Elements cannot partially overlap with other elements (i.e. `<A>over<B></A>lap</B>` is not permitted in XML).
 
 An element has a name, which consists of a local name (e.g. "Text") and optionally a namespace (see the section on [namespaces](#namespaces) below).
 
@@ -55,11 +55,11 @@ Note that different documents (and different elements within a document) may dec
 
 ## Parsing XML
 
-We strongly recommend you use a proper XML parser to parse XML. XML has many complicated rules and it is easy to get them wrong if you try and write your own. Using a supported XML parser is the most reliable way to extract data from an XML document.
+We strongly recommend you use a proper XML parser to parse XML. XML has many complicated rules and it is easy to get them wrong if you try and write your own parsing code. Using a supported XML parser is the most reliable way to extract data from an XML document.
 
 Some popular XML parser libraries and classes include:
 
- * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, or the [BeautifulSoup]() library
+ * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, or the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) library
  * For Javascript, the [DOMParser class](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (only in web browsers), or the [xml2js](https://www.npmjs.com/package/xml2js) module
  * For .NET (C#), the [System.Xml](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/) classes in the standard library
  * For Java, the [DocumentBuilder](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilder.html) or [SAXParser](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/SAXParser.html) classes in the `javax.xml.parsers` package
