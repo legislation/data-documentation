@@ -14,7 +14,7 @@ You can get lists using the API (including those of newly published legislation)
 
 The legislation.gov.uk website is also an [API](https://en.wikipedia.org/wiki/API) (short for "application programming interface"), which means it is designed for software applications to use as well as human readers. Applications can use the API to search for and download legislation and information about it.
 
-The API serves the pages you can view on legislation.gov.uk. This means that (almost) every page or resource on the website is also available via the API, often in multiple formats.
+The API serves the pages you can view on legislation.gov.uk. This means that (almost) every page or resource on the website is also available via the API, often in multiple formats, and the content available via both routes is updated at the same time. 
 
 ## Features of the API
 

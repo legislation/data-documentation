@@ -55,12 +55,12 @@ Note that different documents (and different elements within a document) may dec
 
 ## Parsing XML
 
-We strongly recommend you use a proper XML parser to parse XML. XML has many complicated rules and it is easy to get them wrong if you try and write your own parsing code. Using a supported XML parser is the most reliable way to extract data from an XML document.
+We strongly recommend you use a proper XML parser to parse XML. XML has many complicated rules and it is very easy to get them wrong if you try and write your own parsing code. Using a supported XML parser is the most reliable way to extract data from an XML document.
 
 Some popular XML parser libraries and classes include:
 
  * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, or the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) library
- * For Javascript, the [DOMParser class](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (only in web browsers), or the [xml2js](https://www.npmjs.com/package/xml2js) module
+ * For Javascript, the [DOMParser class](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (only in web browsers), or the [xmldom](https://www.npmjs.com/package/@xmldom/xmldom) package (which implements the DOMParser interface for Node and other non-browser JS runtimes)
  * For .NET (C#), the [System.Xml](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/) classes in the standard library
  * For Java, the [DocumentBuilder](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilder.html) or [SAXParser](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/SAXParser.html) classes in the `javax.xml.parsers` package
  * For Go, the [xml](https://pkg.go.dev/encoding/xml) package in the standard library
