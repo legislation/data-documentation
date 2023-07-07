@@ -1,6 +1,6 @@
 # Publication Log
 
-The Legislation API provides a feed that records the publication and withdrawal of legislation, associated documents and effects on legislation.gov.uk. We call this feed the **Publication Log**.
+The Legislation API provides a feed that records the publication and withdrawal of content on legislation.gov.uk. We call this feed the **Publication Log**.
 
 The Publication Log feed contains one entry for every publication or republication of a resource to, or withdrawal of a resource from, the legislation.gov.uk website, for the following categories of content:
 
@@ -17,7 +17,7 @@ The API *paginates* its responses to requests for Publication Log feeds. This me
 
 ## Fields
 
-Each Publication Log entry has multiple fields describing its publication or withdrawal event. The Publication Log represents most of the fields using the `http://www.legislation.gov.uk/namespaces/publication-log` namespace (normally using the prefix `pbl:`), but also uses other namespaces. Note that the Atom namespace (`http://www.w3.org/2005/Atom`) is used without a prefix in the feeds and in the examples drawn from it below. (For more information about the namespaces, see the [Common namespaces in our data](/api/xml-intro.md#common-namespaces-in-our-data) section of the guide.)
+Each Publication Log entry has multiple fields describing its publication or withdrawal event. The Publication Log represents most of the fields using the `http://www.legislation.gov.uk/namespaces/publication-log` namespace (normally using the prefix `pbl:`), but also uses other namespaces. Note that the Atom namespace (`http://www.w3.org/2005/Atom`) is used without a prefix in the feeds and in the examples drawn from it below, but the table below uses the `atom:` prefix to show where a field uses the Atom namespace. (For more information about the namespaces, see the [Common namespaces in our data](/api/xml-intro.md#common-namespaces-in-our-data) section of the guide.)
 
 The fields that appear in Publication Log entries are:
 
@@ -35,11 +35,19 @@ The fields that appear in Publication Log entries are:
 |New|`<pbl:New>`|Indicates whether the item of legislation existed on legislation.gov.uk before this publication event|
 |Newly issued|`<pbl:NewlyIssued>`|Indicates whether a new item of legislation has just been issued (is actually “new”), or whether it was issued in the past but has only just been uploaded|
 |Document|`<pbl:Document>`|The [expression]() (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item|
+|Link|`<atom:link>`|For XML resources, a link to an alternate representation of the resource| 
 |Item|`<pbl:Item_Published>`<br>`<pbl:Item_Withdrawn>`|The URI of the resource being published or withdrawn|
 |Format|`<pbl:Format>`|The format of the resource (`xml`, `pdf` or `html5`)|
 |Print|`<pbl:Print>`|Indicates whether a legislation PDF represents the version of the document that is to be printed|
 |Direction|`<pbl:Direction>`|For changes, indicates whether the effects were updated for the affecting or affected item|
 |Correction slip number|`<pbl:CorrectionSlipNumber>`|For correction slips, records the sequential number of the correction slip|
+|Document category|`<ukm:DocumentCategory>`|The category of the item of legislation to which the resource relates|
+|Document main type|`<ukm:DocumentMainType>`|The long name of the document type of the item to which the resource relates|
+|Year|`<ukm:Year>`|The year of the item to which the resource relates|
+|Number|`<ukm:Number>`|The number of the item (in its primary numbering series) to which the resource relates|
+|ISBN|`<ukm:ISBN>`|For legislation items that are not numbered, the ISBN of the item of legislation to which the resource relates|
+|Alternative number|`<ukm:AlternativeNumber>`|<p>A number in an alternative numbering series for the item to which the resource relates<p>**Note:** this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation|
+|Supersedes|`<ukm:Supersedes>`|<p>For legislation that supersedes other legislation, the item of legislation superseded by the item to which the resource relates<p>**Note:** this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation|
 
 ## Filtering
 
@@ -66,9 +74,9 @@ The Publication Log feeds support the following path parameters:
 The Publication Log feeds support the following query parameters:
 
 |Parameter|Filters|Permitted values|
-|---|---|---|---|
-|event|The type of event|`published` or `withdrawn`|https://www.legislation.gov.uk/update/wsi/2023/data.feed?event=withdrawn|
-|new|<p>**For items of legislation and UK Impact Assessments:** whether the item of legislation or UK Impact Assessment associated with the event is new to legislation.gov.uk<p>**For other associated documents:** whether the associated document has been published before at this URI|`true` or `false`|https://www.legislation.gov.uk/update/legislation/primary/data.feed?new=false|
+|---|---|---|
+|event|The type of event|`published` or `withdrawn`|
+|new|<p>**For items of legislation and UK Impact Assessments:** whether the item of legislation or UK Impact Assessment associated with the event is new to legislation.gov.uk<p>**For other associated documents:** whether the associated document has been published before at this URI|`true` or `false`|
 |format|The format of the resource|One of the following values:<ul><li>`xml`<li>`pdf`<li>`html5`|
 |language|A language of the resource|`en` or `cy`<p>(dual-language resources will match either value)|
 |title|The title of the resource or the document to which it is associated, or any contiguous sequence of words within its title|Any text string|
