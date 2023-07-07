@@ -37,6 +37,22 @@ An XML document can declare the namespace of an element using the `xmlns` attrib
 </P1>
 ```
 
+### Common namespaces in our data
+
+The legislation.gov.uk dataset uses multiple XML namespaces, including but not limited to the following:
+
+|Namespace|Namespace URI|Default prefix*|
+|---|---|---|
+|Legislation|`http://www.legislation.gov.uk/namespaces/legislation`|`leg:`|
+|Metadata|`http://www.legislation.gov.uk/namespaces/metadata`|`ukm:`|
+|Publication Log|`http://www.legislation.gov.uk/namespaces/publication-log` (see [Publication Log](/api/publication-log.md))|`pbl:`|
+|Dublin Core Elements|`http://purl.org/dc/elements/1.1/`|`dc:`|
+|Dublin Core Terms|`http://purl.org/dc/terms/`|`dct:`|
+|Atom|`http://www.w3.org/2005/Atom`|`atom:`|
+|XHTML|`http://www.w3.org/1999/xhtml`|No prefix|
+
+\* Although most legislation.gov.uk XML data uses the default prefixes for these namespaces, some XML data use a different prefix or none at all, and these prefixes may change in future or vary between different contexts, even within a single document. **You must not use prefixes to identify elements or attributes unless you are parsing the XML with a properly configured XML parser.** Read carefully the following sections on prefixes, particularly [Prefixes are context-dependent](#prefixes-are-context-dependent) and [A note on namespaces in XPath](#a-note-on-namespaces-in-xpath).
+
 ### Namespace prefixes
 
 An XML document can also declare that a prefix represents a particular namespace using the `xmlns:[NS]` attribute, where `[NS]` is the prefix to be used. In the below example, the root element declares prefixes that are used by descendent elements, and both the root `Legislation` element and its child `Primary` element are in the namespace `http://www.legislation.gov.uk/namespaces/legislation`, despite having different prefixes:

@@ -140,8 +140,8 @@ You can specify the following sort orders for a legislation search/list using th
 
 Note that the HTML and Atom view of the feeds have a different default sort order:
 
- * When viewing the HTML view, the default sort order is "basic".
- * When viewing the Atom view, the default sort order is `modified`.
+ * When viewing the HTML view, the default sort is "basic".
+ * When viewing the Atom view, the default sort is `modified`.
 
 ## New legislation listings
 
@@ -255,7 +255,7 @@ then you can use the form to construct the URI for the item of legislation witho
 
 This will redirect you directly to the correct URI for the item of legislation.
 
-## Changes to legislation<a id="changes"></a>
+## Changes to legislation
 
 You can retrieve a feed of changes to legislation using a URI of the following form:
 

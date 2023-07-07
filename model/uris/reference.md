@@ -49,7 +49,7 @@ will result in a document containing
 </ul>
 ```
 
-#### Legislation Types
+#### Legislation types
 
 The legislation type codes used in the API are as follows:
 
@@ -97,7 +97,7 @@ will result in a `301 Moved Permanently` response with a `Location` header point
 
 `http://www.legislation.gov.uk/id/wsi/2002/808`
 
-#### Legislation Years
+#### Legislation years
 
 The legislation year can be a calendar year or a [regnal year](http://en.wikipedia.org/wiki/Regnal_year). For primary legislation, calendar years can be used for legislation enacted after 1963, but before that time legislation is unambiguously identified based on the year of reign of the monarch. (The only exception to this is Acts of the Old Scottish Parliament, which are all identified by calendar year.)
 
@@ -130,7 +130,7 @@ Could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 
 </ul>
 ```
 
-#### Legislation Numbers
+#### Legislation numbers
 
 The legislation number is an integer that reflects the legislation's chapter number according to the primary numbering sequence for the type. Legislation is sometimes assigned one or more secondary numbers. Secondary numbering schemes are:
 
@@ -150,7 +150,7 @@ will result in a `301 Moved Permanently` redirection to
 
 `http://www.legislation.gov.uk/id/wsi/2002/808`
 
-#### Legislation Sections
+#### Legislation sections
 
 You can refer to particular sections, articles, regulations and so on within a piece of legislation by appending `/{divisionName}/{number}` to the URI. For example, to refer to section 6 of the Road Traffic Regulation Act 1984, you can use
 
@@ -206,7 +206,7 @@ Document URIs are used to refer to particular documents on the web: versions of 
 
 <code>http://[]()www.[]()legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]\[/{[authority](/developer/uris#authority)}\]\[/{[extent](/developer/uris#extent)}\]\[/{[version](/developer/uris#version)}\]</code>
 
-#### Legislation Extents
+#### Legislation extents
 
 To reference legislation as it extends to a particular country, append `/{country}`, where country is:
 
@@ -235,11 +235,11 @@ When a selection for an exact extent is needed, the '=' operator can precede the
 
 which will request all version of Section 6 of The Transport Act 1985 that are applicable to both England and Wales.
 
-#### Legislation Versions
+#### Legislation versions
 
 Legislation versions fall into three general categories: [enacted/made/adopted versions](/developer/uris#enacted), [dated versions](/developer/uris#dated) and [prospective versions](/developer/uris#prospective).
 
-##### Enacted/Made/Adopted Versions
+##### Enacted/made/adopted versions
 
 The enacted, made or adopted version of legislation reflects the text of the legislation when it became law. Primary legislation is "enacted", while the majority of secondary legislation is "made" (United Kingdom Church Instruments and Ministerial Orders are simply "created") and legislation originating from the EU was "adopted".
 
@@ -249,7 +249,7 @@ For example, the enacted version of the Childcare Act 2006 can be found at:
 
 `http://www.legislation.gov.uk/ukpga/2006/21/enacted`
 
-##### Dated Versions
+##### Dated versions
 
 It is often helpful to know which parts of a piece of legislation are in force at a particular time. Often, particular sections of a piece of legislation do not come into force immediately (on the enactment date) but are brought into force later on, often through a commencement order (a particular kind of secondary legislation).
 
@@ -273,7 +273,7 @@ Requesting a date that is prior to the [base date]() of 1st February 1991 (or 1s
 
 Requesting a date that was prior to the enactment of the legislation results in `404 Not Found` response. Requests for sections that did not exist within a particular version will return you that section though the fact that it was not in force on that date will be indicated.
 
-##### Prospective Versions
+##### Prospective versions
 
 At any point in time, there may be prospective sections within or amendments to a piece of legislation: planned sections or changes that have not come into force. Using `/prospective` instead of a date within the URI refers to the legislation that would be in force were all prospective sections and amendments in effect. For example, Part II of the Road Traffic Regulation Act 1984 has a prospective amendment from the Railways and Transport Safety Act 2003 (sections 108 and 120) that adds a Section 22B. The prospective version of that Part would be:
 
