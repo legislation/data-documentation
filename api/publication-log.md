@@ -9,7 +9,15 @@ The Publication Log feed contains one entry for every publication or republicati
  * UK Impact Assessments (which are a special kind of associated document that also exists as a standalone item); and
  * changes to legislation (effects).
 
-The feed is available at https://www.legislation.gov.uk/update/data.feed. You can also filter the feed for entries about a specific item, type or category of legislation, or use various other combinations of filters (see [Filtering](#filtering) below).
+The feed allows you to find out when we have:
+
+ * published new items of legislation;
+ * published new, updated Points in Time for an existing item of legislation;
+ * published associated documents or Impact Assessments;
+ * recorded changes to legislation (effects) from or to an item of legislation; and
+ * republished or withdrawn any content already on the website.
+
+The full feed, containing all entries, is available at https://www.legislation.gov.uk/update/data.feed. You can also filter the feed for entries about a specific item, type or category of legislation, or use various other combinations of filters (see [Filtering](#filtering) below).
 
 ## Paging
 

@@ -4,19 +4,19 @@
 
 The information on legislation.gov.uk is available for you to reuse **free of charge**, under a [permissive licence](licence.md), for commercial and non-commercial uses.
 
-You can download the following data from us in a variety of formats:
+You can download the following data from us, in a variety of formats:
 
- * legislation document data and text
- * metadata—data about legislation
- * amendments (changes) to legislation
+ * legislation document data and text;
+ * metadata—data about legislation; and
+ * amendments (changes) to legislation.
 
-You can also search <!--TODO or query--> for legislation, or download lists of legislation.
+You can also search <!--TODO or query--> for legislation, download lists of legislation or subscribe to feeds of new and updated content.
 
 ## Find out what data we have
 
 Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](what-we-have.md), including limitations of the data in our dataset.
 
-We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates]() to our data.
+We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates](/api/publication-log.md) to our data.
 
 ## Understand our data
 
