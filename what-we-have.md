@@ -8,7 +8,7 @@
 
 We hold the text of almost all UK primary and secondary legislation published since 1988, plus the text of some UK legislation published before that date.
 
-Of the legislation we hold published since 1988, we hold most of it in a machine-readable format called [XML](). All legislation held in XML format is available as HTML web pages and [dynamically generated PDF files](), and is also available for full-text search. We also hold revised XML versions of most UK Public General Acts enacted before 1988, as these were [rekeyed from the Statutes in Force volumes]().
+Of the legislation we hold published since 1988, we hold most of it in a machine-readable format called [XML](/formats/xml.md). All legislation held in XML format is available as HTML web pages and [dynamically generated PDF files](/formats/pdf.md#dynamically-generated-pdfs), and is also available for full-text search. We also hold revised XML versions of most UK Public General Acts enacted before 1988, as these were [rekeyed from the Statutes in Force volumes]().
 
 Most UK legislation we hold that was enacted or made before 1988 is currently only available as PDF.
 
@@ -102,13 +102,17 @@ As shown in the History of our Data Collection and Data Completeness sections, t
     *   Only primary legislation (e.g. Public General Acts) at least partially in force on or after the basedate of 1 February 1991 is included, and for Northern Ireland only primary legislation at least partially in force on or after the basedate of 1 January 2006
     *   No version history for revised legislation is available prior to these basedates
 -	Not all legislation on the website is up-to-date and not all changes to Secondary legislation are in the dataset. If you view a revised version that is not up to date, you will see a red &ldquo;Changes to Legislation&rdquo; banner that will explain which amendments are yet to be applied. You can also find unapplied amendments in the `<ukm:UnappliedEffects>` element in the [XML](/formats/xml.md) representation of a revised item or section of legislation. 
--	Not all documents are available in all formats. For instance, some documents are only available in PDF format. For more information on the formats available on the website and how to access them, see XXXXXX<!--TODO-->.
+-	Not all documents are available in all formats. For instance, some documents are only available in PDF format. For more information on the formats available on the website and how to access them, see the [formats](/formats/overview.md) section.
 -	Images within documents do not have ALT text, that is a text describing non-text content such as pictures. ALT text serves several purposes: to allow people with visual or cognitive impairments to read when utilising screen readers; to display a descriptive text in place of a non-loaded image; to provide a semantic meaning to non-text content for search engines.
--	Completeness and accuracy of the data of documents from before the base date cannot be guaranteed as documents might be missing (e.g.: no longer in force, non-print legislation before 2012) or have been rekeyed or OCRed and may contain errors. However, all other legislation - including older versions of revised legislation (post-basedate) - should be present. 
+-	Completeness and accuracy of the data of documents from before the base date cannot be guaranteed as documents might be missing (such as legislation no longer in force, and non-print legislation made before 2012) or have been rekeyed or OCRed and may contain errors. However, all other legislation (including older versions of post-basedaterevised legislation) should be present. 
 
-## Data Updates
+## Data updates
 
-New legislation is published on legislation.gov.uk simultaneously - as quickly as we can once we are authorised to publish it – which is generally within 48 hours of it being enacted, made or laid, and appears on the New Legislation page and feeds. Any document which is especially complex in terms of its size or its typography may take longer to prepare and, sometimes, we publish PDFs for some items of new legislation before XML is available. Data is sometimes altered after it is first published. This can occur in a few scenarios: a formal correction of the legislation (e.g. a correction slip); the correction of data versions to better represent the official PDF version; or a reprint/reissue of the relevant legislation item.
+New legislation is published on legislation.gov.uk at the same time as it is printed, which happens as quickly as possible once we are authorised to publish it. This generally occurs within 48 hours of the legislation being enacted, made or laid. Newly published legislation appears on the New Legislation page and feeds on legislation.gov.uk. 
+
+Any document which is especially complex in terms of its size or its typography may take longer to prepare. Sometimes, we publish PDFs for some items of new legislation before XML is available, and then upload the XML later. 
+
+We sometimes alter legislation data after we first publish it. This can occur in a few scenarios: a formal correction of the legislation (e.g. a correction slip); the correction of data versions to better represent the official PDF version; or a reprint/reissue of the relevant legislation item.
 
 It is possible to subscribe to the legislation feeds to get details of the latest legislation as soon as it is published without having to check the new legislation page each day. You can find more details about this service by reading the New Legislation page. <!--TI 15/9/22: Do we need to explain here how to subscribe to the feed, considering that many users do not seem to understand how it works? Or should we just improve the guide on the New Legislation page? -->
 

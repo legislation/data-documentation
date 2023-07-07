@@ -18,7 +18,7 @@ We provide the content of legislation in two XML formats:
 * Crown Legislation Markup Language (or CLML), a format that uses our [Legislation Schema]() to represent UK legislation and legislation originating from the EU.
 * [Akoma Ntoso](http://www.akomantoso.org/) (or AKN), a general-purpose format for representing parliamentary, legislative and judiciary documents, with some extensions to support the representation of UK and EU origin legislation.
 
-[Read more&hellip;](xml.md)
+[Read more about XML formats](xml.md).
 
 ## HTML
 
@@ -27,7 +27,7 @@ Where an item of legislation is available as XML, we provide its content in two 
  * XHTML, which is an embeddable &ldquo;snippet&rdquo; form of the same HTML we use on the website for legislation content;
  * HTML5, which comes as complete HTML files with linked styles suitable for standalone display.
 
-[Read more&hellip;](html.md)
+[Read more about HTML formats](html.md).
 
 ## PDF
 
@@ -38,10 +38,10 @@ We provide the following types of document as PDF:
  * static PDFs of certain revised legislation, such as DWP legislation and legislation originating from the EU;
  * static PDFs of associated documents such as Impact Assessments and Correction slips.
 
-[Read more&hellip;](pdf.md)
+[Read more about PDF formats](pdf.md).
 
 ## Atom
 
 We provide lists of, and search results for, both [legislation](/api/search.md#listings) and [effects](/api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
 
-[Read more&hellip;](atom.md)
+[Read more about Atom feeds](atom.md).

@@ -72,11 +72,11 @@ For example, [section 116 of the Adoption and Children Act 2002](http://www.legi
 
 Our editor read the whole document to identify the amendments and research the context for them, and noted the following:
 
-*   The [introduction](https://www.legislation.gov.uk/ukpga/2002/38/introduction/enacted) of the document states that the date of Royal Assent is the 7<sup>th</sup> November 2002, which is the date on which the Act’s provisions come into force unless otherwise stated.
-*   [Section 148(1) of the Act](http://www.legislation.gov.uk/id/ukpga/2002/38/section/148/1) requires that the Secretary of State must bring the Act into force by order, but excludes section 116\. As there is no other provision specifying when section 116 comes into force, section 116 and its child provisions come wholly into force on the date of Royal Assent.
-*   [Schedule 4](http://www.legislation.gov.uk/id/ukpga/2002/38/schedule/4) contains transitory provisions and “savings” (provisions that qualify effects in the Act). [Paragraphs 6-8](https://www.legislation.gov.uk/ukpga/2002/38/schedule/4#schedule-4-paragraph-6) of Schedule 4 all begin with “Nothing in this Act affects”, and so are treated as savings that qualify all effects in the Act.
+*  The [introduction](https://www.legislation.gov.uk/ukpga/2002/38/introduction/enacted) of the Act states that the date of Royal Assent is the 7<sup>th</sup> November 2002, which is the date on which the Act’s provisions come into force unless otherwise stated.
+*  [Section 148(1) of the Act](http://www.legislation.gov.uk/id/ukpga/2002/38/section/148/1) requires that the Secretary of State must bring the Act into force by order, but excludes section 116. As there is no other provision specifying when section 116 comes into force, section 116 and its child provisions come wholly into force on the date of Royal Assent.
+*  [Schedule 4](http://www.legislation.gov.uk/id/ukpga/2002/38/schedule/4) contains transitory provisions and “savings” (provisions that qualify effects in the Act). [Paragraphs 6-8](https://www.legislation.gov.uk/ukpga/2002/38/schedule/4#schedule-4-paragraph-6) of Schedule 4 all begin with “Nothing in this Act affects”, and so are treated as [savings]() that qualify all effects in the Act.
 
-The editor then recorded the amendments in this section as the following effects:
+The editor then recorded the amendments in the above section as the following effects:
 
 |Affected Legislation|Affected provision(s)|Type of Effect|Affecting Extent|Affecting Legislation|Affecting Provision|Sav|Commencement Authority|IF Date1|IF Date1 Qualification|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
@@ -86,7 +86,7 @@ The editor then recorded the amendments in this section as the following effects
 
 ### Applying effects
 
-When one of our editors update an item of legislation, they use our Editorial system to create a new version of the item. The Editorial system instructs the editor which amendments to apply to the version, and the editor then amends the text of the version using these instructions and those contained in the amending provision of legislation from which the effect originates.
+When one of our editors update an item of legislation, they use our Editorial system to create a new version of the item. The Editorial system instructs the editor which amendments to apply to the version, and the editor then amends the text of the version using those instructions, as well as those contained in the amending provision of legislation from which the effect originates.
 
 The Editorial system automatically adds [revision tags]() and [commentaries]() for the amendments that they apply. For recently applied amendments, both the revision tags and commentaries have identifiers that link them to the effect.
 

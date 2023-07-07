@@ -4,9 +4,11 @@ We publish UK legislation from 1267 onwards, as well as selected  legislation or
 
 An item of legislation is an individually identifiable legal text passed by a legislature or governmental body. Legislation.gov.uk publishes many different types of new and historical legislation, although [we do not record or publish all UK legislation]().
 
-For each item of legislation that we record, we assign that item a URI that uniquely identifies it wherever it appears in our data. For example, the URI of the [Localism Act 2011](https://www.legislation.gov.uk/ukpga/2011/20/contents) (c. 20) is:
+For each item of legislation that we record, we assign that item a URI that uniquely identifies it. For example, the URI of the [Localism Act 2011](https://www.legislation.gov.uk/ukpga/2011/20/contents) (c. 20) is:
 
 `http://www.legislation.gov.uk/id/ukpga/2011/20`
+
+We use the same URI to identify an item of legislation across our whole dataset. We encourage you to use these URIs in your own data to uniquely identify items of UK legislation and retained EU origin legislation.
 
 ## Structure of a legislation document
 
@@ -16,7 +18,7 @@ An item of legislation is a structured piece of text, consisting of a set of com
  * numbered paragraphs and sub-paragraphs;
  * headings (such as parts, chapters and cross-headings), with or without numbers;
  * schedules, appendices and attachments, which follow the main body of the text;
- * a signature, bearing the names of the officials who authorised the making of the legislation;
+ * a signature block, bearing the names of the officials who authorised the making of the legislation;
  * explanatory text, which appears at the end of the text and describe the purposes for which it was passed.
 
 We assign each of these features a URI, so that it is possible to identify and link to them separately from the document as a whole.
@@ -28,7 +30,7 @@ For example:
  * `http://www.legislation.gov.uk/id/asp/2019/17/part/2/chapter/2` is the URI of [Chapter 2 of Part 2 of the Transport (Scotland) Act 2019](http://www.legislation.gov.uk/id/asp/2019/17/part/2/chapter/2) (asp 17). 
  * `http://www.legislation.gov.uk/id/nia/2016/15/schedule/2` is the URI of [Schedule 2 of the Employment Act (Northern Ireland) 2016](http://www.legislation.gov.uk/id/nia/2016/15/schedule/2) (c. 15 (N.I.)).
  * `http://www.legislation.gov.uk/id/uksi/2013/376/note` is the URI of the [explanatory note for the Universal Credit Regulations 2013 ](http://www.legislation.gov.uk/id/uksi/2013/376/note).
- * `http://www.legislation.gov.uk/id/eur/2016/679/signature` is the signature of the [GDPR (General Data Protection Regulation)](http://www.legislation.gov.uk/id/eur/2016/679/signature). 
+ * `http://www.legislation.gov.uk/id/eur/2016/679/signature` is the URI of the signature block of the UK [GDPR (General Data Protection Regulation)](http://www.legislation.gov.uk/id/eur/2016/679/signature). 
 
 Each of these features may have one or more versions (see below).
 
@@ -51,7 +53,7 @@ Each revised version of an item or section of legislation may embody that item o
  * in a particular geographical extent (one of the legal jurisdictions of the UK)
  * in one of the languages in which the item was or is published.
 
-Where we hold the text for a version, we make it available in one or more formats (XML and the formats we generate from it, or a static PDF). 
+Where we hold the text for a version, we make it available in one or more formats (either [CLML](/formats/xml.md) and the formats we generate from it, a static PDF, or both). 
 
 We treat the item of legislation, its versions and the formats of those versions as separate (but related) things in separate categories.
 
@@ -66,13 +68,15 @@ In our data model, we map the FRBR concepts onto the following legislation conce
 
 * an item of legislation, or a division of it, is a **work**;
 * an version of an item of legislation, or a division of it, is an **expression**;
-* a representation of an interpretation of an item or a division in a specific file format is a **manifestation**.
+* a representation of an interpretation of an item or a division, provided in a specific file format, is a **manifestation**.
 
 ### Points in time
 
+**Note that some items of legislation have revised versions available as static PDFs, which do not use the below URIs. For more information on these, see the [legislation PDFs](/model/uris/reference.md#legislation-pdfs) sectin of the URI scheme reference.**
+
 Each newly published item (and each of its sections) has an enacted, made or created version that shows the text of the item as it was passed into law.
 
-For items we have updated or intend to update, the item and its sections will also have one or more edited or revised versions, each at a dated point in time. They will also have a "current" version (shown on the website as "latest available (revised)") which contains the same text and annotations as the latest point in time version.
+For items we have updated (or are planning to update in the near future), the item and its sections will also have one or more edited or revised versions, each at a dated point in time. They will also have a &ldquo;current&rdquo; version (shown on the website as &ldquo;latest available (revised)&rdquo;) which contains the same text and annotations as the latest point in time version.
 
 The date of the first revised version for a item or section of legislation is normally the day the item or section first comes fully or partly into force, and contains extent and commencement information about the sections of the item in addition to their text. If any amendments apply to the item at or immediately before the time it comes into force, the first dated version will also contain those amendments. There will then be a subsequent dated version on each day on which an amendment or commencement comes into force.
 
@@ -96,8 +100,8 @@ An item or section may have different versions for different geographical extent
 
 For example, an amendment may amend a provision only for England and Wales, even though the provision applies in England and Wales and Scotland, so at each point in time when the amendment is in force only in England and Wales, there are two versions of the provision and its parent item:
 
- * one version for England and Wales, where the amendment is in force, and 
- * one version for Scotland, where the amendment is not in force.
+ * one version for England and Wales, where the amendment extends and is in force, and 
+ * one version for Scotland, where the amendment does not extend.
 
 For example, section 3 of the Dogs Act 1906 began to diverge between the legal jurisdiction of England and Wales and the jurisdiction of Scotland on the 1<sup>st</sup> April 1992. The URI for the version of section 3 of that Act as it was in force on that date in England and Wales is:
 
@@ -111,7 +115,7 @@ Section 3 was repealed in England and Wales on the 6<sup>th</sup> April 2008, bu
 
 `http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/scotland`
 
-The URI for the latest version of the section for both jurisdictions, which returns the text of both versions, is `http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/`.
+The URI for the latest version of the section for both jurisdictions, which returns the text of both versions, is `http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3`.
 
 ### Languages
 
@@ -147,10 +151,10 @@ We do not currently hold the text of quashed items of legislation on legislation
 
 Each extant version of an item of legislation has at least one *manifestation*, which is a representation of that version in a digital format.
 
-We represent the text of almost all digitally published and edited legislation as XML, in a bespoke XML dialect called Crown Legislation Markup Language (or CLML for short). 
+We represent the text of almost all digitally published and edited legislation as XML, in a bespoke XML dialect called [Crown Legislation Markup Language](/formats/xml.md) (or CLML for short). 
 
-We convert legislation to CLML when we ingest it in machine-readable formats from other sources, including new legislation from legislatures ([Parliament](https://www.parliament.uk/), the [Welsh Sennedd](https://www.senedd.cymru), the [Scottish Parliament]() or the [Northern Ireland Assembly]()) and government departments, as well as some legislation from historical sources. We then generate other formats from the CLML on demand, including the HTML views for our website, dynamically generated PDFs and other XML formats such as Akoma Ntoso (AKN).
+We convert legislation to CLML when we ingest it in machine-readable formats from other sources, including new legislation from legislatures ([Parliament](https://www.parliament.uk/), the [Welsh Sennedd](https://www.senedd.cymru), the [Scottish Parliament](https://www.parliament.scot/) or the [Northern Ireland Assembly](http://www.niassembly.gov.uk/)) and government departments, as well as some legislation from historical sources. We then generate other formats from the CLML on demand, including the HTML views for our website, dynamically generated PDFs and other XML formats such as Akoma Ntoso (AKN).
 
-The XML schema for Crown Legislation Markup Language describes the permitted structure of a valid CLML document. The schema is [available on our website](), along with [schema documentation]() that contains a guide to its use and a reference for the schema’s features. The [legislation document data]() section of this guide gives a basic explanation for how to interpret CLML.
+The XML schema for Crown Legislation Markup Language describes the permitted structure of a valid CLML document. The schema is [available on our website](https://www.legislation.gov.uk/schema/legislation.xsd), along with [schema documentation]() that contains a guide to its use and a reference for the schema’s features. The [XML](/formats/xml.md) section of this guide gives a basic explanation for how to interpret CLML.
 
-We also store some legislation in its original enacted or made version as PDF, as well as some revised versions of legislation produced by third parties (for example, the Department for Work and Pensions used to produce revised versions of social security Acts and supplied them to legislation.gov.uk as PDF).
+We also store some legislation in its original enacted or made version as PDF, as well as some revised versions of legislation produced by third parties. (For example, the Department for Work and Pensions used to produce revised versions of social security Acts and supplied them to us as PDF.)

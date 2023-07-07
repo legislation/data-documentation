@@ -1,7 +1,7 @@
 
 # HTML
 
-## XHTML
+## XHTML snippets
 
 We provide the content of items, sections and tables of contents in a ready-transformed XHTML format that is suitable for embedding within a web page. **These HTML snippets are only available through their [representation URI](/model/uris/reference.md#representation-uris) and not through content negotiation.** 
 
@@ -13,7 +13,7 @@ The XHTML snippets use the exact same HTML markup as the content pane of our web
 *   [legislation.css](https://www.legislation.gov.uk/styles/legislation.css) for Northern Ireland Acts
 *   [explanatoryNotes.css](https://www.legislation.gov.uk/styles/explanatoryNotes.css) for Explanatory Notes
 
-The HTML snippets include context information, such as the title of the Part that the section you're looking at belongs to.
+The HTML snippets include context information, such as the title of the Part to which the section you're looking at belongs.
 
 You can get an item or section as an XHTML snippet by appending `/data.xht` to a version URI.
 

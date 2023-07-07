@@ -16,7 +16,7 @@ Both the table of contents and the full content of the legislation includes link
 * The `IdURI` attribute provides the identifier URI for the section. This URI identifies the section, but not the particular version that should be linked to from the view of the legislation that you are looking at.
 * The `DocumentURI` attribute provides the document URI for the section, which includes any selected extent and the currently viewed version.
 
-## Entire Items
+## Entire items
 
 When an entire piece of legislation is requested using a URL that contains a version such as `http://www.legislation.gov.uk/ukpga/1985/67/2003-04-01`, the legislation will be returned in its entirety, including sections that were not in force on the given date, which will including any prospective sections. Using the keyword prospective in place of the date will indicate how the legislation will look if all prospective amendments are applied in the future. A URL without a date will give you the current version of the legislation, which is the same as using today's date in the URI.
 

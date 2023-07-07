@@ -45,15 +45,15 @@ Some documents are only available as PDF. For example, the Metropolis Water Act 
 
 You can get metadata (information about an item of legislation) through the API.
 
-The `<ukm:Metadata>` element in CLML <!--TODO link to explanation of namespaces--> contains information about the item of legislation and the version being viewed, including but not limited to:
+The `<ukm:Metadata>` element in CLML (see the section on [namespaces](/api/xml-intro.md#namespaces) in our introduction to XML for an explanation of what `ukm:` means) contains information about the item of legislation and the version being viewed, including but not limited to:
 
-* the title of the item
-* the item's type, year and number
-* any "alternative" formats of the item, such as a PDF
-* any associated documents, such as Impact Assessments and Explanatory Memoranda
-* the date(s) of enactment, making, laying and/or coming into force of the item (where present in the data)
-* any powers to make secondary legislation conferred by the item (present only in [revised data]())
-* any unapplied changes outstanding for the document
+* the title of the item;
+* the item's type, year and number;
+* any &ldquo;alternative&rdquo; formats of the item, such as a PDF;
+* any associated documents, such as Impact Assessments and Explanatory Memoranda;
+* the date(s) of enactment, making, laying and/or coming into force of the item (where present in the data);
+* any powers to make secondary legislation conferred by the item (present only in [revised data]()); and
+* any unapplied changes outstanding for the document.
 
 The CLML Reference Guide has guidance on how to interpret [metadata in CLML]().
 
@@ -64,19 +64,19 @@ If you only want the metadata for a document, the `/resources` sub-resource cont
 
 ### Changes to legislation
 
-The API provides lists of [changes made to legislation](https://www.legislation.gov.uk/changes), also known as "effects". You can request a list of changes to legislation by the type, year and number of the affected and/or affecting document, including information on:
+The API provides lists of [changes made to legislation](https://www.legislation.gov.uk/changes), also known as &ldquo;effects&rdquo;. You can request a list of changes to legislation by the type, year and number of the affected and/or affecting document, including information on:
 
- * the affected and affecting provisions of the items
- * the type of effect (e.g. &ldquo;words substituted&rdquo;, &ldquo;repealed&rdquo;, &ldquo;restricted&rdquo;)
- * the in force date(s) of the effect
- * the geographical extent of the effect
- * whether the effect has been applied or will be applied
+ * the affected and affecting provisions of the items;
+ * the type of effect (e.g. &ldquo;words substituted&rdquo;, &ldquo;repealed&rdquo;, &ldquo;restricted&rdquo;);
+ * the in force date(s) of the effect;
+ * the geographical extent of the effect; and/or
+ * whether the effect has been applied or will be applied.
 
-To get a list of effects, see the [Changes to legislation](/api/search.md#changes) sub-section of the "Search, lists and feeds" section.
+To get a list of effects, see the [changes to legislation](/api/search.md#changes-to-legislation) sub-section of the &ldquo;Search, lists and feeds&rdquo; section.
 
 <!--For more information on how to request lists of effects, see the changes section of our API reference.--> 
 
-For more information on how to interpret effects, see the [effects section of the CLML reference guide]().
+For more information on how to interpret effects, see the [effects section]() of the CLML reference guide.
 
 ### Search, lists and feeds
 
@@ -89,9 +89,9 @@ By default the API returns items in order of their last modification date (the d
 For example:
 
 * [https://www.legislation.gov.uk/ukpga/data.feed](https://www.legislation.gov.uk/ukpga/data.feed) returns the first page of the feed of UK Public General Acts, maximum 20 items per page.
-* [https://www.legislation.gov.uk/primary+secondary?title=help](https://www.legislation.gov.uk/primary+secondary?title=help) returns the first page of the feed of UK legislation with "help" in the title, maximum 20 items per page.
+* [https://www.legislation.gov.uk/primary+secondary?title=help](https://www.legislation.gov.uk/primary+secondary?title=help) returns the first page of the feed of UK legislation with &ldquo;help&rdquo; in the title, maximum 20 items per page.
 * [https://www.legislation.gov.uk/all/2002/1-100?page=2](https://www.legislation.gov.uk/all/2002/1-100?page=2) returns the second page of the feed of legislation of all types with a year of 2002 and a number between 1 and 100, maximum 20 items per page.
-* [https://www.legislation.gov.uk/uksi+wsi+ssi+nisr/data.feed?text=dogs&results-count=5](https://www.legislation.gov.uk/uksi+wsi+ssi+nisr/data.feed?text=dogs&results-count=5) returns a feed of Statutory Instruments (UK, Welsh and Scottish) and Northern Ireland Statutory Rules with the word "dogs" in the text, maximum 5 items per page.
+* [https://www.legislation.gov.uk/uksi+wsi+ssi+nisr/data.feed?text=dogs&results-count=5](https://www.legislation.gov.uk/uksi+wsi+ssi+nisr/data.feed?text=dogs&results-count=5) returns a feed of Statutory Instruments (UK, Welsh and Scottish) and Northern Ireland Statutory Rules with the word &ldquo;dogs&rdquo; in the text, maximum 5 items per page.
 
 For more information, see the section on [search, lists and feeds](/api/search.md).
 
@@ -99,22 +99,24 @@ For more information, see the section on [search, lists and feeds](/api/search.m
 
 You can connect to our API using any HTTP client (such as a web browser, or an HTTP request library for your programming language). This page contains addresses for some example resources available through the API. The API <!--TODO except for the SPARQL endpoint--> only supports `GET` requests. 
 
-We encourage users to use our API in their own applications, including crawling and bulk access, and whether commercial or non-commercial. The data in the API are available under open licences. For more information on licensing, see the License section of this guide.
+We encourage users to use our API in their own applications, including crawling and bulk access, and whether commercial or non-commercial. The data in the API are available under open licences. For more information on licensing, see the [licence](/licence.md) section of this guide.
 
 ### Fair Use Policy
 
-We do have a [Fair Use Policy]() for the API. To use the API, you must follow the requirements of the policy: 
+We do have a [Fair Use Policy](/fair-use.md) for the API. To use the API, you must follow the requirements of the policy: 
 
- * If you make requests to the API, they must specify a **user agent** (if you are making requests from a web browser it will specify a user agent automatically). <!-- TODO in future we may require that the user agent contains descriptive information such as a web address -->
+ * If you make requests to the API, they must specify a **user agent** (if you are making requests from a web browser, it will specify a user agent automatically). <!-- TODO in future we may require that the user agent contains descriptive information such as a web address -->
  * We currently limit each IP address to 3,000 API requests every 5 minutes. If you want to download a large amount of legislation data at once, it may be quicker to use our [bulk downloads]() service, which allows you to download all or part of our set of legislation as a ZIP file.
 
 ### CORS
 
 The API has [CORS (cross-origin resource sharing)](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) enabled, which means you can make requests to the API from client-side Javascript applications running in a web browser.
 
+Note that only endpoints where the path ends in `/data.[ext]` (e.g. `/data.xml` or `/data.feed`) have CORS enabled. Endpoints ending in `/data.htm` (which correspond to web pages as returned by the website) currently do not have CORS enabled.
+
 ### Caching
 
-We [cache](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) the output of the API for performance reasons, so sometimes there may be a delay between an update to our data and its appearance on the website or API.
+We [cache](/api/caching.md) the output of the API for performance reasons, so sometimes there may be a delay between an update to our data and its appearance on the website or API.
 
 ### Representations and content negotiation
 

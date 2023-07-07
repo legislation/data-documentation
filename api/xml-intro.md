@@ -37,6 +37,8 @@ An XML document can declare the namespace of an element using the `xmlns` attrib
 </P1>
 ```
 
+### Namespace prefixes
+
 An XML document can also declare that a prefix represents a particular namespace using the `xmlns:[NS]` attribute, where `[NS]` is the prefix to be used. In the below example, the root element declares prefixes that are used by descendent elements, and both the root `Legislation` element and its child `Primary` element are in the namespace `http://www.legislation.gov.uk/namespaces/legislation`, despite having different prefixes:
 
 ```
@@ -50,8 +52,14 @@ An XML document can also declare that a prefix represents a particular namespace
   <leg:Primary>...</leg:Primary>
 </Legislation>
 ```
+
+### Prefixes are context-dependent
  
-Note that different documents (and different elements within a document) may declare their own prefix for any namespace, or declare a namespace as the default one with no prefix. For example, various CLML documents use the `leg` and `ukl` namespaces to represent the `http://www.legislation.gov.uk/namespaces/legislation` namespace, but most declare it as the default namespace using `xmlns` and then do not use a prefix at all (and some documents use multiple prefixes for the same namespace in different places). Make sure when you parse XML that you are checking for both the local name and the actual *namespace*, not a prefix or just a local name.
+Note that different documents (and different elements within a document) may declare their own prefix for any namespace, or declare a namespace as the default one with no prefix. 
+
+For example, various CLML documents use the `leg` and `ukl` namespaces to represent the `http://www.legislation.gov.uk/namespaces/legislation` namespace, but most declare it as the default namespace using `xmlns` and then do not use a prefix at all (and some documents use multiple prefixes for the same namespace in different places). 
+
+Make sure when you parse XML that you are checking for both the local name and the actual *namespace*, not a prefix or just a local name. When processing or querying XML, you may need to tell your XML processor which prefix corresponds to which namespace. For an example, see the [a note on XPath namespace prefixes](#a-note-on-xpath-namespace-prefixes) section below.
 
 ## Parsing XML
 
@@ -59,9 +67,35 @@ We strongly recommend you use a proper XML parser to parse XML. XML has many com
 
 Some popular XML parser libraries and classes include:
 
- * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, or the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) library
+ * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, the [lxml](https://pypi.org/project/lxml/) library, or the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) library _(note that ElementTree does not fully support [XPath]())_
  * For Javascript, the [DOMParser class](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (only in web browsers), or the [xmldom](https://www.npmjs.com/package/@xmldom/xmldom) package (which implements the DOMParser interface for Node and other non-browser JS runtimes)
  * For .NET (C#), the [System.Xml](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/) classes in the standard library
  * For Java, the [DocumentBuilder](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilder.html) or [SAXParser](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/SAXParser.html) classes in the `javax.xml.parsers` package
- * For Go, the [xml](https://pkg.go.dev/encoding/xml) package in the standard library
- * For Rust, the [minidom](https://crates.io/crates/minidom) or [quickxml](https://crates.io/crates/quick-xml) crates
+ * For Go, the [xml](https://pkg.go.dev/encoding/xml) package in the standard library _(note that this package does not provide support for [XPath]())_
+ * For Rust, the [quickxml](https://crates.io/crates/quick-xml) crate _(note that this crate does not provide support for [XPath]())_
+
+## Navigating XML with XPath
+
+The [XPath](https://en.wikipedia.org/wiki/XPath) language is a simple, flexible and powerful syntax for querying and transforming XML documents.
+
+An XPath _location path_ is a type of XPath expression that identifies part(s) of an XML document. For example, the following location path identifies all `<P1>` elements with an `id` attribute that are the descendant of a `<Pblock>` element anywhere within a `<Secondary>` child of a `<Legislation>` element:
+
+`/child::leg:Legislation/child::leg:Secondary/descendant::leg:Pblock/descendant::leg:P1[exists(@id)]`
+
+This can be written in an abbreviated form as:
+
+`/leg:Legislation/leg:Secondary//leg:Pblock//leg:P1[@id]`
+
+XPath has many other features. Most XML parsers that provide XPath support only support XPath 1.0, which has fewer features than the latest versions. To find out more about the features of XPath 1.0, read the [XPath 1.0 specification](https://www.w3.org/TR/1999/REC-xpath-19991116/) and the [syntax and semantics section of the XPath article on Wikipedia](https://en.wikipedia.org/wiki/XPath#Syntax_and_semantics_(XPath_1.0)).
+
+### A note on namespaces in XPath
+
+In the above examples, each step of the XPath location path expression has a prefix ending with a colon (in those examples, the only prefix used is `leg:`). As explained above in the [namespaces](#namespaces) section, the names of XML elements (and sometimes attributes) may have a namespace. A prefix in an XML element/attribute name indicates that its namespace is the one the current element (or one of its ancestors) declares the prefix to represent.
+
+The relationship between a prefix and a namespace is context-dependent and may vary between documents and even elements within a document, and an element may have a namespace without a prefix if a default namespace is declared. As a result, a namespace prefix in an XPath expression is meaningless unless the resolver of the expression is told what the prefix means, and a resolver will treat the absence of a prefix as indicating &ldquo;no namespace&ldquo; unless told otherwise. If you fail to register namespaces prefixes with an XPath resolver before using it, you may find that either your XPath expressions fail to return the desired results or cause the application to complain that the expression contains an unrecognized prefix and stop.
+
+To avoid writing XPath expressions that don&rsquo;t work, make sure that you:
+
+* know what the namespace URI is for each element you want to query&mdash;if there is a prefix look for the value of the `xmlns:[prefix]` attribute on the target element or one of its ancestors, and if there is no prefix look for the value of the `xmlns` attribute instead;
+* provide the XPath resolver with a set of prefixes corresponding to the namespaces you need to use in your XPath expression&mdash;for example, the <code>[document.evaluate()](https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate)</code> method in Javascript takes a `namespaceResolver` parameter that accepts a function taking a prefix string and returning the namespace URI corresponding to that prefix (or returns the default namespace if `null` is provided); and
+* use the prefix you&rsquo;ve provided for each namespace in the appropriate places in your XPath expression.

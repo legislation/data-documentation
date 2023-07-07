@@ -1,4 +1,4 @@
-# Atom Feeds
+# Atom feeds
 
 We provide lists of [legislation](/api/search.md#listings) and [effects](/api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
 
