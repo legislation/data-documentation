@@ -160,7 +160,7 @@ If you are not familiar with XML, we strongly recommend you read our [introducti
 
 #### Content negotiation
 
-To request a different representation of a resource, you can specify a _subresource_ at the end of the URI path. For example, appending `/data.xml` to the end of the URI for a version of legislation requests that version as CLML (e.g. https://www.legislation.gov.uk/anaw/2013/1/data.xml requests the CLML version of 2013 anaw 1).
+To request a different representation of a resource, you can specify a _subresource_ at the end of the URI path. For example, appending `/data.xml` to the end of the URI for a version of legislation requests that version as CLML (e.g. [https://www.legislation.gov.uk/anaw/2013/1/data.xml](https://www.legislation.gov.uk/anaw/2013/1/data.xml) requests the CLML version of 2013 anaw 1).
 
 <!-- PA: I’m commenting this out because I think we want to discourage server side content negotiation, which the WHATWG advise against and reduces cache performance: https://wiki.whatwg.org/wiki/Why_not_conneg#Server-side_choice_is_worse_for_intermediate_caches_than_browser-side_choice
 
@@ -170,7 +170,7 @@ We strongly recommend you specify a subresource to choose a representation, rath
 
 ### Supported HTTP methods
 
-The API currently only supports the `GET` HTTP method, which is the default for most applications that use HTTP, except for the SPARQL endpoint at https://www.legislation.gov.uk/sparql, which also supports the `POST` HTTP method in accordance with the [support for `POST` in the SPARQL protocol](https://www.w3.org/TR/sparql11-protocol/#query-via-post-urlencoded).
+The API currently only supports the `GET` HTTP method, which is the default for most applications that use HTTP, except for the SPARQL endpoint at [https://www.legislation.gov.uk/sparql](https://www.legislation.gov.uk/sparql), which also supports the `POST` HTTP method in accordance with the [support for `POST` in the SPARQL protocol](https://www.w3.org/TR/sparql11-protocol/#query-via-post-urlencoded).
 
 ### Response codes
 
@@ -179,7 +179,7 @@ The API uses HTTP response codes as specified in [RFC 9110 (HTTP Semantics)](htt
 Most requests to the API should return `200 OK`. Some other common response codes the API returns are:
 
  * `202 Accepted`: The API will return this code if you make a request to a URI that identifies a resource that is dynamically generated, such as a [dynamically generated PDF](../formats/pdf.md#dynamically-generated-pdfs), to indicate that your request has been accepted but the resource is not yet available. You should repeat the request for the same URI after a short wait, until the API returns a `200 OK` response—we recommend you wait at least 10 seconds between each request to give the API sufficient time to generate the resource.
- * `300 Multiple Choices`: The API will return this code if you make a request to a URI that identifies more than one item or section of legislation (e.g. http://www.legislation.gov.uk/id/ukpga/1955/18 identifies both the Army Act 1955 and the Aliens' Employment Act 1955). The response will contain an HTML list with links to the different options.
+ * `300 Multiple Choices`: The API will return this code if you make a request to a URI that identifies more than one item or section of legislation (e.g. [http://www.legislation.gov.uk/id/ukpga/1955/18](http://www.legislation.gov.uk/id/ukpga/1955/18) identifies both the Army Act 1955 and the Aliens' Employment Act 1955). The response will contain an HTML list with links to the different options.
  * `400 Bad Request`: The API will return this code if you make a request for an item of legislation and specify a year or number that is out of the acceptable range for that type of legislation. The API may also return this code if your request is malformed.
  * `403 Forbidden`: The API will return this code if you exceed the rate limit (see the section on our [Fair Use Policy](#fair-use) above). Your application should slow down or stop making requests until it is under the rate limit again. The API also returns `403 Forbidden` if we have blocked requests from your IP address. If you continue to receive `403 Forbidden` responses to your requests, please [contact us](../index.md#contact-us). 
  * `500 Internal Server Error`: The API may return this code if there is a temporary error within the service, or if it cannot process the requested document due to an error in the data. If you get this response more than once for a request to a specific resource, please [contact us](../index.md#contact-us) with details of the resource.

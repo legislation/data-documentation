@@ -6,7 +6,7 @@ We provide both dynamically generated PDFs of legislation content, and static PD
 
 Any item of legislation or subdivision of it that you can get as XML or HTML is also available as a dynamically generated PDF. To get an item or subdivision of legislation as PDF, append `/data.pdf` to a version URI.
 
-The API dynamically generates a PDF the first time a user requests a PDF representation of a given resource, and then caches the generated PDF, which is returned instantly upon subsequent requests. If the PDF is not yet in the cache, the API will return a `202 Accepted` response, and you should repeat the request every 10 seconds or so until it returns a `200 OK` response containing the PDF (see the API documentation on [response codes]|(../api/overview.md#response-codes)).
+The API dynamically generates a PDF the first time a user requests a PDF representation of a given resource, and then caches the generated PDF, which is returned instantly upon subsequent requests. If the PDF is not yet in the cache, the API will return a `202 Accepted` response, and you should repeat the request every 10 seconds or so until it returns a `200 OK` response containing the PDF (see the API documentation on [response codes](../api/overview.md#response-codes)).
 
 For example, you can get the current version of the Education Act (Northern Ireland) 2014 as PDF at the following URI:
 

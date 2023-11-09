@@ -12,4 +12,4 @@ When our API returns a response to the request, our content delivery network sav
 
 On the website, a Time to Live (TTL) mechanism has been implemented which determines how long our content delivery network caches content before a check needs to be made for an updated version.
 
-Currently we cache all pages on legislation.gov.uk for 1 hour, except the new legislation feeds under `/new/` (e.g. https://www.legislation.gov.uk/new/data.feed), which we cache for 5 minutes. Newly published legislation does not exist in the cache until it is first requested.
+Currently we cache all pages on legislation.gov.uk for 1 hour, except the new legislation feeds under `/new/` (e.g. [https://www.legislation.gov.uk/new/data.feed](https://www.legislation.gov.uk/new/data.feed)), which we cache for 5 minutes. Newly published legislation does not exist in the cache until it is first requested.

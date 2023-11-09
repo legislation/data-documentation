@@ -17,7 +17,7 @@ The feed allows you to find out when we have:
  * recorded changes to legislation (effects) from or to an item of legislation; and
  * republished or withdrawn any content already on the website.
 
-The full feed, containing all entries, is available at https://www.legislation.gov.uk/update/data.feed. You can also filter the feed for entries about a specific item, type or category of legislation, or use various other combinations of filters (see [Filtering](#filtering) below).
+The full feed, containing all entries, is available at [https://www.legislation.gov.uk/update/data.feed](https://www.legislation.gov.uk/update/data.feed). You can also filter the feed for entries about a specific item, type or category of legislation, or use various other combinations of filters (see [Filtering](#filtering) below).
 
 ## Paging
 
@@ -69,15 +69,15 @@ The Publication Log feeds support the following path parameters:
 
 |Parameter|Filters|Permitted values|Examples|
 |---|---|---|---|
-|Date|The date on which the event occurred (from the `<atom:published>` field)|A date in `yyyy-mm-dd` format|https://www.legislation.gov.uk/update/2023-07-07/data.feed|
-|Content type|The type of content to which the event relates|One of the following values:<ul><li>`legislation`<li>`draft`<li>`associated-documents`<li>`changes`|https://www.legislation.gov.uk/update/draft/data.feed|
-|Direction|**For effects only:** Whether the effects were recorded against the affecting item or the affected item|One of the following values:<ul><li>`affecting`<li>`affected`|https://www.legislation.gov.uk/update/changes/affected/data.feed|
-|Document category|**For legislation and associated documents:** The category of legislation|One of the following values:<ul><li>`primary`<li>`secondary`<li>`eu-origin`|<p>https://www.legislation.gov.uk/update/legislation/eu-origin/data.feed|
-|Document main type|The type of the document to which the resource relates|One of the values in the [legislation types](../model/uris/reference.md) list|https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed (Document main type = wsi)|
-|Treaty name|**For EU treaties only:** The short name of the EU treaty|One of the following values:<ul><li>`teec`<li>`euratom`<li>`teu`<li>`eea-agreement`<li>`withdrawal-agreement`|https://www.legislation.gov.uk/update/eut/withdrawal-agreement/data.feed|
-|Year|The year assigned to the document|A four digit year|https://www.legislation.gov.uk/update/2014/data.feed|
-|Regnal year|**For regnal year-numbered items only:** The monarch and session assigned to the document|A regnal year string (see examples)|
-|Number|The number assigned to the document in its main numbering series|A whole number greater than or equal to 0|https://www.legislation.gov.uk/update/2023-07-06/2022/231/data.feed (Number = 231)|
+|Date|The date on which the event occurred (from the `<atom:published>` field)|A date in `yyyy-mm-dd` format|[https://www.legislation.gov.uk/update/2023-07-07/data.feed](https://www.legislation.gov.uk/update/2023-07-07/data.feed)|
+|Content type|The type of content to which the event relates|One of the following values:<ul><li>`legislation`<li>`draft`<li>`associated-documents`<li>`changes`|[https://www.legislation.gov.uk/update/draft/data.feed](https://www.legislation.gov.uk/update/draft/data.feed)|
+|Direction|**For effects only:** Whether the effects were recorded against the affecting item or the affected item|One of the following values:<ul><li>`affecting`<li>`affected`|[https://www.legislation.gov.uk/update/changes/affected/data.feed](https://www.legislation.gov.uk/update/changes/affected/data.feed)|
+|Document category|**For legislation and associated documents:** The category of legislation|One of the following values:<ul><li>`primary`<li>`secondary`<li>`eu-origin`|[https://www.legislation.gov.uk/update/legislation/eu-origin/data.feed](https://www.legislation.gov.uk/update/legislation/eu-origin/data.feed)|
+|Document main type|The type of the document to which the resource relates|One of the values in the [legislation types](../model/uris/reference.md) list|[https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed](https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed) (Document main type = wsi)|
+|Treaty name|**For EU treaties only:** The short name of the EU treaty|One of the following values:<ul><li>`teec`<li>`euratom`<li>`teu`<li>`eea-agreement`<li>`withdrawal-agreement`|[https://www.legislation.gov.uk/update/eut/withdrawal-agreement/data.feed](https://www.legislation.gov.uk/update/eut/withdrawal-agreement/data.feed)|
+|Year|The year assigned to the document|A four digit year|[https://www.legislation.gov.uk/update/2014/data.feed](https://www.legislation.gov.uk/update/2014/data.feed)|
+|Regnal year|**For regnal year-numbered items only:** The monarch and session assigned to the document|A regnal year string (see examples)|[https://www.legislation.gov.uk/update/legislation/ukpga/Eliz2/6-7/51/data.feed](https://www.legislation.gov.uk/update/legislation/ukpga/Eliz2/6-7/51/data.feed) (Regnal = Eliz2/6-7)|
+|Number|The number assigned to the document in its main numbering series|A whole number greater than or equal to 0|[https://www.legislation.gov.uk/update/2023-07-06/2022/231/data.feed](https://www.legislation.gov.uk/update/2023-07-06/2022/231/data.feed) (Number = 231)|
 
 ### Query string parameters
 
@@ -87,8 +87,8 @@ The Publication Log feeds support the following query parameters:
 |---|---|---|
 |event|The type of event|`published` or `withdrawn`|
 |new|<p>**For items of legislation and UK Impact Assessments:** whether the item of legislation or UK Impact Assessment associated with the event is new to legislation.gov.uk<p>**For other associated documents:** whether the associated document has been published before at this URI|`true` or `false`|
-|format|The format of the resource|One of the following values:<ul><li>`xml`<li>`pdf`<li>`html5`|
-|language|A language of the resource|`en` or `cy`<p>(dual-language resources will match either value)|
+|format|The format of the resource|`xml`, `pdf` or `html5`|
+|language|A language of the resource|`en` or `cy` (dual-language resources will match either value)|
 |title|The title of the resource or the document to which it is associated, or any contiguous sequence of words within its title|Any text string|
 |republished|Whether the resource has been published before at this URI|`true` or `false`|
 
@@ -125,7 +125,7 @@ The default sort is `date` and the default sort order is `descending`.
 
 The Publication Log feed contains one entry for each publication, republication or withdrawal of an XML or PDF representation of an item of legislation, which may be for the enacted or made version or for a revised Point in Time (PiT).
 
-The following is the example of the publication of XML for the 1/3/2021 revised PiT for Regulation (EU) 2019/2013 (from https://www.legislation.gov.uk/update/2023-07-07/legislation/eu-origin/eur/2019/2013/data.feed?format=xml&republished=false):
+The following is the example of the publication of XML for the 1/3/2021 revised PiT for Regulation (EU) 2019/2013 (from [https://www.legislation.gov.uk/update/2023-07-07/legislation/eu-origin/eur/2019/2013/data.feed?format=xml&republished=false](https://www.legislation.gov.uk/update/2023-07-07/legislation/eu-origin/eur/2019/2013/data.feed?format=xml&republished=false)):
 
 ```
 <entry>
@@ -157,7 +157,7 @@ The following is the example of the publication of XML for the 1/3/2021 revised 
 </entry>
 ```
 
-The following is an example of the withdrawal of a non-print PDF of the made English version of W.S.I. 2023/754 (from https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf):
+The following is an example of the withdrawal of a non-print PDF of the made English version of W.S.I. 2023/754 (from [https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf](https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf)):
 
 ```
 <entry>
@@ -188,7 +188,7 @@ The following is an example of the withdrawal of a non-print PDF of the made Eng
 
 The feed contains one entry for each publication, republication or withdrawal of a PDF, XML or HTML 5 version of an associated document for an item of legislation.
 
-The following is an example of the publication of an Explanatory Note for a UKPGA (from https://www.legislation.gov.uk/update/2023-07-07/associated-documents/ukpga/2023/data.feed):
+The following is an example of the publication of an Explanatory Note for a UKPGA (from [https://www.legislation.gov.uk/update/2023-07-07/associated-documents/ukpga/2023/data.feed](https://www.legislation.gov.uk/update/2023-07-07/associated-documents/ukpga/2023/data.feed)):
 
 ```
 <entry>
@@ -220,7 +220,7 @@ The feed contains one entry for each publication, republication or withdrawal of
 
 The following is an example of the publication of a UKIA associated with an item of legislation. There are two entries, one from the feed for the item of legislation with which it is associated, and one from the feed for the UKIA itself. Both entries have the same ID as they represent the same event, the same document (which represents the link between the two items) and the same metadata about the resource itself. However, the metadata in the feed entry for the item of legislation (the type, year, number and publisher) all relate to the item of legislation, whereas in the feed entry for the UKIA they relate to the UKIA.
 
-The entry for the item of legislation appears as follows (from https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed):
+The entry for the item of legislation appears as follows (from [https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed](https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed)):
 
 ```
 <entry>
@@ -246,7 +246,7 @@ The entry for the item of legislation appears as follows (from https://www.legis
 </entry>
 ```
 
-The entry for the UKIA appears as follows (from https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed):
+The entry for the UKIA appears as follows (from [https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed](https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed)):
 
 ```
 <entry>
@@ -285,7 +285,7 @@ Due to limitations in our API, changes entries do not have the following fields:
 
 Changes entries also do not have a language, as each legislation item only has a single set of effects even if its text has multiple languages. However, they do contain both English and Welsh titles for dual-language documents.
 
-The following is an example of a changes event relating to the publishing of effects made **by** W.S.I. 2020/1073 (from https://www.legislation.gov.uk/update/changes/affecting/wsi/2020/1073/data.feed):
+The following is an example of a changes event relating to the publishing of effects made **by** W.S.I. 2020/1073 (from [https://www.legislation.gov.uk/update/changes/affecting/wsi/2020/1073/data.feed](https://www.legislation.gov.uk/update/changes/affecting/wsi/2020/1073/data.feed)):
 
 ```
 <entry>
