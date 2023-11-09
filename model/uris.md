@@ -305,11 +305,11 @@ If there are no Explanatory Notes or no Explanatory Note for a specific section 
 
 Each document is available in multiple [formats](../../formats/overview.md). The URI for a particular format follows the template:
 
-<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}][/{<a href="#legislation-extents">extent</a>}][/{<a href="#legislation-versions">version</a>}]/data.\[ext\]</code>
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}][/{<a href="#legislation-extents">extent</a>}][/{<a href="#legislation-versions">version</a>}]/data.[ext]</code>
 
 for legislation and
 
-<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}]/notes/data.\[ext\]</code>
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}]/notes/data.[ext]</code>
 
 for explanatory notes.
 
@@ -393,6 +393,6 @@ TODO explain how to find images-->
 
 Static HTML versions of explanatory notes, where available, use the below URI pattern:
 
-<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}/notes/division/\[number\]/index.htm</code>
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}/notes/division/[number]/index.htm</code>
 
 where `[number]` is a whole number starting from 1 for the first division of the notes and increasing by 1 for each subsequent division. 
