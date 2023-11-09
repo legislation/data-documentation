@@ -393,6 +393,6 @@ TODO explain how to find images-->
 
 Static HTML versions of explanatory notes, where available, use the below URI pattern:
 
-<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}/notes/division/\[number\]/index.htm</code>
+`http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}/notes/division/\[number\]/index.htm`
 
 where `[number]` is a whole number starting from 1 for the first division of the notes and increasing by 1 for each subsequent division. 
