@@ -97,15 +97,42 @@ There are some types of legislation for which we do not record either changes ma
 
 ## Limitations
 
-<!-- TODO: Re-add when history is ready As shown in the History of our Data Collection and Data Completeness sections, the --> Our database is both large and complex, with more than 300,000 items of legislation from data collections deriving from different sources. As a result, the content held within the database has some limitations:
+<!-- TODO: Re-add when history is ready As shown in the History of our Data Collection and Data Completeness sections, the --> Our database is both large and complex, with more than 300,000 items of legislation from data collections deriving from different sources. As a result, the content held within the database has some limitations.
 
--   The text of the Statute Law Database, from which much of our revised primary legislation originates, was derived from two earlier official hardcopy editions of revised primary legislation, Statutes in Force (SIF) and The Northern Ireland Statutes Revised (NISR). The final text of SIF was revised to 1 February 1991, and that of NISR to 1 January 2006. These dates form the basedates for SLD legislation, which means the dates from which revision work has been taken forward. There are two main implications of this:
-    *   Only primary legislation (e.g. Public General Acts) at least partially in force on or after the basedate of 1<sup>st</sup> February 1991 is included, and for Northern Ireland only primary legislation at least partially in force on or after the basedate of 1<sup>st</sup> January 2006
-    *   No version history for revised legislation is available prior to these basedates (except for legislation first revised after 7<sup>th</sup> March 2019)
--	Not all legislation on the website is up-to-date and not all changes to Secondary legislation are in the dataset. If you view a revised version that is not up to date, you will see a red “Changes to Legislation” banner that will explain which amendments are yet to be applied. You can also find unapplied amendments in the `<ukm:UnappliedEffects>` element in the [XML](formats/xml.md) representation of a revised item or section of legislation. 
--	Not all documents are available in all formats. For instance, some documents are only available in PDF format. For more information on the formats available on the website and how to access them, see the [formats](formats/overview.md) section.
--	Images within documents do not have ALT text. ALT text serves several purposes: to allow people with visual or cognitive impairments to read when utilising screen readers; to display a descriptive text in place of a non-loaded image; to provide a semantic meaning to non-text content for search engines.
--	Completeness and accuracy of the data of documents from before the base date cannot be guaranteed as documents might be missing (including legislation no longer in force, and non-print secondary legislation made before 2012) or have been rekeyed or OCRed and may contain errors. However, all other legislation (including older versions of post-base date revised legislation) should be present. 
+### Missing legislation
+
+#### Primary legislation
+
+The text of the Statute Law Database, from which much of our revised primary legislation originates, was derived from two earlier official hardcopy editions of revised primary legislation, Statutes in Force (SIF) and The Northern Ireland Statutes Revised (NISR). The final text of SIF was revised to 1<sup>st</sup> February 1991, and that of NISR to 1<sup>st</sup> January 2006. These dates form the basedates for SLD legislation, which means the dates from which revision work has been taken forward.
+
+As a result, we do not have XML for all UK primary legislation that was not at least partially in force on or after the basedate of 1<sup>st</sup> February 1991. For Northern Ireland, we do not have XML for all primary legislation that was not at least partially in force on or after the basedate of 1<sup>st</sup> January 2006.
+
+#### Secondary legislation
+
+We have acquired secondary legislation from various sources, many of which are not complete. Consequently, we do not have complete sets of the following secondary legislation:
+
+ * Statutory instruments of a local character made before 1987 (or Northern Ireland statutory rules of a local character made before 1996);
+ * Statutory instruments made before 2012 that were not printed (usually temporary legislation).
+
+### Revised legislation
+
+Not all legislation on the website is up to date. Typically, over 95% of all primary legislation on the website is up to date, and over 85% of the top 5,000 documents (including secondary legislation) are up to date. These figures fluctuate as Parliament and ministers regularly enact new amendments to legislation.
+
+Until 7<sup>th</sup> March 2019, the initial revised version of all legislation either came from the original Statutes In Force/Northern Ireland Statutes Revised datasets or was produced using the legacy Statute Law Database editorial system. As a result, no version history is available prior to the base date of 1<sup>st</sup> February 1991 (or 1<sup>st</sup> January 2006 for Northern Ireland legislation) for legislation initially revised before 7<sup>th</sup> March 2019.
+
+If you view a revised version that is not up to date, you will see a red “Changes to Legislation” banner that will explain which amendments are yet to be applied. You can also find unapplied amendments on the [changes to legislation](https://www.legislation.gov.uk/changes) search page and in the `<ukm:UnappliedEffects>` element in the [XML](formats/xml.md) representation of a revised item or section of legislation. 
+
+### Formats
+
+Not all documents are available in all formats. For instance, some documents are only available in PDF format, or do not have a printed PDF format available. For more information on the formats available on the website and how to access them, see the [formats](formats/overview.md) section.
+
+### No ALT text
+
+Images within documents (including diagrams, forms and mathematical formulae) do not currently have descriptive ALT text.
+
+### Errors in historical data
+
+Completeness and accuracy of the data of documents from before the base date cannot be guaranteed, as documents may have been rekeyed or OCRed and may therefore contain errors.
 
 ## Data updates
 
