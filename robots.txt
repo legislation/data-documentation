@@ -1,0 +1,3 @@
+# Not quite ready to let Google see this yet
+User-agent: *
+Disallow: /
