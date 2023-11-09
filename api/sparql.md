@@ -115,7 +115,7 @@ Here, the URI ending `/ukpga/2021/10` is the subject, `leg:title` (short for `<h
 
 #### Ontologies and vocabularies
 
-The Linked Data service uses a bespoke legislation ontology. The ontology specifies a vocabulary of classes and properties that entities in the data can use, such as `ScottishAct` or `title`. There is [documentation for the ontology](/def/legislation/).
+The Linked Data service uses a bespoke legislation ontology. The ontology specifies a vocabulary of classes and properties that entities in the data can use, such as `ScottishAct` or `title`. There is [documentation for the ontology](../def/legislation/).
 
 The most commonly used vocabularies in the Linked Data service are:
 
@@ -163,7 +163,7 @@ Each triple in the Linked Data store exists within a named graph, which is a gro
 The Linked Data service subdivides its data into different datasets according to the following attributes:
 
  * **Topic:** The topic or theme of the data. Currently, the only topic is “core”, which relates to core data about legislation such as titles and citations, years and numbers and the languages of the text;
- * **System:** The system that provided the data. Currently, the only systems are “alignment” (which contains information derived from reference texts and various databases) and “publishing” (which contains information about modern legislation published through [legislation.gov.uk](/)’s Publishing system);
+ * **System:** The system that provided the data. Currently, the only systems are “alignment” (which contains information derived from reference texts and various databases) and “publishing” (which contains information about modern legislation published through [legislation.gov.uk](https://www.legislation.gov.uk/)’s Publishing system);
  * **Origin:** The process, agent or other source responsible for the data in the relevant system. Currently, the only sources are “coreinputs” (the dataset in the alignment system containing the core data) and “department” (data about an item of legislation input to the Publishing system by the entity publishing it);
  * **Data unit:** An intersection of a topic, system and origin. Currently, there are two data units: one is the intersection of the “core” topic, the “alignment” system and the “coreinputs” origin, and the other is the intersection of the “core” topic, the “publishing” system and the “department” origin. There can be multiple data units for each topic, system and origin. Only certain combinations of topics, systems and origins will contain data – for example, not all systems or origins will provide data for the “core” topic, and the “department” origin is currently only relevant to the “publishing” system.
 
@@ -196,8 +196,8 @@ In future, we intend to release a Linked Data API that will allow users to retri
 We also plan for the Linked Data service to provide the following additonal data:
 
  * Legislation publishing data, e.g. data collected in our publishing and bibliographic systems during the registration and publication of new legislation
- * Publishing audit trail data, e.g. audit of receipt, processing, transformation, publication of new legislation on [legislation.gov.uk](/)
- * Website data, e.g. documents, versions and formats held in the main [legislation.gov.uk](/) database
+ * Publishing audit trail data, e.g. audit of receipt, processing, transformation, publication of new legislation on [legislation.gov.uk](https://www.legislation.gov.uk/)
+ * Website data, e.g. documents, versions and formats held in the main [legislation.gov.uk](https://www.legislation.gov.uk/) database
  * Effects data (records of amendments to legislation)
  * Enabling powers (the enabling acts for secondary legislation)
  * Subject classifications, e.g. Statutory Instrument subject headings, EU legislation subject categories
@@ -207,7 +207,7 @@ Please [contact us](index.md#contact-us) if you want to request or suggest other
 
 ### Querying using SPARQL
 
-You can query the data in the Linked Data store directly through a [SPARQL endpoint](/sparql), either with our in-browser query editor or connecting directly or using your own software. The endpoint is compliant with the SPARQL 1.1 Query Language specification. For more information on using SPARQL to query linked data, read the [specification for the SPARQL query language](https://www.w3.org/TR/sparql11-query/).
+You can query the data in the Linked Data store directly through a [SPARQL endpoint](../sparql), either with our in-browser query editor or connecting directly or using your own software. The endpoint is compliant with the SPARQL 1.1 Query Language specification. For more information on using SPARQL to query linked data, read the [specification for the SPARQL query language](https://www.w3.org/TR/sparql11-query/).
 
 The SPARQL endpoint allows you to query all data available from the Linked Data service. For example, the following SPARQL query returns all the data units containing data about the Kew Gardens (Leases) Act 2019 (c. 25) and its interpretations, along with information about each of the provenance events that affected them:
 
@@ -235,4 +235,4 @@ You can find out more information about UK legislation on [Legislation.gov.uk](h
 
 ## Licence
 
-For information on licensing and re-using our data, please see the [Licence](/licence.md) page.
+For information on licensing and re-using our data, please see the [Licence](../licence.md) page.

@@ -3,7 +3,7 @@
 
 ## XHTML snippets
 
-We provide the content of items, sections and tables of contents in a ready-transformed XHTML format that is suitable for embedding within a web page. **These HTML snippets are only available through their [representation URI](/model/uris/reference.md#representation-uris) and not through content negotiation.** 
+We provide the content of items, sections and tables of contents in a ready-transformed XHTML format that is suitable for embedding within a web page. **These HTML snippets are only available through their [representation URI](../model/uris/reference.md#representation-uris) and not through content negotiation.** 
 
 The XHTML snippets use the exact same HTML markup as the content pane of our website. The markup is wrapped in a `<div>` element with a class of `LegSnippet`. Many other classes are used within the HTML. Default stylesheets for these classes are available at:
 

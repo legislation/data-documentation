@@ -4,7 +4,7 @@ This page describes the URI scheme that is used on the Legislation API. The Legi
 
 ## Legislation
 
-**The best way of finding out the URI for a particular piece of legislation is to [search](/api/search.md) for it. A search on the title of a piece of legislation will redirect you to the proper URI for that item of legislation without you having to construct the URI yourself.**
+**The best way of finding out the URI for a particular piece of legislation is to [search](../../api/search.md) for it. A search on the title of a piece of legislation will redirect you to the proper URI for that item of legislation without you having to construct the URI yourself.**
 
 We define three levels of URIs for legislation:
 
@@ -20,7 +20,7 @@ When you request an identifier URI, the response will usually be a `303 See Othe
 
 Identifier URIs generally follow the template:
 
-<code>http://[]()www[]().legislation.gov.uk/id/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]</code>
+<code>http://[]()www[]().legislation.gov.uk/id/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]</code>
 
 However, legislation is often quoted without a chapter number, which can make it hard to automatically construct these URIs. If you don’t know the chapter number for a piece of legislation, you can use a search URI of the form:
 
@@ -204,7 +204,7 @@ Requesting a division that does not exist within the legislation will result in 
 
 Document URIs are used to refer to particular documents on the web: versions of the legislation. Document URIs follow the template:
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]\[/{[authority](/developer/uris#authority)}\]\[/{[extent](/developer/uris#extent)}\]\[/{[version](/developer/uris#version)}\]</code>
+<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]\[/{[authority](../../developer/uris#authority)}\]\[/{[extent](../../developer/uris#extent)}\]\[/{[version](../../developer/uris#version)}\]</code>
 
 #### Legislation extents
 
@@ -237,7 +237,7 @@ which will request all version of Section 6 of The Transport Act 1985 that are a
 
 #### Legislation versions
 
-Legislation versions fall into three general categories: [enacted/made/adopted versions](/developer/uris#enacted), [dated versions](/developer/uris#dated) and [prospective versions](/developer/uris#prospective).
+Legislation versions fall into three general categories: [enacted/made/adopted versions](../../developer/uris#enacted), [dated versions](../../developer/uris#dated) and [prospective versions](../../developer/uris#prospective).
 
 ##### Enacted/made/adopted versions
 
@@ -259,7 +259,7 @@ If no version is specified in a document URI, this is taken to refer to the vers
 
 `http://www.legislation.gov.uk/ukpga/1985/67`
 
-Indicates the current version of The Transport Act 1985, and will provide the most up to date version of the legislation available through the API. (This may not indicate the current state of the legislation, due to the [limitations](/what-we-have.md#limitations) of the content available through this site.) In this case, the result will be the legislation as it stood on 1st April 2003, which is also accessible at the URI:
+Indicates the current version of The Transport Act 1985, and will provide the most up to date version of the legislation available through the API. (This may not indicate the current state of the legislation, due to the [limitations](../../what-we-have.md#limitations) of the content available through this site.) In this case, the result will be the legislation as it stood on 1st April 2003, which is also accessible at the URI:
 
 `http://www.legislation.gov.uk/ukpga/1985/67/2003-04-01`
 
@@ -269,7 +269,7 @@ Any date can be used within the URI. For example:
 
 would refer to the version of The Transport Act 1985 that was in effect on 1st June 1997.
 
-Requesting a date that is prior to the [base date](/glossary.md#base-date) of 1st February 1991 (or 1st January 2006 for NI legislation) will normally result in a redirection to the legislation as it was on the base date.
+Requesting a date that is prior to the [base date](../../glossary.md#base-date) of 1st February 1991 (or 1st January 2006 for NI legislation) will normally result in a redirection to the legislation as it was on the base date.
 
 Requesting a date that was prior to the enactment of the legislation results in `404 Not Found` response. Requests for sections that did not exist within a particular version will return you that section though the fact that it was not in force on that date will be indicated.
 
@@ -303,17 +303,17 @@ If there are no Explanatory Notes or no Explanatory Note for a specific section 
 
 **Note that these URIs only apply to _dynamic_ representations of legislation and associated documents. For static PDFs and images, see the [static resources](#static-resources) section below.**
 
-Each document is available in multiple [formats](/developer/formats). The URI for a particular format follows the template:
+Each document is available in multiple [formats](../../developer/formats). The URI for a particular format follows the template:
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]\[/{[authority](/developer/uris#authority)}\]\[/{[extent](/developer/uris#extent)}\]\[/{[version](/developer/uris#version)}\]/data.\[ext\]</code>
+<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]\[/{[authority](../../developer/uris#authority)}\]\[/{[extent](../../developer/uris#extent)}\]\[/{[version](../../developer/uris#version)}\]/data.\[ext\]</code>
 
 for legislation and
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]/notes/data.\[ext\]</code>
+<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]/notes/data.\[ext\]</code>
 
 for explanatory notes.
 
-In the above URI templates, `[ext]` is the extension for the particular format. Available formats and their extensions are listed on the [formats](/formats/overview.md) page.
+In the above URI templates, `[ext]` is the extension for the particular format. Available formats and their extensions are listed on the [formats](../../formats/overview.md) page.
 
 <!-- PA 23/2/2023: Commenting this out as I think we want to discourage content negotiation using the Accept header
 
@@ -346,9 +346,9 @@ Legislation.gov.uk offers two types of static legislation PDFs:
 * “Original” legislation PDFs, representing the legislation as enacted or made (usually this is the same as the text as it was first printed, although some PDFs may incorporate corrections made later to the text); and
 * Revised legislation PDFs, representing the legislation as it stood at a particular point in time (these are rare and mostly only appear for selected social security legislation)
 
-Links to static legislation PDFs (where available) appear in the metadata of the legislation item, specifically as children of the `<ukm:Alternatives>` child element of the `<ukm:Metadata>` element. The `URI` attribute of the `<ukm:Alternative>` element indicates the URI of the PDF, and the presence of the `Revised` attribute indicates that the PDF represents a revised version (its value indicates the date of the [point in time](/model/legislation.md#points-in-time) up to which the version is revised; the attribute’s absence indicates that the PDF is an original version).
+Links to static legislation PDFs (where available) appear in the metadata of the legislation item, specifically as children of the `<ukm:Alternatives>` child element of the `<ukm:Metadata>` element. The `URI` attribute of the `<ukm:Alternative>` element indicates the URI of the PDF, and the presence of the `Revised` attribute indicates that the PDF represents a revised version (its value indicates the date of the [point in time](../../model/legislation.md#points-in-time) up to which the version is revised; the attribute’s absence indicates that the PDF is an original version).
 
-The [XPath](/api/xml-intro.md#navigating-xml-with-xpath) that selects the URIs of original legislation PDFs from the metadata of a legislation document is:
+The [XPath](../../api/xml-intro.md#navigating-xml-with-xpath) that selects the URIs of original legislation PDFs from the metadata of a legislation document is:
 
 `/leg:Legislation/ukm:Metadata/ukm:Alternatives/ukm:Alternative[not(@Revised)]/@URI`
 
@@ -366,9 +366,9 @@ The XPath that selects the URI of explanatory notes PDFs from the metadata of a 
 
 #### PDFs for other associated documents
 
-Legislation items often have other [associated documents](/glossary.md#associated-document). The metadata available via the API link to these in a variety of different ways.
+Legislation items often have other [associated documents](../../glossary.md#associated-document). The metadata available via the API link to these in a variety of different ways.
 
-The below table provides an [XPath expression](/api/xml-intro.md#navigating-xml-with-xpath) that identifies all the URIs in the metadata of a given legislation item for associated documents of the kind given in the first column:
+The below table provides an [XPath expression](../../api/xml-intro.md#navigating-xml-with-xpath) that identifies all the URIs in the metadata of a given legislation item for associated documents of the kind given in the first column:
 
 |Associated document|XPath expression|
 |---|---|
@@ -393,6 +393,6 @@ TODO explain how to find images-->
 
 Static HTML versions of explanatory notes, where available, use the below URI pattern:
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}/notes/division/\[number\]/index.htm</code>
+<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}/notes/division/\[number\]/index.htm</code>
 
 where `[number]` is a whole number starting from 1 for the first division of the notes and increasing by 1 for each subsequent division. 

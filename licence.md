@@ -72,7 +72,7 @@ Westlaw UK’s contribution to legislation.gov.uk means that the government is a
 
 ### Identifying content derived from Westlaw
 
-All content provided by Westlaw contains the following element in the `<ukm:Metadata>` element of its [XML representation](/formats/xml.md):
+All content provided by Westlaw contains the following element in the `<ukm:Metadata>` element of its [XML representation](formats/xml.md):
 
 `<dc:publisher>Westlaw</dc:publisher>`
 

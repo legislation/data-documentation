@@ -42,6 +42,6 @@ We provide the following types of document as PDF:
 
 ## Atom
 
-We provide lists of, and search results for, both [legislation](/api/search.md#listings) and [effects](/api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
+We provide lists of, and search results for, both [legislation](../api/search.md#listings) and [effects](../api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
 
 [Read more about Atom feeds](atom.md).

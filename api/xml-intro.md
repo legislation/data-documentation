@@ -45,7 +45,7 @@ The legislation.gov.uk dataset uses multiple XML namespaces, including but not l
 |---|---|---|
 |Legislation|`http://www.legislation.gov.uk/namespaces/legislation`|`leg:`|
 |Metadata|`http://www.legislation.gov.uk/namespaces/metadata`|`ukm:`|
-|Publication Log|`http://www.legislation.gov.uk/namespaces/publication-log` (see [Publication Log](/api/publication-log.md))|`pbl:`|
+|Publication Log|`http://www.legislation.gov.uk/namespaces/publication-log` (see [Publication Log](../api/publication-log.md))|`pbl:`|
 |Dublin Core Elements|`http://purl.org/dc/elements/1.1/`|`dc:`|
 |Dublin Core Terms|`http://purl.org/dc/terms/`|`dct:`|
 |Atom|`http://www.w3.org/2005/Atom`|`atom:`|

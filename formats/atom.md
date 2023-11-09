@@ -1,8 +1,8 @@
 # Atom feeds
 
-We provide lists of [legislation](/api/search.md#listings) and [effects](/api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
+We provide lists of [legislation](../api/search.md#listings) and [effects](../api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
 
-We also provide the [Publication Log](/api/publication-log.md), which is a feed of all updates to the website, including the publication and republication of individual versions of legislation, associated documents and effects, plus the withdrawal of legislation and associated documents.
+We also provide the [Publication Log](../api/publication-log.md), which is a feed of all updates to the website, including the publication and republication of individual versions of legislation, associated documents and effects, plus the withdrawal of legislation and associated documents.
 
 ## Common elements
 
@@ -33,7 +33,7 @@ The list also provides the following metadata in the `http://www.legislation.gov
 * `<ukm:Number>` gives the number of the legislation
 * `<ukm:CreationDate>` gives the enactment or made date of the legislation
 
-For each entry, we provide links to the [XML](formats/xml.md) (CLML and Akoma Ntoso) and [HTML](/developer/formats/html.md) (XHTML and HTML5) formats of the legislation as well as to the XML [table of contents](/developer/formats/xml#toc) for the legislation. For example:
+For each entry, we provide links to the [XML](formats/xml.md) (CLML and Akoma Ntoso) and [HTML](../developer/formats/html.md) (XHTML and HTML5) formats of the legislation as well as to the XML [table of contents](../developer/formats/xml#toc) for the legislation. For example:
 
 ```
 <entry>
@@ -109,7 +109,7 @@ The Publication Log feeds list publication and withdrawal events for legislation
  * for legislation and associated documents, the (re)publication or withdrawal of an individual resource on legislation.gov.uk, such as the XML for the enacted/made version or a specific revised Point in Time for an item of legislation, or a PDF of an item of legislation or associated document;
  * for effects, the (re)publication of new or updated effects within or against an item of legislation
 
-As well as the common feed elements listed above, the Publication Log also uses elements in the `http://www.legislation.gov.uk/namespaces/publication-log` namespace, normally using the prefix `pbl:`. For more information, refer to the [Publication Log](/api/publication-log.md) section of this documentation.
+As well as the common feed elements listed above, the Publication Log also uses elements in the `http://www.legislation.gov.uk/namespaces/publication-log` namespace, normally using the prefix `pbl:`. For more information, refer to the [Publication Log](../api/publication-log.md) section of this documentation.
 
 For example, below is an entry relating to the publication of the XML for the 21/7/2022 revised Point in Time of the Sentencing Act 2022:
 

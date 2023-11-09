@@ -16,11 +16,11 @@ You can also search or query for legislation, download lists of legislation or s
 
 Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](what-we-have.md), including limitations of the data in our dataset.
 
-We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates](/api/publication-log.md) to our data.
+We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates](api/publication-log.md) to our data.
 
 ## Understand our data
 
-Our [data model](/model/introduction.md) overview explains what our data represent and how to interpret them.
+Our [data model](model/introduction.md) overview explains what our data represent and how to interpret them.
 
 ## Start using our data
 
@@ -45,22 +45,22 @@ Our data downloads service provides ZIP files containing the text of legislation
 
 The ZIP files are available in the following formats:
 
-* [XML](/formats/xml.md) (where available) in our CLML dialect and Akoma Ntoso
-* [HTML](/formats/html.md) as XHTML and HTML5 (transformed from the source XML, only where it is available)
-* [PDF](/formats/pdf.md) (where an enacted/made or revised PDF is available)
+* [XML](formats/xml.md) (where available) in our CLML dialect and Akoma Ntoso
+* [HTML](formats/html.md) as XHTML and HTML5 (transformed from the source XML, only where it is available)
+* [PDF](formats/pdf.md) (where an enacted/made or revised PDF is available)
 * Plain text, both in full and limited to only the operative text TODO link to explanation of the item (transformed from the source XML, only where it is available)
 
 There are ZIPs available that contain all legislation available in the specified format, as well as smaller ZIPs that contain only legislation of a specific type, or type and year.-->
 
 ### Online access via our API and website<a name="api"></a>
 
-Our website provides data for items of legislation in multiple formats, including [XML](/formats/xml.md). You can try: 
- * appending `/data.xml` to the end of a legislation.gov.uk address to get the content as [XML](/formats/xml.md) (e.g. `https://www.legislation.gov.uk/asc/2021/4/part/1/data.xml`), or 
- * appending `/data.feed` to the end of the address for a search or list page (before the `?` query string character, if it appears) to get the content of the results page as an [Atom](/formats/atom.md) feed (e.g. `https://www.legislation.gov.uk/nia/2013/data.feed?title=budget`).
+Our website provides data for items of legislation in multiple formats, including [XML](formats/xml.md). You can try: 
+ * appending `/data.xml` to the end of a legislation.gov.uk address to get the content as [XML](formats/xml.md) (e.g. `https://www.legislation.gov.uk/asc/2021/4/part/1/data.xml`), or 
+ * appending `/data.feed` to the end of the address for a search or list page (before the `?` query string character, if it appears) to get the content of the results page as an [Atom](formats/atom.md) feed (e.g. `https://www.legislation.gov.uk/nia/2013/data.feed?title=budget`).
 
 The website is usable as an [API](https://en.wikipedia.org/wiki/API) by applications that speak [HTTP](https://en.wikipedia.org/wiki/HTTP). All the features of the website are available via the API. 
 
-If you want to find out more about our API, we provide an [overview of the API](/api/overview.md) that explains how it works and what features it offers.
+If you want to find out more about our API, we provide an [overview of the API](api/overview.md) that explains how it works and what features it offers.
 
 ## Code, schemas and other resources
 

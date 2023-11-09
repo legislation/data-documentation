@@ -9,7 +9,7 @@ The non-human traffic we receive on legislation.gov.uk falls into several catego
  *	Other commercial data re-users (e.g. legal data services)
  *	Academic/individual data re-users (usually independent researchers looking to extract data)
 
-The legislation.gov.uk website contains over 300,000 documents and there are often many hundreds of ways users can view (sections of) each one. Some individual documents can also contain more than 10,000 pages worth of text. You can find information about our data and formats available through our API on our [formats](/formats/overview.md) page.
+The legislation.gov.uk website contains over 300,000 documents and there are often many hundreds of ways users can view (sections of) each one. Some individual documents can also contain more than 10,000 pages worth of text. You can find information about our data and formats available through our API on our [formats](formats/overview.md) page.
 
 Some users can, accidentally or intentionally, place a greater demand on website services than others. For instance, users running automated scripts that request a very large number of pages within a short amount of time.
 
@@ -88,9 +88,9 @@ Some of the statements contained in this policy may also be superseded by statem
 
 If you find it difficult to follow our fair use policy, there may be an alternative way to get the content you need:
 
-<!-- TODO: re-enable when bulk downloads online * Use the [bulk downloads](/index.md#data-downloads) service if you are looking for a one-off data download or a significant sub-set of data. This service provides pre-packaged data downloads of all the data we hold on legislation.gov.uk.--> 
- * Use the [“New Legislation”](/api/search.md#new-legislation-listings) feed if you are interested in extracting new published legislation. 
- * Use the [Publication Log](/api/publication-log.md) feed if you are interested in extracting any kind of new or updated content, including updates to legislation or resources already published.
+<!-- TODO: re-enable when bulk downloads online * Use the [bulk downloads](index.md#data-downloads) service if you are looking for a one-off data download or a significant sub-set of data. This service provides pre-packaged data downloads of all the data we hold on legislation.gov.uk.--> 
+ * Use the [“New Legislation”](api/search.md#new-legislation-listings) feed if you are interested in extracting new published legislation. 
+ * Use the [Publication Log](api/publication-log.md) feed if you are interested in extracting any kind of new or updated content, including updates to legislation or resources already published.
 
 We encourage users to use these services where appropriate to their needs, instead of crawling the entire website or API. Doing so may save you (and us) time and money and free up server resources for other users.
 

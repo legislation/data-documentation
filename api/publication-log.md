@@ -7,7 +7,7 @@ The Publication Log feed contains one entry for every publication or republicati
  * legislation;
  * associated documents;
  * UK Impact Assessments (which are a special kind of associated document that also exists as a standalone item); and
- * changes to legislation ([effects](/model/effects.md)).
+ * changes to legislation ([effects](../model/effects.md)).
 
 The feed allows you to find out when we have:
 
@@ -27,7 +27,7 @@ Currently, the number of entries per page is fixed at 20 entries. The `page` que
 
 ## Fields
 
-Each Publication Log entry has multiple fields describing its publication or withdrawal event. The Publication Log represents most of the fields using the `http://www.legislation.gov.uk/namespaces/publication-log` namespace (normally using the prefix `pbl:`), but also uses other namespaces. Note that the Atom namespace (`http://www.w3.org/2005/Atom`) is used without a prefix in the feeds and in the examples drawn from it below, but the table below uses the `atom:` prefix to show where a field uses the Atom namespace. (For more information about the namespaces, see the [Common namespaces in our data](/api/xml-intro.md#common-namespaces-in-our-data) section of the guide.)
+Each Publication Log entry has multiple fields describing its publication or withdrawal event. The Publication Log represents most of the fields using the `http://www.legislation.gov.uk/namespaces/publication-log` namespace (normally using the prefix `pbl:`), but also uses other namespaces. Note that the Atom namespace (`http://www.w3.org/2005/Atom`) is used without a prefix in the feeds and in the examples drawn from it below, but the table below uses the `atom:` prefix to show where a field uses the Atom namespace. (For more information about the namespaces, see the [Common namespaces in our data](../api/xml-intro.md#common-namespaces-in-our-data) section of the guide.)
 
 The fields that appear in Publication Log entries are:
 
@@ -44,7 +44,7 @@ The fields that appear in Publication Log entries are:
 |Republished|`<pbl:Republished>`|<p>Indicates whether the resource has ever previously been published at this URI<p>**Note:** Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If the value of this field is `false`, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date|
 |New|`<pbl:New>`|Indicates whether the item of legislation existed on legislation.gov.uk before this publication event|
 |Newly issued|`<pbl:NewlyIssued>`|Indicates whether a new item of legislation has just been issued (is actually “new”), or whether it was issued in the past but has only just been uploaded|
-|Document|`<pbl:Document>`|The [expression](/model/legislation.md#frbr-functional-requirements-for-bibliographic-records) (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item|
+|Document|`<pbl:Document>`|The [expression](../model/legislation.md#frbr-functional-requirements-for-bibliographic-records) (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item|
 |Link|`<atom:link>`|For XML resources, a link to an alternate representation of the resource| 
 |Item|`<pbl:Item_Published>`<br>`<pbl:Item_Withdrawn>`|The URI of the resource being published or withdrawn|
 |Format|`<pbl:Format>`|The format of the resource (`xml`, `pdf` or `html5`)|
@@ -73,7 +73,7 @@ The Publication Log feeds support the following path parameters:
 |Content type|The type of content to which the event relates|One of the following values:<ul><li>`legislation`<li>`draft`<li>`associated-documents`<li>`changes`|https://www.legislation.gov.uk/update/draft/data.feed|
 |Direction|**For effects only:** Whether the effects were recorded against the affecting item or the affected item|One of the following values:<ul><li>`affecting`<li>`affected`|https://www.legislation.gov.uk/update/changes/affected/data.feed|
 |Document category|**For legislation and associated documents:** The category of legislation|One of the following values:<ul><li>`primary`<li>`secondary`<li>`eu-origin`|<p>https://www.legislation.gov.uk/update/legislation/eu-origin/data.feed|
-|Document main type|The type of the document to which the resource relates|One of the values in the [legislation types](/model/uris/reference.md) list|https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed (Document main type = wsi)|
+|Document main type|The type of the document to which the resource relates|One of the values in the [legislation types](../model/uris/reference.md) list|https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed (Document main type = wsi)|
 |Treaty name|**For EU treaties only:** The short name of the EU treaty|One of the following values:<ul><li>`teec`<li>`euratom`<li>`teu`<li>`eea-agreement`<li>`withdrawal-agreement`|https://www.legislation.gov.uk/update/eut/withdrawal-agreement/data.feed|
 |Year|The year assigned to the document|A four digit year|https://www.legislation.gov.uk/update/2014/data.feed|
 |Regnal year|**For regnal year-numbered items only:** The monarch and session assigned to the document|A regnal year string (see examples)|
