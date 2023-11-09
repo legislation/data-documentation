@@ -102,20 +102,20 @@ Among other things, these metadata elements include `<atom:link>` elements that 
 
 |Relation|Description|
 |---|---|
-|self|The representation URI for the provided XML representation|
-|alternate|Representation URIs for alternative representations, such as the RDF/XML representation|
-|http://purl.org/dc/terms/tableOfContents|The document URI of the table of contents for the item of legislation|
-|http://www.legislation.gov.uk/def/navigation/act|The document URI for the whole item of legislation|
-|http://www.legislation.gov.uk/def/navigation/introduction|The document URI for the introduction of the item of legislation|
-|http://www.legislation.gov.uk/def/navigation/body|The document URI for the body of the item of legislation|
-|http://www.legislation.gov.uk/def/navigation/schedules|The document URI for the schedules of the item of legislation|
-|http://purl.org/dc/terms/hasPart|Document URIs for any concurrent versions; the title indicates their extents|
-|http://purl.org/dc/terms/isPartOf|If you’ve requested a particular extent, the document URI for the combined version|
-|http://purl.org/dc/terms/replaces|The document URI of the previous version, or the current version if you’re looking at the prospective version; the title provides the date or the keyword 'current'|
-|http://purl.org/dc/terms/isReplacedBy|The document URI of the next version, or the prospective version if there is one; the title provides the date or the keyword 'prospective'|
-|up|A link to the parent of the section (the item of legislation)|
-|prev|A link to the previous section|
-|next|A link to the next section|
+|`self`|The representation URI for the provided XML representation|
+|`alternate`|Representation URIs for alternative representations, such as the RDF/XML representation|
+|`http://purl.org/dc/terms/tableOfContents`|The document URI of the table of contents for the item of legislation|
+|`http://www.legislation.gov.uk/def/navigation/act`|The document URI for the whole item of legislation|
+|`http://www.legislation.gov.uk/def/navigation/introduction`|The document URI for the introduction of the item of legislation|
+|`http://www.legislation.gov.uk/def/navigation/body`|The document URI for the body of the item of legislation|
+|`http://www.legislation.gov.uk/def/navigation/schedules`|The document URI for the schedules of the item of legislation|
+|`http://purl.org/dc/terms/hasPart`|Document URIs for any concurrent versions; the title indicates their extents|
+|`http://purl.org/dc/terms/isPartOf`|If you’ve requested a particular extent, the document URI for the combined version|
+|`http://purl.org/dc/terms/replaces`|The document URI of the previous version, or the current version if you’re looking at the prospective version; the title provides the date or the keyword 'current'|
+|`http://purl.org/dc/terms/isReplacedBy`|The document URI of the next version, or the prospective version if there is one; the title provides the date or the keyword 'prospective'|
+|`up`|A link to the parent of the section (the item of legislation)|
+|`prev`|A link to the previous section|
+|`next`|A link to the next section|
 
 ## Unapplied effects
 
