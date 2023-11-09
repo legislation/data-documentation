@@ -4,13 +4,13 @@ The data we hold come from a number of sources:
 
  * Digital publishing by UK legislatures and administrations
  * Acquisition of digital collections from other publishers
- * Rekeying of legislation text <!--and metadata--> from printed sources
+ * Rekeying of legislation text and metadata from printed sources
  * Scanning of printed copies of legislation
  * Editorial update of legislation
 
 ## Digital publishing
 
-The King's Printer began to publish legislation through a digital process in 1987.
+The King’s Printer began to publish legislation through a digital process in 1987.
 
 ## Rekeying of legislation text
 

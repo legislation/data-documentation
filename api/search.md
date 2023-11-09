@@ -63,7 +63,7 @@ If the address does not contain a `?` character, you can append `/data.feed` to 
 Note that the default sort order on list web pages is different to that of feeds:
 
  * By default, list web pages are ordered by:
-    * Legislation type in descending alphabetical order (the [internal type name]() is used for sorting)
+    * Legislation type in descending alphabetical order (the [internal type name](/model/uris/reference.md#legislation-types) is used for sorting)
     * Legislation year in descending order (most recent first)
     * Legislation number in descending order
  * By default, feeds are sorted by last modification date in descending order (where the last modification date is the last date any enacted or revised version of the item was created or changed)
@@ -80,17 +80,17 @@ A list page address has the following structure:
 
 `https://www.legislation.gov.uk/[{type}][/{year} or {start-year}-{end-year}}][/{number} or {start-number}-{end-number}]/[/{extent}|{point-in-time}]`
 
-A list page address may also have a query string, which may contain the `title`, `text` and/or `sort` parameters and, where a single type and year are specified in the path, additionally a `number` parameter. (If you want the API to return a *listing* with an item of legislation of a specific type, year and number you must specify the `number` parameter in the query string&mdash;otherwise the API will redirect you to the item of legislation itself.)
+A list page address may also have a query string, which may contain the `title`, `text` and/or `sort` parameters and, where a single type and year are specified in the path, additionally a `number` parameter. (If you want the API to return a *listing* with an item of legislation of a specific type, year and number you must specify the `number` parameter in the query string—otherwise the API will redirect you to the item of legislation itself.)
 
 The parameters permit the following values:
 
 |Parameter|Meaning|Permitted values (`/search`)|Permitted values (list page)|
 |---|---|---|---|
-|`type`|The type of the legislation (e.g. UK Public General Act)|Supports any of the [short type codes](), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, use the parameter more than once (e.g. `type=ukpga&type=asp`)|Supports any of the [short type codes](), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, separate them using the `+` character (e.g. `ukpga+asp`)|
+|`type`|The type of the legislation (e.g. UK Public General Act)|Supports any of the [short type codes](/model/uris/reference.md#legislation-types), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, use the parameter more than once (e.g. `type=ukpga&type=asp`)|Supports any of the [short type codes](/model/uris/reference.md#legislation-types), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, separate them using the `+` character (e.g. `ukpga+asp`)|
 |`year`|The calendar year of the enactment or registration of the item of legislation|Supports any four-digit year.||
 |`start-year`|The lower limit of the desired range of calendar years of items of legislation|Supports any four-digit year. Must be less than or equal to `end-year`.||
 |`end-year`|The upper limit of the desired range of calendar years of items of legislation|Supports any four-digit year. Must be greater than or equal to `start-year`.||
-|`number`|The number of the item of legislation|Supports any [natural number](https://en.wikipedia.org/wiki/Natural_number) or `*` wildcard, as well as a natural number or `*` wildcard preceded by a [series number]() code (`c`, `l`, `w`, `s`, `ni`)||
+|`number`|The number of the item of legislation|Supports any [natural number](https://en.wikipedia.org/wiki/Natural_number) or `*` wildcard, as well as a natural number or `*` wildcard preceded by a [series number](/glossary.md#alternative-number) code (`c`, `l`, `w`, `s`, `ni`)||
 |`start-number`|The lower limit of the desired range of numbers of items of legislation|Supports any natural number or `*` wildcard. If a natural number, must be less than or equal to `end-number`.||
 |`end-number`|The upper limit of the desired range of numbers of items of legislation|Supports any natural number or `*` wildcard. If a natural number, must be greater than or equal to `start-number`.||
 |`extent`|The geographical extent of an item of legislation|Supports the values `england`, `wales`, `scotland` and `ni`. To specify multiple values, use the parameter more than once (e.g. `extent=england&extent=wales`)|Supports the values `england`, `wales`, `scotland` and `ni`. To specify multiple values, separate them using the `+` character (e.g. `england+wales`)|
@@ -105,17 +105,17 @@ The parameters permit the following values:
 
 Both the `title` and `text` parameters support simple text, phrase and Boolean queries, such as:
 
- * `boats` matches a document whose title/text contains the word "boats" (or "boat" - see [Stemming]() below)
- * `fishing boats` matches a document that contains the words "fishing" and "boats" (or "fish" or "boat" - see [Stemming]() below) anywhere within the title/text (not necessarily adjacent to or near one another)
- * `boats OR cars` matches a document that contains the words "boats" or "cars" (or "boat" or "car" - see [Stemming]() below) anywhere within the title/text
- * `"electric cars" AND batteries` matches a document that contains the exact phrase "electric cars" and the word "batteries" (or "battery" - see [Stemming]() below) anywhere within the title/text
+ * `boats` matches a document whose title/text contains the word "boats" (or "boat" - see [Stemming](#stemming) below)
+ * `fishing boats` matches a document that contains the words "fishing" and "boats" (or "fish" or "boat" - see [Stemming](#stemming) below) anywhere within the title/text (not necessarily adjacent to or near one another)
+ * `boats OR cars` matches a document that contains the words "boats" or "cars" (or "boat" or "car" - see [Stemming](#stemming) below) anywhere within the title/text
+ * `"electric cars" AND batteries` matches a document that contains the exact phrase "electric cars" and the word "batteries" (or "battery" - see [Stemming](#stemming) below) anywhere within the title/text
  * `(fish AND dogs) OR ("electric cars" AND batteries)` matches a document that contains, anywhere within the title/text, either: 
-    * the words "fish" and "dogs" (or "dog" - see [Stemming]() below), or 
-    * the exact phrase "electric cars" and the word "batteries" (or "battery" - see [Stemming]() below)
+    * the words "fish" and "dogs" (or "dog" - see [Stemming](#stemming) below), or 
+    * the exact phrase "electric cars" and the word "batteries" (or "battery" - see [Stemming](#stemming) below)
 
 Note that the Boolean operators `OR` and `AND` **must be in all-caps** or they will be treated as regular words.
 
-If you specify a `text` search, the resulting feed will have a `<link rel="http://purl.org/dc/terms/tableOfContents">` element for each matching result with a URL for the item's table of contents, containing the `text` parameter appended to the end. If you insert `/data.xml` before the `?` character in this URL and make a request to the resulting URL, the returned XML will contain the following information to identify the provisions/parts of the document with text that matches the query:
+If you specify a `text` search, the resulting feed will have a `<link rel="http://purl.org/dc/terms/tableOfContents">` element for each matching result with a URL for the item’s table of contents, containing the `text` parameter appended to the end. If you insert `/data.xml` before the `?` character in this URL and make a request to the resulting URL, the returned XML will contain the following information to identify the provisions/parts of the document with text that matches the query:
 
  * Each individual `<Contents*>` element may have a `MatchText="true"` attribute indicating that there is a text match within the corresponding part/provision of the document.
  * The `<Contents>` element may have a `MatchTextEntries` attribute, containing a space-separated list of the IDs of the provisions containing matching text, and/or one or more of the following pseudo-IDs:
@@ -124,6 +124,13 @@ If you specify a `text` search, the resulting feed will have a `<link rel="http:
     * `earlier-orders` to indicate that there is matching text within the "earlier orders" part of the document (`<EarlierOrders>`, available at `/earlier-orders`)
     * `introduction` to indicate that there is matching text within the introduction (`<IntroductoryText>`, available at `/introduction`)
     * `schedules` to indicate that there is matching text within the schedules (`<Schedules>`, available at `/schedules`)
+
+#### Stemming
+
+The search on legislation.gov.uk uses *stemming*, where words in a search and in the title and texts of documents are all mapped onto their common root word. By default, this means that:
+
+ * searches containing a plural noun (dogs) will match the singular form of the noun (dog) and the singular form will match the plural
+ * searches containing a verb will match all conjugations of that verb (i.e. “run” will match “ran” and “runs”, “protect” will match “protecting” and “protected”)
 
 ### Sort orders
 
@@ -135,7 +142,7 @@ You can specify the following sort orders for a legislation search/list using th
 |`title`|Sort by title ascending in alphabetical order, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`modified`|Sort by last modified date descending, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`created`|Sort by category (EU, then primary, then secondary), then year descending, then enacted/made date descending|
-|`type`|Sort by legislation type ascending in alphabetical order (using the [long type code]()), then year descending, then enacted/made date descending|
+|`type`|Sort by legislation type ascending in alphabetical order (using the [long type code](/model/uris/reference.md#legislation-types)), then year descending, then enacted/made date descending|
 |"Basic" sort order|Default sort order for search result and list web pages. Also used if any other value apart from the above values is passed to the `sort` parameter, including an empty string. Sort by category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending)|
 
 Note that the HTML and Atom view of the feeds have a different default sort order:
@@ -145,7 +152,7 @@ Note that the HTML and Atom view of the feeds have a different default sort orde
 
 ## New legislation listings
 
-The "new legislation" listings at [https://www.legislation.gov.uk/new](https://www.legislation.gov.uk/new) list newly published items of legislation by date and type, sorted in descending order of publication date and time. It does not include historical legislation newly uploaded to legislation.gov.uk, which is published with a &ldquo;silent&rdquo; flag that hides it from the new legislation listings.
+The "new legislation" listings at [https://www.legislation.gov.uk/new](https://www.legislation.gov.uk/new) list newly published items of legislation by date and type, sorted in descending order of publication date and time. It does not include historical legislation newly uploaded to legislation.gov.uk, which is published with a “silent” flag that hides it from the new legislation listings.
 
 The new legislation listings are available in Atom format at:
 
@@ -164,7 +171,7 @@ IA searches and listings support some additional query string parameters:
 |Parameter|Meaning|Permitted values|
 |---|---|---|
 |`stage`|The stage of the development of the legislation to which the IA relates.|One of `Options`, `Consultation`, `Development`, `Enactment`, `Final`, `Implementation`, `Post-Implementation`|
-|`department`|The department that authored the IA.|The full name of the department, [URL-encoded]() (e.g. DEFRA is specified as `Department%20for%20Environment%2C%20Food%20and%20Rural%20Affairs`)|
+|`department`|The department that authored the IA.|The full name of the department, [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding) (e.g. DEFRA is specified as `Department%20for%20Environment%2C%20Food%20and%20Rural%20Affairs`)|
 
 Note that UKIA listings and searches do not support the following parameters or parameter values:
 
@@ -275,4 +282,4 @@ Each `<entry>` in the feed contains a `<ukm:Effect>` element, which contains the
  * whether the effect has been applied or will be applied
  * any "savings" (provisions that qualify the application of the effect)
 
-To interpret the contents of the `<ukm:Effect>` element, see the [Effects section of the CLML User Guide]().
+To interpret the contents of the `<ukm:Effect>` element, see the [Effects section of the CLML User Guide](https://legislation.github.io/clml-schema/userguide.html#effects).

@@ -30,7 +30,7 @@ An effect contains information on the following:
 
 An effect may also contain other information, such as the titles of the affecting and affected items, appended information for the amendment’s commentary (the AppendedCommentary attribute), plus other information used internally within legislation.gov.uk.
 
-The effect does not contain the amending text, and nor does it contain machine-readable instructions on how to apply the amendment to the amended provision (although our Editorial system can apply certain effects automatically, such as repeals, commencements and [non-textual amendments]()).
+The effect does not contain the amending text, and nor does it contain machine-readable instructions on how to apply the amendment to the amended provision (although our Editorial system can apply certain effects automatically, such as repeals, commencements and [non-textual amendments](/glossary.md#non-textual-amendment)).
 
 The effect does link to the amending provision, which allows our editors to research how to apply any amendments, and our readers to consult it themselves.
 
@@ -48,7 +48,7 @@ The unique identifier for an effect may be any alphanumeric string containing da
 
 `http://www.legislation.gov.uk/id/effect/upload-b7xquzz2-48`
 
-In our [XML]() formats (including CLML and [feeds](../../search.md)), the unique identifier normally appears on its own in the `EffectId` attribute of an `<Effect>` or `<UnappliedEffect>` element, rather than as a URI.
+In our [XML](/formats/xml.md) formats (including CLML and [feeds](/api/search.md)), the unique identifier normally appears on its own in the `EffectId` attribute of an `<Effect>` or `<UnappliedEffect>` element, rather than as a URI.
 
 ## Effects and the Editorial process
 
@@ -74,7 +74,7 @@ Our editor read the whole document to identify the amendments and research the c
 
 *  The [introduction](https://www.legislation.gov.uk/ukpga/2002/38/introduction/enacted) of the Act states that the date of Royal Assent is the 7<sup>th</sup> November 2002, which is the date on which the Act’s provisions come into force unless otherwise stated.
 *  [Section 148(1) of the Act](http://www.legislation.gov.uk/id/ukpga/2002/38/section/148/1) requires that the Secretary of State must bring the Act into force by order, but excludes section 116. As there is no other provision specifying when section 116 comes into force, section 116 and its child provisions come wholly into force on the date of Royal Assent.
-*  [Schedule 4](http://www.legislation.gov.uk/id/ukpga/2002/38/schedule/4) contains transitory provisions and “savings” (provisions that qualify effects in the Act). [Paragraphs 6-8](https://www.legislation.gov.uk/ukpga/2002/38/schedule/4#schedule-4-paragraph-6) of Schedule 4 all begin with “Nothing in this Act affects”, and so are treated as [savings]() that qualify all effects in the Act.
+*  [Schedule 4](http://www.legislation.gov.uk/id/ukpga/2002/38/schedule/4) contains transitory provisions and “savings” (provisions that qualify effects in the Act). [Paragraphs 6-8](https://www.legislation.gov.uk/ukpga/2002/38/schedule/4#schedule-4-paragraph-6) of Schedule 4 all begin with “Nothing in this Act affects”, and so are treated as [savings](/glossary.md#saving) that qualify all effects in the Act.
 
 The editor then recorded the amendments in the above section as the following effects:
 
@@ -88,6 +88,6 @@ The editor then recorded the amendments in the above section as the following ef
 
 When one of our editors update an item of legislation, they use our Editorial system to create a new version of the item. The Editorial system instructs the editor which amendments to apply to the version, and the editor then amends the text of the version using those instructions, as well as those contained in the amending provision of legislation from which the effect originates.
 
-The Editorial system automatically adds [revision tags]() and [commentaries]() for the amendments that they apply. For recently applied amendments, both the revision tags and commentaries have identifiers that link them to the effect.
+The Editorial system automatically adds [revision tags](https://legislation.github.io/clml-schema/userguide.html#revised-legislation) and [commentaries](https://legislation.github.io/clml-schema/userguide.html#commentaries) for the amendments that they apply. For recently applied amendments, both the revision tags and commentaries have identifiers that link them to the effect.
 
 (Although most amendments are applied this way, some amendments either pre-date the current Editorial system or are applied manually. These have identifiers that do not correspond to an effect.)

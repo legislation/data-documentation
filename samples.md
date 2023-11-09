@@ -17,7 +17,7 @@ The following documents give a cross-section of the available content with the L
 
 ## UK Private or Personal Act
 
-*   [Walton (Derbyshire) inclosure Act 1803](http://www.legislation.gov.uk/id/ukppa/Geo3/43/60)
+*   [Walton (Derbyshire) Inclosure Act 1803](http://www.legislation.gov.uk/id/ukppa/Geo3/43/60)
 
 ## Private or Personal Act of the Parliament of Great Britain
 
@@ -37,21 +37,21 @@ The following documents give a cross-section of the available content with the L
 
 ## United Kingdom Ministerial Order
 
-*   [The Competition and Service (Utilities) Act 1992 (Commencement No.1) Order 1992](http://www.legislation.gov.uk/id/ukmo/1992/1)
+*   [The Competition and Service (Utilities) Act 1992 (Commencement No. 1) Order 1992](http://www.legislation.gov.uk/id/ukmo/1992/1)
 
 ## United Kingdom Statutory Instrument
 
 *   [The Conservation (Natural Habitats, &c.) Regulations 1994](http://www.legislation.gov.uk/id/uksi/1994/2716)
 
-## Great Britain Act
+## Act of the Parliament of Great Britain
 
 *   [Demise of the Crown Act 1727](http://www.legislation.gov.uk/id/apgb/Geo2St1/1/5)
 
-## England Act
+## Act of the Parliament of England
 
 *   [Act of Uniformity 1662](http://www.legislation.gov.uk/id/aep/Cha2/14/4)
 
-## Scottish Act
+## Act of the Scottish Parliament
 
 *   [Agricultural Holdings (Scotland) Act 2003](http://www.legislation.gov.uk/id/asp/2003/11)
 
@@ -59,11 +59,11 @@ The following documents give a cross-section of the available content with the L
 
 *   [The Water Industry (Scotland) Act 2002 (Commencement and Savings) Order 2002](http://www.legislation.gov.uk/id/ssi/2002/118)
 
-## Ireland Act
+## Act of the Old Irish Parliament
 
 *   [Forfeiture Act (Ireland) 1639](http://www.legislation.gov.uk/id/aip/Chas1Sess2/15/3)
 
-## Northern Ireland Act
+## Act of the Northern Ireland Assembly
 
 *   [Budget Act (Northern Ireland) 2007](http://www.legislation.gov.uk/id/nia/2007/1)
 
@@ -75,18 +75,18 @@ The following documents give a cross-section of the available content with the L
 
 *   [Animals (Northern Ireland) Order 1976](http://www.legislation.gov.uk/id/nisi/1976/1040)
 
-## Northern Ireland Parliament Act
+## Act of the Northern Ireland Parliament
 
 *   [Adoption (Hague Convention) Act (Northern Ireland) 1969](http://www.legislation.gov.uk/id/apni/1969/22)
 
-## Northern Ireland Assembly Measure
+## Measure of the Northern Ireland Assembly
 
 *   [Financial Provisions Measure (Northern Ireland) 1974](http://www.legislation.gov.uk/id/mnia/1974/2)
 
-## Measure for the National Assembly for Wales
+## Measure of the National Assembly for Wales
 
 *   [NHS Redress (Wales) Measure 2008](http://www.legislation.gov.uk/id/mwa/2008/1)
 
-## Wales Statutory Instrument
+## Welsh Statutory Instrument
 
 *   [The Local Authorities (Executive and Alternative Arrangements) (Modification of Enactments and Other Provisions) (Wales) Order 2002](http://www.legislation.gov.uk/id/wsi/2002/808)

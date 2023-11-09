@@ -4,7 +4,7 @@ We encourage the use and re-use of legislation.gov.uk data, with only a few cond
 
 ## Open Government Licence
 
-All content on legislation.gov.uk is available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) (OGLv3.0). The licence grants a worldwide, royalty-free, perpetual, non-exclusive licence to:
+All content on legislation.gov.uk, and on our [Github page](https://github.com/legislation), is available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/). The licence grants a worldwide, royalty-free, perpetual, non-exclusive licence to:
 
  * copy, publish, distribute and transmit our content;
  * adapt our content;
@@ -27,20 +27,20 @@ Some legislation on legislation.gov.uk [originates from the EU](https://www.legi
 
 Where we have described legislation as ‘originating from the EU’, the item has been derived from [EUR-Lex](https://eur-lex.europa.eu) and published on legislation.gov.uk. EU legislation is published subject to the EUR-Lex copyright notice.
 
-In addition to the legislation itself, we publish associated documents such as corrigenda (correction slips), and PDF versions of legislation both as originally adopted by the EU and as ‘revised’. We have also published [amendments](model/effects.md) made by EU legislation prior to the UK’s exit from the EU, data which are derived from EUR-Lex&lsquo;s CELLAR database. The CELLAR stores and disseminates all content and metadata created or disseminated by the Publications Office of the European Union. It also drives the Publications Office's major portals, including EUR-Lex.
+In addition to the legislation itself, we publish associated documents such as corrigenda (correction slips), and PDF versions of legislation both as originally adopted by the EU and as revised. We have also published [amendments](model/effects.md) made by EU legislation prior to the UK’s exit from the EU, data which are derived from EUR-Lex’s CELLAR database. The CELLAR stores and disseminates all content and metadata created or disseminated by the Publications Office of the European Union. It also drives the Publications Office’s major portals, including EUR-Lex.
 
 ### Re-using data derived from EUR-Lex
 
 Data derived from EUR-Lex and published on legislation.gov.uk originate from two sources and are made available under two licences, **both** of which apply simultaneously:
 
- * Legislation originating from the EU is available for re-use under the terms of the Commission Decision 2011/833/EU.
+ * Legislation originating from the EU is available for re-use under the terms of the [Commission Decision 2011/833/EU](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833).
  * Legislation published on legislation.gov.uk is available for re-use under the terms of the Open Government Licence v3.0.
 
 You may re-use data for legislation originating from the EU and published on legislation.gov.uk and comply with both licences by acknowledging both Crown and EU copyright and not claiming any official endorsement in any onward publication of your re-use.
 
 The following wording for acknowledgement is suggested:
 
- > Crown © and database right material re-used under the Open Government Licence (Logo containing link). Material derived from the European Institutions © European Union, 1998-2019 and re-used under the terms of the Commission Decision 2011/833/EU.
+ > Crown © and database right material re-used under the Open Government Licence (Logo containing link). Material derived from the European Institutions © European Union, 1998-2020 and re-used under the terms of the Commission Decision 2011/833/EU.
 
 ### EUR-Lex Copyright notice
 
@@ -64,19 +64,19 @@ For all other copyright issues, please contact: [op-copyright@publications.europ
 
 ## Content derived from Westlaw
  
-To support the government's deregulation initiative, Westlaw UK have contributed electronic versions of Statutory Instruments, Statutory Rules and Orders, as they were first made, to legislation.gov.uk. These are the original versions of the legislation, so do not show how the information has changed or how it stands today. The legislation contributed by Westlaw UK was all made prior to 1987 and is in its original form.
+To support the government’s deregulation initiative, Westlaw UK have contributed electronic versions of Statutory Instruments, Statutory Rules and Orders, as they were first made, to legislation.gov.uk. These are the original versions of the legislation, so do not show how the information has changed or how it stands today. The legislation contributed by Westlaw UK was all made prior to 1987 and is in its original form.
 
-Westlaw UK provide a commercial (pay for) service which provides the current version of these Statutory Instruments, Rules and Orders, showing how they currently in force. For more information about Westlaw's commercial services, including an online demo and free trial, visit their [website](https://uk.westlaw.com/). Other companies provide similar commercial services.
+Westlaw UK provide a commercial (pay for) service which provides the current version of these Statutory Instruments, Rules and Orders, showing how they currently in force. For more information about Westlaw’s commercial services, including an online demo and free trial, visit their [website](https://uk.westlaw.com/). Other companies provide similar commercial services.
 
-Westlaw UK's contribution to legislation.gov.uk means that the government is able to make secondary legislation from before 1987 available to the public, free of charge. The National Archives thanks Westlaw UK for their significant and important contribution, enabling greater public access to legislation.
+Westlaw UK’s contribution to legislation.gov.uk means that the government is able to make secondary legislation from before 1987 available to the public, free of charge. The National Archives thanks Westlaw UK for their significant and important contribution, enabling greater public access to legislation.
 
 ### Identifying content derived from Westlaw
 
-All content provided by Westlaw contains the following element in the `<ukm:Metadata>` element of its [XML representation]():
+All content provided by Westlaw contains the following element in the `<ukm:Metadata>` element of its [XML representation](/formats/xml.md):
 
 `<dc:publisher>Westlaw</dc:publisher>`
 
-In [XHTML]() pages (the default pages served by the website), Westlaw legislation contains the following element in the `<head>` element:
+In [XHTML](formats/html.md) pages (the default pages served by the website), Westlaw legislation contains the following element in the `<head>` element:
 
 `<meta name="DC.publisher" content="Westlaw"/>`
 

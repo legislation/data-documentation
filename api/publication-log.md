@@ -7,7 +7,7 @@ The Publication Log feed contains one entry for every publication or republicati
  * legislation;
  * associated documents;
  * UK Impact Assessments (which are a special kind of associated document that also exists as a standalone item); and
- * changes to legislation (effects).
+ * changes to legislation ([effects](/model/effects.md)).
 
 The feed allows you to find out when we have:
 
@@ -21,7 +21,9 @@ The full feed, containing all entries, is available at https://www.legislation.g
 
 ## Paging
 
-The API *paginates* its responses to requests for Publication Log feeds. This means that the API only returns a fixed number of items in each response. Currently, the number of entries per page is fixed at 20 entries. The `page` query string parameter specifies the page of results the API will return.
+The API *paginates* its responses to requests for Publication Log feeds. This means that the API returns a maximum number of items in each response to a request for a feed, and so it may be necessary to make multiple requests to get all the items in a feed.
+
+Currently, the number of entries per page is fixed at 20 entries. The `page` query string parameter specifies the page of results the API will return.
 
 ## Fields
 
@@ -34,15 +36,15 @@ The fields that appear in Publication Log entries are:
 |Entry ID|`<atom:id>`|<p>A unique identifier for the event<p>**Note:** the Publication Log records the (dis)association of a UK Impact Assessment with an item of legislation as two separate entries (one for the UKIA-legislation association, and one for the legislation-UKIA association). These entries have the same Entry ID, but different Item IDs (one for the legislation item and the other for the UKIA)|
 |Item ID|`<dc:identifier>`|The identifier of the item of legislation or UK Impact Assessment which the resource manifests or to which it is associated.|
 |Updated|`<atom:updated>`|The date and time at which the event (publication or withdrawal) occurred|
-|Published|`<atom:published>`|<p>If present, the first date and time at which a resource was published at this URI<p>**Note:** Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If this field is absent, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date|
+|Published|`<atom:published>`|<p>If present, the first date and time at which a resource was published at this URI<p>**Note:** Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If this field is absent, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date. If this field is present, the date may not be the true date and time of original publication if it is on or after 5<sup>th</sup> July 2023|
 |Title|`<atom:title>`|The title of the resource. This is usually the title of the legislation item, but for associated documents it will normally be the title of the associated legislation item followed by the type of the associated document|
-|Author|`<atom:author>`|The publisher of the resource|
+|Author|`<atom:author>`|<p>The publisher of the resource<p>**Note:** the Publication Log always shows the author for XML versions of revised legislation as “editorial.legislation.gov.uk”, but in the XML for the revised legislation itself the `dc:publisher` is usually “Statute Law Database”|
 |Content type|`<pbl:ContentType>`|The type of content being published or withdrawn (`legislation`, `draft`, `associated-documents` or `changes`)|
 |Event|`<pbl:Event>`|The type of event (`published` or `withdrawn`)|
 |Republished|`<pbl:Republished>`|<p>Indicates whether the resource has ever previously been published at this URI<p>**Note:** Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If the value of this field is `false`, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date|
 |New|`<pbl:New>`|Indicates whether the item of legislation existed on legislation.gov.uk before this publication event|
 |Newly issued|`<pbl:NewlyIssued>`|Indicates whether a new item of legislation has just been issued (is actually “new”), or whether it was issued in the past but has only just been uploaded|
-|Document|`<pbl:Document>`|The [expression]() (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item|
+|Document|`<pbl:Document>`|The [expression](/model/legislation.md#frbr-functional-requirements-for-bibliographic-records) (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item|
 |Link|`<atom:link>`|For XML resources, a link to an alternate representation of the resource| 
 |Item|`<pbl:Item_Published>`<br>`<pbl:Item_Withdrawn>`|The URI of the resource being published or withdrawn|
 |Format|`<pbl:Format>`|The format of the resource (`xml`, `pdf` or `html5`)|
@@ -121,7 +123,7 @@ The default sort is `date` and the default sort order is `descending`.
 
 ### Legislation
 
-The Publication Log feed contains one entry for each publication, republication or withdrawal of an XML or PDF representation of an item of legislation, which may be for the enacted or made version or for a revised Point in Time.
+The Publication Log feed contains one entry for each publication, republication or withdrawal of an XML or PDF representation of an item of legislation, which may be for the enacted or made version or for a revised Point in Time (PiT).
 
 The following is the example of the publication of XML for the 1/3/2021 revised PiT for Regulation (EU) 2019/2013 (from https://www.legislation.gov.uk/update/2023-07-07/legislation/eu-origin/eur/2019/2013/data.feed?format=xml&republished=false):
 
@@ -307,4 +309,4 @@ The following is an example of a changes event relating to the publishing of eff
   <pbl:Event>published</pbl:Event>
   <pbl:Direction>affecting</pbl:Direction>
 </entry>
-``` 
+```

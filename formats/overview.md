@@ -15,7 +15,7 @@ The Legislation API currently offers legislation in the following formats:
 
 We provide the content of legislation in two XML formats: 
 
-* Crown Legislation Markup Language (or CLML), a format that uses our [Legislation Schema]() to represent UK legislation and legislation originating from the EU.
+* Crown Legislation Markup Language (or CLML), a format that uses our [Legislation Schema](https://www.legislation.gov.uk/schema/legislation.xsd) to represent UK legislation and legislation originating from the EU.
 * [Akoma Ntoso](http://www.akomantoso.org/) (or AKN), a general-purpose format for representing parliamentary, legislative and judiciary documents, with some extensions to support the representation of UK and EU origin legislation.
 
 [Read more about XML formats](xml.md).
@@ -24,7 +24,7 @@ We provide the content of legislation in two XML formats:
 
 Where an item of legislation is available as XML, we provide its content in two HTML formats designed for reuse in other applications:
 
- * XHTML, which is an embeddable &ldquo;snippet&rdquo; form of the same HTML we use on the website for legislation content;
+ * XHTML, which is an embeddable “snippet” form of the same HTML we use on the website for legislation content;
  * HTML5, which comes as complete HTML files with linked styles suitable for standalone display.
 
 [Read more about HTML formats](html.md).

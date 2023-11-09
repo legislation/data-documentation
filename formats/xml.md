@@ -7,7 +7,9 @@ We provide the content of legislation in two XML formats:
 
 The two formats represent both the metadata and the content of legislation, using [Dublin Core](http://dublincore.org/documents/dces/) for metadata, [XHTML](http://www.w3.org/TR/xhtml1/) for tables and [MathML](http://www.w3.org/Math/) for formulae. Additionally, both formats have their own proprietary elements and attributes to represent metadata.
 
-The remainder of this page describes the features of CLML only.
+The remainder of this page mainly describes the features of CLML, with minimal commentary on the differences between CLML and Akoma Ntoso.
+
+For more information on the representation of legislation in CLML, please read the [CLML Reference Guide](https://legislation.github.io/clml-schema/).
 
 ## Identifiers
 
@@ -18,15 +20,13 @@ Both the table of contents and the full content of the legislation includes link
 
 ## Entire items
 
-When an entire piece of legislation is requested using a URL that contains a version such as `http://www.legislation.gov.uk/ukpga/1985/67/2003-04-01`, the legislation will be returned in its entirety, including sections that were not in force on the given date, which will including any prospective sections. Using the keyword prospective in place of the date will indicate how the legislation will look if all prospective amendments are applied in the future. A URL without a date will give you the current version of the legislation, which is the same as using today's date in the URI.
+When an entire piece of legislation is requested using a URL that contains a version such as `http://www.legislation.gov.uk/ukpga/1985/67/2003-04-01/data.xml`, the legislation will be returned in its entirety, including sections that were not in force on the given date, which will including any prospective sections. Using the keyword prospective in place of the date will indicate how the legislation will look if all prospective amendments are applied in the future. A URL without a date will give you the current version of the legislation, which is the same as using today’s date in the URI.
 
-Within the XML, any sections that aren't valid at the date requested have a `Match="false"` attribute. The Status attribute indicates the status of the section at the requested date, which can be Prospective (the section hasn't yet come into force on that date), Repealed or Discarded (a section which was never brought into force and was later repealed). Other attributes, such as `RestrictStartDate`, `RestrictEndDate` and `RestrictExtent` provide additional information about the validity of the section.
-
-Some items of legislation are very large and therefore take a long time to retrieve. **We recommend avoiding requesting entire items of legislation.**
+Within the XML, any sections that aren’t valid at the date requested have a `Match="false"` attribute. The Status attribute indicates the status of the section at the requested date, which can be Prospective (the section hasn’t yet come into force on that date), Repealed or Discarded (a section which was never brought into force and was later repealed). Other attributes, such as `RestrictStartDate`, `RestrictEndDate` and `RestrictExtent` provide additional information about the validity of the section.
 
 ## Sections
 
-When a section of legislation is requested using a URL such as `http://www.legislation.gov.uk/ukpga/1985/67/section/6`, the section will be provided in context, including basic information about its ancestors (such as the part and chapter that it's contained in), their numbers, titles and links to them through the `DocumentURI` and `IdURI` attributes<!-- TODO: in AKN <portion includedIn="[ID URI]"> and <FRBRuri> is used instead -->. This information can help in the construction of breadcrumb trails, for example. The metadata will only include unapplied effects that would apply to that section or to the entire piece of legislation.
+When a section of legislation is requested using a URL such as `http://www.legislation.gov.uk/ukpga/1985/67/section/6/data.xml`, the section will be provided in context, including basic information about its ancestors (such as the part and chapter within which it is contained), their numbers, titles and links to them through the `DocumentURI` and `IdURI` attributes<!-- TODO: in AKN <portion includedIn="[ID URI]"> and <FRBRuri> is used instead -->. This information can help in the construction of breadcrumb trails, for example. The metadata will only include unapplied effects that would apply to that section or to the entire piece of legislation.
 
 Where there are concurrent sections with different geographical extents, the body of the XML will contain only one of the versions of the section, and an `AltVersionRefs` attribute will point to the alternative version for that section which is held in the `<Versions>` element. <!-- TODO AKN does it differently - parallel version appears alongside with alternativeTo attribute containing the id of the default version; for formulae instead of versions they use <math altimg=""> instead -->
 
@@ -34,11 +34,11 @@ Where there are concurrent sections with different geographical extents, the bod
 
 <!-- TODO table of contents looks different in AKN -->
 
-When a contents page is requested using a URL such as `http://www.legislation.gov.uk/ukpga/1985/67/contents` (which is the usual document retrieved after a request to an identifier URI), you will get back a table of contents for the legislation. The table of contents is a combination of the contents of the requested version, previous versions and, if you're looking at the current table of contents, prospective changes to the legislation.
+When a contents page is requested using a URL such as `http://www.legislation.gov.uk/ukpga/1985/67/contents/data.xml` (which is the usual document retrieved after a request to an identifier URI), you will get back a table of contents for the legislation. The table of contents is a combination of the contents of the requested version, previous versions and, if you’re looking at the current table of contents, prospective changes to the legislation.
 
-Within the table of contents, any sections that aren't valid at the date requested have a `Match="false"`<!-- TODO AKN is different, seems to just use period="" with dates instead --> attribute. The `Status` attribute indicates the status of the section at the requested date, which can be `Prospective` (the section hasn't yet come into force on that date), `Repealed` or `Discarded` (a section which was never brought into force and was later repealed)<!-- TODO again AKN doesn't do this, has class="prospective" and aforementioned period info -->. Other attributes, such as `RestrictStartDate`, `RestrictEndDate` and `RestrictExtent` provide additional information about the validity of the section <!-- TODO AKN uses separate metadata in <meta> instead of attributes for this -->.
+Within the table of contents, any sections that aren’t valid at the date requested have a `Match="false"`<!-- TODO AKN is different, seems to just use period="" with dates instead --> attribute. The `Status` attribute indicates the status of the section at the requested date, which can be `Prospective` (the section hasn’t yet come into force on that date), `Repealed` or `Discarded` (a section which was never brought into force and was later repealed)<!-- TODO again AKN doesn’t do this, has class="prospective" and aforementioned period info -->. Other attributes, such as `RestrictStartDate`, `RestrictEndDate` and `RestrictExtent` provide additional information about the validity of the section <!-- TODO AKN uses separate metadata in <meta> instead of attributes for this -->.
 
-For example, the table of contents at `http://www.legislation.gov.uk/ukpga/1975/30/contents` includes a Part whose content has been repealed:
+For example, the table of contents at `http://www.legislation.gov.uk/ukpga/1975/30/contents/data.xml` includes a Part whose content has been repealed:
 
 ```
 <ContentsPart ContentRef="part-II"
@@ -65,7 +65,7 @@ For example, the table of contents at `http://www.legislation.gov.uk/ukpga/1975/
 </ContentsPart>
 ```
 
-The table of contents at `http://www.legislation.gov.uk/nisi/2007/288/contents` includes an Article that has not yet come into force:
+The table of contents at `http://www.legislation.gov.uk/nisi/2007/288/contents/data.xml` includes an Article that has not yet come into force:
 
 ```
 <ContentsPart ContentRef="part-IV"
@@ -110,8 +110,8 @@ Among other things, these metadata elements include `<atom:link>` elements that 
 |http://www.legislation.gov.uk/def/navigation/body|The document URI for the body of the item of legislation|
 |http://www.legislation.gov.uk/def/navigation/schedules|The document URI for the schedules of the item of legislation|
 |http://purl.org/dc/terms/hasPart|Document URIs for any concurrent versions; the title indicates their extents|
-|http://purl.org/dc/terms/isPartOf|If you've requested a particular extent, the document URI for the combined version|
-|http://purl.org/dc/terms/replaces|The document URI of the previous version, or the current version if you're looking at the prospective version; the title provides the date or the keyword 'current'|
+|http://purl.org/dc/terms/isPartOf|If you’ve requested a particular extent, the document URI for the combined version|
+|http://purl.org/dc/terms/replaces|The document URI of the previous version, or the current version if you’re looking at the prospective version; the title provides the date or the keyword 'current'|
 |http://purl.org/dc/terms/isReplacedBy|The document URI of the next version, or the prospective version if there is one; the title provides the date or the keyword 'prospective'|
 |up|A link to the parent of the section (the item of legislation)|
 |prev|A link to the previous section|

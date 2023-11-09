@@ -73,8 +73,7 @@ In order to preserve the security, stability, availability or integrity of our w
 Furthermore, note that:
 
  * we may temporarily decrease the rate limit or block users to deal with unexpected spikes in traffic;
- * we will add a specific crawl delay to a user agent if the user’s total requests from multiple IP addresses causes excessive load on our API;
- * if a user is being blocked for more than XXX<!--TODO fix--> days/weeks/months, we will add a comment to our robots.txt file specifying which user has been blocked and for what reason; and
+ * we will add a specific crawl delay to a user agent if the user’s total requests from multiple IP addresses causes excessive load on our API;<!--TODO fix * if a user is being blocked for more than XXX days/weeks/months, we will add a comment to our robots.txt file specifying which user has been blocked and for what reason; and -->
  * we may block or modify any user’s access to our website for any other reason at our sole discretion (see [Changes to this policy](#changes-to-this-policy)).
 
 ## Changes to this policy
@@ -89,14 +88,14 @@ Some of the statements contained in this policy may also be superseded by statem
 
 If you find it difficult to follow our fair use policy, there may be an alternative way to get the content you need:
 
- * Use the [bulk downloads](/index.md#data-downloads) service if you are looking for a one-off data download or a significant sub-set of data. This service provides pre-packaged data downloads of all the data we hold on legislation.gov.uk. 
- * Use the [&ldquo;New Legislation&rdquo;](/api/search.md#new-legislation-listings) feed if you are interested in extracting new published legislation. 
+<!-- TODO: re-enable when bulk downloads online * Use the [bulk downloads](/index.md#data-downloads) service if you are looking for a one-off data download or a significant sub-set of data. This service provides pre-packaged data downloads of all the data we hold on legislation.gov.uk.--> 
+ * Use the [“New Legislation”](/api/search.md#new-legislation-listings) feed if you are interested in extracting new published legislation. 
  * Use the [Publication Log](/api/publication-log.md) feed if you are interested in extracting any kind of new or updated content, including updates to legislation or resources already published.
 
 We encourage users to use these services where appropriate to their needs, instead of crawling the entire website or API. Doing so may save you (and us) time and money and free up server resources for other users.
 
 ## Contact us
 
-We are happy to assist legitimate data users acquire our data in a responsible fashion.
+We are happy to assist data users to acquire our data in a responsible fashion.
 
 If you need any further information about this policy, you feel you have been blocked in error or you are otherwise having difficulties, please [contact us](index.md#contact-us).

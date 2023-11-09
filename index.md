@@ -7,10 +7,10 @@ The information on legislation.gov.uk is available for you to reuse **free of ch
 You can download the following data from us, in a variety of formats:
 
  * legislation document data and text;
- * metadata—data about legislation; and
+ * metadata (data about legislation); and
  * amendments (changes) to legislation.
 
-You can also search <!--TODO or query--> for legislation, download lists of legislation or subscribe to feeds of new and updated content.
+You can also search or query for legislation, download lists of legislation or subscribe to feeds of new and updated content.
 
 ## Find out what data we have
 
@@ -24,12 +24,14 @@ Our [data model](/model/introduction.md) overview explains what our data represe
 
 ## Start using our data
 
-You can read get our data through one of two routes:
+You can get our data via our website and **[API](#api)**.
 
- * through our **[data downloads](#data-downloads)** service, if you want to download all or a subset of our documents<!-- TODO or metadata-->, or
- * via our website and **[API](#api)**, if you want fine-grained control over which data you download or you want to search our dataset<!--TODO query our dataset-->.
+<!-- TODO: Replace above para with this one once bulk downloads available You can read get our data through one of two routes:
+
+ * through our **[data downloads](#data-downloads)** service, if you want to download all or a subset of our documents, or
+ * via our website and **[API](#api)**, if you want fine-grained control over which data you download or you want to search or query our dataset. -->
  
-You can find more information out about the different kinds of data we offer, including how to get and interpret them, in the [open data](#open-data) section above.
+You can find more information about the different kinds of data we offer, including how to get and interpret them, in the [open data](#open-data) section above.
 
 <!--If you want a solution for a specific problem, you can read our [How do I…]() section, which includes instructions on how to do the following:
 
@@ -37,7 +39,7 @@ You can find more information out about the different kinds of data we offer, in
  * [Download all UK legislation as XML, PDF or plain text]()
  * [Get XML for an item of legislation or part of it]()-->
 
-### Data downloads
+<!-- TODO: re-add when bulk downloads available ### Data downloads
 
 Our data downloads service provides ZIP files containing the text of legislation. They are available in the [Data section of our Research website]().
 
@@ -45,10 +47,10 @@ The ZIP files are available in the following formats:
 
 * [XML](/formats/xml.md) (where available) in our CLML dialect and Akoma Ntoso
 * [HTML](/formats/html.md) as XHTML and HTML5 (transformed from the source XML, only where it is available)
-* Plain text, both in full and limited to only the operative text<!--TODO link to explanation--> of the item (transformed from the source XML, only where it is available)
 * [PDF](/formats/pdf.md) (where an enacted/made or revised PDF is available)
+* Plain text, both in full and limited to only the operative text TODO link to explanation of the item (transformed from the source XML, only where it is available)
 
-There are ZIPs available that contain all legislation available in the specified format, as well as smaller ZIPs that contain only legislation of a specific type, or type and year.
+There are ZIPs available that contain all legislation available in the specified format, as well as smaller ZIPs that contain only legislation of a specific type, or type and year.-->
 
 ### Online access via our API and website<a name="api"></a>
 
@@ -66,6 +68,6 @@ You can find details about our code and schemas on the [More Resources](more-res
 
 ## Contact us
 
-If you have any questions about using our data or API, please contact data.legislation@nationalarchives.gov.uk. We&rsquo;re happy to help with enquiries from individuals, business, organisations and government departments.
+If you have any questions about using our data or API, please contact data.legislation@nationalarchives.gov.uk. We’re happy to help with enquiries from individuals, business, organisations and government departments.
 
-You can also follow us on Twitter at [@legislation](https://twitter.com/legislation).
+You can also follow us on X (formerly Twitter) at [@legislation](https://twitter.com/legislation).

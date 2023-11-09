@@ -1,8 +1,8 @@
 # Legislation document data model
 
-We publish UK legislation from 1267 onwards, as well as selected  legislation originating from the EU.
+We publish UK legislation from 1267 onwards, as well as selected legislation originating from the EU.
 
-An item of legislation is an individually identifiable legal text passed by a legislature or governmental body. Legislation.gov.uk publishes many different types of new and historical legislation, although [we do not record or publish all UK legislation]().
+An item of legislation is an individually identifiable legal text passed by a legislature or governmental body. Legislation.gov.uk publishes many different types of new and historical legislation, although [we do not record or publish all UK legislation](/what-we-have.md).
 
 For each item of legislation that we record, we assign that item a URI that uniquely identifies it. For example, the URI of the [Localism Act 2011](https://www.legislation.gov.uk/ukpga/2011/20/contents) (c. 20) is:
 
@@ -40,10 +40,10 @@ Each item of legislation has an original version (although we do not always hold
 
 The original text of an item does not change once it is passed, except that for secondary legislation one of the following may occur:
 
- * the department or body who submitted the legislation may issue a [correction slip]() to correct errors that do not substantially change the meaning of the text; 
- * a court may partly or wholly [quash]() the item of legislation (declare it unlawful) if it determines that the government lacked the legal authority to make all or part of the legislation.
+ * the department or body who submitted the legislation may issue a [correction slip](/glossary.md#correction-slip--corrigendum) to correct errors that do not substantially change the meaning of the text; 
+ * a court may partly or wholly [quash](https://en.wikipedia.org/wiki/Judicial_review_in_English_law#Quashing_order) the item of legislation (declare it unlawful) if it determines that the government lacked the legal authority to make all or part of the legislation.
 
-An item of legislation may have one or more revised versions. A revised version is a version of the item's text that shows the item as it applied at a particular point in time or in a particular legal jurisdiction within the UK. A revised version includes applicable amendments and/or other editorial commentary, such as information on which provisions are in force.
+An item of legislation may have one or more revised versions. A revised version is a version of the item’s text that shows the item as it applied at a particular point in time or in a particular legal jurisdiction within the UK. A revised version includes applicable amendments and/or other editorial commentary, such as information on which provisions are in force.
 
 A section of an item of legislation also has one or more versions. Each version of a section is contained within a version of its parent item or section
 
@@ -72,15 +72,15 @@ In our data model, we map the FRBR concepts onto the following legislation conce
 
 ### Points in time
 
-**Note that some items of legislation have revised versions available as static PDFs, which do not use the below URIs. For more information on these, see the [legislation PDFs](/model/uris/reference.md#legislation-pdfs) sectin of the URI scheme reference.**
+**Note that some items of legislation have revised versions available as static PDFs, which do not use the below URIs. For more information on these, see the [legislation PDFs](/model/uris/reference.md#legislation-pdfs) section of the URI scheme reference.**
 
 Each newly published item (and each of its sections) has an enacted, made or created version that shows the text of the item as it was passed into law.
 
-For items we have updated (or are planning to update in the near future), the item and its sections will also have one or more edited or revised versions, each at a dated point in time. They will also have a &ldquo;current&rdquo; version (shown on the website as &ldquo;latest available (revised)&rdquo;) which contains the same text and annotations as the latest point in time version.
+For items we have updated (or are planning to update in the near future), the item and its sections will also have one or more edited or revised versions, each at a dated point in time. They will also have a “current” version (shown on the website as “latest available (revised)”) which contains the same text and annotations as the latest point in time version.
 
 The date of the first revised version for a item or section of legislation is normally the day the item or section first comes fully or partly into force, and contains extent and commencement information about the sections of the item in addition to their text. If any amendments apply to the item at or immediately before the time it comes into force, the first dated version will also contain those amendments. There will then be a subsequent dated version on each day on which an amendment or commencement comes into force.
 
-For items of legislation published before our [base date]() of 1<sup>st</sup> February 1991, the first dated version will fall on that base date. This &ldquo;base date&rdquo; version will contain all amendments and commencements that applied as of the base date, as well as extent information.
+For items of legislation originally published before our [base date](/glossary.md#basedate) of 1<sup>st</sup> February 1991 and whose first revised version was published before the 7<sup>th</sup> March 2019, the first revised version will normally fall on that base date. This “base date” version will contain all amendments and commencements that applied as of the base date, as well as extent information. Legislation that was first revised after the 7<sup>th</sup> March 2019 will have a first revised version for the first date on which the legislation came wholly or partly into force.
 
 For example, the URI for the version dated 4<sup>th</sup> May 2022 of the Universal Credit Regulations is:
 
@@ -155,6 +155,6 @@ We represent the text of almost all digitally published and edited legislation a
 
 We convert legislation to CLML when we ingest it in machine-readable formats from other sources, including new legislation from legislatures ([Parliament](https://www.parliament.uk/), the [Welsh Sennedd](https://www.senedd.cymru), the [Scottish Parliament](https://www.parliament.scot/) or the [Northern Ireland Assembly](http://www.niassembly.gov.uk/)) and government departments, as well as some legislation from historical sources. We then generate other formats from the CLML on demand, including the HTML views for our website, dynamically generated PDFs and other XML formats such as Akoma Ntoso (AKN).
 
-The XML schema for Crown Legislation Markup Language describes the permitted structure of a valid CLML document. The schema is [available on our website](https://www.legislation.gov.uk/schema/legislation.xsd), along with [schema documentation]() that contains a guide to its use and a reference for the schema’s features. The [XML](/formats/xml.md) section of this guide gives a basic explanation for how to interpret CLML.
+The XML schema for Crown Legislation Markup Language describes the permitted structure of a valid CLML document. The schema is [available on our website](https://www.legislation.gov.uk/schema/legislation.xsd), along with [schema documentation](https://legislation.github.io/clml-schema/) that contains a guide to its use and a reference for the schema’s features. The [XML](/formats/xml.md) section of this guide gives a basic explanation for how to interpret CLML.
 
 We also store some legislation in its original enacted or made version as PDF, as well as some revised versions of legislation produced by third parties. (For example, the Department for Work and Pensions used to produce revised versions of social security Acts and supplied them to us as PDF.)

@@ -22,7 +22,7 @@ Identifier URIs generally follow the template:
 
 <code>http://[]()www[]().legislation.gov.uk/id/{[type](/developer/uris#type)}/{[year](/developer/uris#year)}/{[number](/developer/uris#number)}\[/{[section](/developer/uris#section)}\]</code>
 
-However, legislation is often quoted without a chapter number, which can make it hard to automatically construct these URIs. If you don't know the chapter number for a piece of legislation, you can use a search URI of the form:
+However, legislation is often quoted without a chapter number, which can make it hard to automatically construct these URIs. If you don’t know the chapter number for a piece of legislation, you can use a search URI of the form:
 
 `http://www.legislation.gov.uk/id?title={title}`
 
@@ -132,7 +132,7 @@ Could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 
 
 #### Legislation numbers
 
-The legislation number is an integer that reflects the legislation's chapter number according to the primary numbering sequence for the type. Legislation is sometimes assigned one or more secondary numbers. Secondary numbering schemes are:
+The legislation number is an integer that reflects the legislation’s chapter number according to the primary numbering sequence for the type. Legislation is sometimes assigned one or more secondary numbers. Secondary numbering schemes are:
 
 |Numbering Scheme|Description|URI Number Prefix|
 |---|---|---|
@@ -142,7 +142,7 @@ The legislation number is an integer that reflects the legislation's chapter num
 |Northern Ireland series (NI)|Orders in Council made under [section 1(3) of the Northern Ireland (Temporary Provisions) Act 1972](http://www.legislation.gov.uk/id/ukpga/1972/22/section/1/3) or [paragraph 1 of Schedule 1 to the Northern Ireland Act 1974](http://www.legislation.gov.uk/id/ukpga/1974/28/schedule/1/paragraph/1).|`ni`|
 |National Assembly for Wales series (W/Cy)|Statutory Instruments made by the National Assembly for Wales and applying to Wales only. Such instruments will generally be made in both the English and Welsh languages.|`w`|
 
-It's possible to use a secondary number within a URI by prefixing the number with the appropriate prefix as shown in the above table. This will result in a `301 Moved Permanently` redirection to the URI using the main numbering scheme. For example, requesting
+It’s possible to use a secondary number within a URI by prefixing the number with the appropriate prefix as shown in the above table. This will result in a `301 Moved Permanently` redirection to the URI using the main numbering scheme. For example, requesting
 
 `http://www.legislation.gov.uk/id/wsi/2002/w89`
 
@@ -259,7 +259,7 @@ If no version is specified in a document URI, this is taken to refer to the vers
 
 `http://www.legislation.gov.uk/ukpga/1985/67`
 
-Indicates the current version of The Transport Act 1985, and will provide the most up to date version of the legislation available through the API. (This may not indicate the current state of the legislation, due to the [limitations]() of the content available through this site.) In this case, the result will be the legislation as it stood on 1st April 2003, which is also accessible at the URI:
+Indicates the current version of The Transport Act 1985, and will provide the most up to date version of the legislation available through the API. (This may not indicate the current state of the legislation, due to the [limitations](/what-we-have.md#limitations) of the content available through this site.) In this case, the result will be the legislation as it stood on 1st April 2003, which is also accessible at the URI:
 
 `http://www.legislation.gov.uk/ukpga/1985/67/2003-04-01`
 
@@ -269,7 +269,7 @@ Any date can be used within the URI. For example:
 
 would refer to the version of The Transport Act 1985 that was in effect on 1st June 1997.
 
-Requesting a date that is prior to the [base date]() of 1st February 1991 (or 1st January 2006 for NI legislation) will normally result in a redirection to the legislation as it was on the base date.
+Requesting a date that is prior to the [base date](/glossary.md#base-date) of 1st February 1991 (or 1st January 2006 for NI legislation) will normally result in a redirection to the legislation as it was on the base date.
 
 Requesting a date that was prior to the enactment of the legislation results in `404 Not Found` response. Requests for sections that did not exist within a particular version will return you that section though the fact that it was not in force on that date will be indicated.
 
@@ -343,10 +343,10 @@ These have URIs that do not follow a predictable pattern. The most reliable way 
 
 Legislation.gov.uk offers two types of static legislation PDFs:
 
-* &ldquo;Original&rdquo; legislation PDFs, representing the legislation as enacted or made (usually this is the same as the text as it was first printed, although some PDFs may incorporate corrections made later to the text); and
+* “Original” legislation PDFs, representing the legislation as enacted or made (usually this is the same as the text as it was first printed, although some PDFs may incorporate corrections made later to the text); and
 * Revised legislation PDFs, representing the legislation as it stood at a particular point in time (these are rare and mostly only appear for selected social security legislation)
 
-Links to static legislation PDFs (where available) appear in the metadata of the legislation item, specifically as children of the `<ukm:Alternatives>` child element of the `<ukm:Metadata>` element. The `URI` attribute of the `<ukm:Alternative>` element indicates the URI of the PDF, and the presence of the `Revised` attribute indicates that the PDF represents a revised version (its value indicates the date of the [point in time](/model/legislation.md#points-in-time) up to which the version is revised; the attribute&rsquo;s absence indicates that the PDF is an original version).
+Links to static legislation PDFs (where available) appear in the metadata of the legislation item, specifically as children of the `<ukm:Alternatives>` child element of the `<ukm:Metadata>` element. The `URI` attribute of the `<ukm:Alternative>` element indicates the URI of the PDF, and the presence of the `Revised` attribute indicates that the PDF represents a revised version (its value indicates the date of the [point in time](/model/legislation.md#points-in-time) up to which the version is revised; the attribute’s absence indicates that the PDF is an original version).
 
 The [XPath](/api/xml-intro.md#navigating-xml-with-xpath) that selects the URIs of original legislation PDFs from the metadata of a legislation document is:
 
@@ -366,17 +366,28 @@ The XPath that selects the URI of explanatory notes PDFs from the metadata of a 
 
 #### PDFs for other associated documents
 
-Legislation items often have other [associated documents](). The metadata available via the API link to these in a variety of different ways.
+Legislation items often have other [associated documents](/glossary.md#associated-document). The metadata available via the API link to these in a variety of different ways.
 
 The below table provides an [XPath expression](/api/xml-intro.md#navigating-xml-with-xpath) that identifies all the URIs in the metadata of a given legislation item for associated documents of the kind given in the first column:
 
 |Associated document|XPath expression|
 |---|---|
-|Correction slips|`/leg:Legislation/ukm:Metadata/ukm:CorrectionSlips/ukm:CorrectionSlip/@URI`|
-<!--TODO complete associated documents table-->
+|Impact Assessments|`/leg:Legislation/ukm:Metadata/ukm:ImpactAssessments/ukm:ImpactAssessment/@URI`|
+|Policy equality statements|`/leg:Legislation/ukm:Metadata/ukm:PolicyEqualityStatements/ukm:PolicyEqualityStatement/@URI`|
+|Codes of practice|`/leg:Legislation/ukm:Metadata/ukm:CodesOfPractice/ukm:CodeOfPractice/@URI`|
+|Codes of conduct|`/leg:Legislation/ukm:Metadata/ukm:CodesOfConduct/ukm:CodeOfConduct/@URI`|
+|Tables of origins|`/leg:Legislation/ukm:Metadata/ukm:TablesOfOrigins/ukm:TableOfOrigins/@URI`|
+|Tables of destinations|`/leg:Legislation/ukm:Metadata/ukm:TablesOfDestinations/ukm:TableOfDestinations/@URI`|
+|Orders in Council|`/leg:Legislation/ukm:Metadata/ukm:OrdersInCouncil/ukm:OrderInCouncil/@URI`|
+|Explanatory documents|`/leg:Legislation/ukm:Metadata/ukm:ExplanatoryDocuments/ukm:ExplanatoryDocument/@URI`|
+|Transposition notes|`/leg:Legislation/ukm:Metadata/ukm:TranspositionNotes/ukm:TranspositionNote/@URI`|
+|UK Regulatory Policy Committee opinions|`/leg:Legislation/ukm:Metadata/ukm:UKRPCOpinions/ukm:UKRPCOpinion/@URI`|
+|Correction slips|`/leg:Legislation/ukm:Metadata/ukm:CorrectionSlips/ukm:CorrectionSlip/@URI`|  
+|Correction slips for explanatory notes and memoranda|`/leg:Legislation/ukm:Metadata/ukm:Notes/ukm:CorrectionSlips/ukm:CorrectionSlip/@URI`|
+|Other documents (not included in the other categories)|`/leg:Legislation/ukm:Metadata/ukm:OtherDocuments/ukm:OtherDocument/@URI`|
 
-### Images
-<!--TODO explain how to find images-->
+<!--### Images
+TODO explain how to find images-->
 
 ### HTML explanatory notes
 

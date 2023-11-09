@@ -83,14 +83,14 @@ We strongly recommend you use a proper XML parser to parse XML. XML has many com
 
 Some popular XML parser libraries and classes include:
 
- * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, the [lxml](https://pypi.org/project/lxml/) library, or the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) library _(note that ElementTree does not fully support [XPath]())_
+ * For Python, the [ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html) module in the standard library, the [lxml](https://pypi.org/project/lxml/) library, or the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) library _(note that ElementTree does not fully support [XPath](#xpath))_
  * For Javascript, the [DOMParser class](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) (only in web browsers), or the [xmldom](https://www.npmjs.com/package/@xmldom/xmldom) package (which implements the DOMParser interface for Node and other non-browser JS runtimes)
  * For .NET (C#), the [System.Xml](https://docs.microsoft.com/en-us/dotnet/standard/data/xml/) classes in the standard library
  * For Java, the [DocumentBuilder](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/DocumentBuilder.html) or [SAXParser](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/SAXParser.html) classes in the `javax.xml.parsers` package
- * For Go, the [xml](https://pkg.go.dev/encoding/xml) package in the standard library _(note that this package does not provide support for [XPath]())_
- * For Rust, the [quickxml](https://crates.io/crates/quick-xml) crate _(note that this crate does not provide support for [XPath]())_
+ * For Go, the [xml](https://pkg.go.dev/encoding/xml) package in the standard library _(note that this package does not provide support for [XPath](#xpath))_
+ * For Rust, the [quickxml](https://crates.io/crates/quick-xml) crate _(note that this crate does not provide support for [XPath](#xpath))_
 
-## Navigating XML with XPath
+## Navigating XML with XPath<a id="xpath"></a>
 
 The [XPath](https://en.wikipedia.org/wiki/XPath) language is a simple, flexible and powerful syntax for querying and transforming XML documents.
 
@@ -108,10 +108,10 @@ XPath has many other features. Most XML parsers that provide XPath support only 
 
 In the above examples, each step of the XPath location path expression has a prefix ending with a colon (in those examples, the only prefix used is `leg:`). As explained above in the [namespaces](#namespaces) section, the names of XML elements (and sometimes attributes) may have a namespace. A prefix in an XML element/attribute name indicates that its namespace is the one the current element (or one of its ancestors) declares the prefix to represent.
 
-The relationship between a prefix and a namespace is context-dependent and may vary between documents and even elements within a document, and an element may have a namespace without a prefix if a default namespace is declared. As a result, a namespace prefix in an XPath expression is meaningless unless the resolver of the expression is told what the prefix means, and a resolver will treat the absence of a prefix as indicating &ldquo;no namespace&ldquo; unless told otherwise. If you fail to register namespaces prefixes with an XPath resolver before using it, you may find that either your XPath expressions fail to return the desired results or cause the application to complain that the expression contains an unrecognized prefix and stop.
+The relationship between a prefix and a namespace is context-dependent and may vary between documents and even elements within a document, and an element may have a namespace without a prefix if a default namespace is declared. As a result, a namespace prefix in an XPath expression is meaningless unless the resolver of the expression is told what the prefix means, and a resolver will treat the absence of a prefix as indicating “no namespace“ unless told otherwise. If you fail to register namespaces prefixes with an XPath resolver before using it, you may find that either your XPath expressions fail to return the desired results or cause the application to complain that the expression contains an unrecognized prefix and stop.
 
-To avoid writing XPath expressions that don&rsquo;t work, make sure that you:
+To avoid writing XPath expressions that don’t work, make sure that you:
 
-* know what the namespace URI is for each element you want to query&mdash;if there is a prefix look for the value of the `xmlns:[prefix]` attribute on the target element or one of its ancestors, and if there is no prefix look for the value of the `xmlns` attribute instead;
-* provide the XPath resolver with a set of prefixes corresponding to the namespaces you need to use in your XPath expression&mdash;for example, the <code>[document.evaluate()](https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate)</code> method in Javascript takes a `namespaceResolver` parameter that accepts a function taking a prefix string and returning the namespace URI corresponding to that prefix (or returns the default namespace if `null` is provided); and
-* use the prefix you&rsquo;ve provided for each namespace in the appropriate places in your XPath expression.
+* know what the namespace URI is for each element you want to query—if there is a prefix look for the value of the `xmlns:[prefix]` attribute on the target element or one of its ancestors, and if there is no prefix look for the value of the `xmlns` attribute instead;
+* provide the XPath resolver with a set of prefixes corresponding to the namespaces you need to use in your XPath expression—for example, the <code>[document.evaluate()](https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate)</code> method in Javascript takes a `namespaceResolver` parameter that accepts a function taking a prefix string and returning the namespace URI corresponding to that prefix (or returns the default namespace if `null` is provided); and
+* use the prefix you’ve provided for each namespace in the appropriate places in your XPath expression.

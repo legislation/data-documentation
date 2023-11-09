@@ -16,19 +16,19 @@ You can get the version of Part 4 of the Bankruptcy (Scotland) Regulations 2016 
 
 `http://www.legislation.gov.uk/ssi/2016/397/part/4/2017-05-01/data.pdf`
 
-We also provide dynamically generated PDFs of the enacted, made or adopted version of an item or subdivision of legislation. You can get the enacted Welsh version of the cross-heading &ldquo;Cyffredinol&rdquo; of Part 3 of the Planning (Wales) Act 2015 at:
+We also provide dynamically generated PDFs of the enacted, made or adopted version of an item or subdivision of legislation. You can get the enacted Welsh version of the cross-heading “Cyffredinol” of Part 3 of the Planning (Wales) Act 2015 at:
 
 `http://www.legislation.gov.uk/anaw/2015/4/part/3/crossheading/cyffredinol/enacted/welsh/data.pdf`
 
-However, if you want an entire enacted, made or adopted version of a whole item of legislation, you may find that there is a higher-quality static PDF of the enacted/made/adopted version
+However, if you want an entire enacted, made or adopted version of a whole item of legislation, you may find that there is already a higher quality static PDF of the enacted/made/adopted version.
 
 ## Static PDFs
 
-Some other documents are available as &ldquo;static&rdquo; PDFs. These are:
+Some other documents are available as “static” PDFs. These are:
 
  * Original versions of legislation as printed
  * Revised PDF versions of legislation
  * Associated documents (such as Impact Assessments)
  * Correction slips and corrigenda
 
-These documents do not follow a standardised URI scheme. You can find their URIs linked in the metadata of the document to which they are associated. The CLML user guide describes [how to identify associated documents in metadata]().
+These documents do not follow a standardised URI scheme. You can find their URIs linked in the metadata of the document to which they are associated. The CLML user guide describes [how to identify associated documents in metadata](https://legislation.github.io/clml-schema/userguide.html#associated-documents-and-alternative-representations).
