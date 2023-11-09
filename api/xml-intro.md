@@ -12,7 +12,7 @@ An element is denoted by either a pair of tags (e.g. `<Text>Hello</Text>`) or a 
 
 An element may contain other nodes in between its opening and closing tags, such as text nodes (e.g. `Hello` in the first example above) or other elements. These child nodes may appear in an arbitrary order (e.g. `<A X="Y">1 <B>2 <C Z="/">3</C> 4</B></A>`). Elements cannot partially overlap with other elements (i.e. `<A>over<B></A>lap</B>` is not permitted in XML).
 
-An element has a name, which consists of a local name (e.g. "Text") and optionally a namespace (see the section on [namespaces](#namespaces) below).
+An element has a name, which consists of a local name (e.g. “Text”) and optionally a namespace (see the section on [namespaces](#namespaces) below).
 
 Every XML document must contain exactly one root element, which must be the first node to appear in an XML document (apart from the optional `<?xml ... ?>` processing instruction, which indicates the XML version and character encoding for the file).
 

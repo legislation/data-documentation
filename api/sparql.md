@@ -128,27 +128,27 @@ The most commonly used vocabularies in the Linked Data service are:
 </tr>
 <tr>
 <td>Core legislation ontology</td>
-<td>`http://www.legislation.gov.uk/def/legislation/`</td>
+<td><code>http://www.legislation.gov.uk/def/legislation/</code></td>
 <td>Defines core classes and properties for linked data for legislation.gov.uk</td>
 </tr>
 <tr>
 <td>RDF vocabulary</td>
-<td>`http://www.w3.org/1999/02/22-rdf-syntax-ns#`</td>
+<td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td>
 <td>Defines core classes and properties for relational data</td>
 </tr>
 <tr>
 <td>RDF schema vocabulary</td>
-<td>`http://www.w3.org/2000/01/rdf-schema#`</td>
+<td><code>http://www.w3.org/2000/01/rdf-schema#</code></td>
 <td>Defines core classes and properties for describing ontologies</td>
 </tr>
 <tr>
 <td>Dublin Core</td>
-<td>`http://purl.org/dc/terms/`</td>
+<td><code>http://purl.org/dc/terms/</code></td>
 <td>Defines common classes and properties for metadata</td>
 </tr>
 <tr>
 <td>OWL (Web Ontology Language)</td>
-<td>`http://www.w3.org/2002/07/owl#`</td>
+<td><code>http://www.w3.org/2002/07/owl#</code></td>
 <td>Defines further classes and properties for describing ontologies</td>
 </tr>
 </tbody>

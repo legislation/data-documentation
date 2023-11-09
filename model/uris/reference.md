@@ -8,9 +8,9 @@ This page describes the URI scheme that is used on the Legislation API. The Legi
 
 We define three levels of URIs for legislation:
 
-*   [identifier URIs](#identifier-uris); for example, "The Transport Act 1985", `http://www.legislation.gov.uk/id/ukpga/1985/67`
-*   [document URIs](#document-uris); for example, "The current version of The Transport Act 1985" (as opposed to a previous version), `http://www.legislation.gov.uk/ukpga/1985/67`
-*   [representation URIs](#representation-uris); for example, "The current version of The Transport Act 1985 in XML" (as opposed to an HTML document), `http://www.legislation.gov.uk/ukpga/1985/67/data.xml`
+*   [identifier URIs](#identifier-uris); for example, “The Transport Act 1985”, `http://www.legislation.gov.uk/id/ukpga/1985/67`
+*   [document URIs](#document-uris); for example, “The current version of The Transport Act 1985” (as opposed to a previous version), `http://www.legislation.gov.uk/ukpga/1985/67`
+*   [representation URIs](#representation-uris); for example, “The current version of The Transport Act 1985 in XML” (as opposed to an HTML document), `http://www.legislation.gov.uk/ukpga/1985/67/data.xml`
 
 When you request an identifier URI, the response will usually be a `303 See Other` redirection to a document URI. When you request a document URI, you will usually get a `200 OK` response and a `Content-Location` header that will point to an appropriate representation URI based on the `Accept` headers that you use in the request.
 
@@ -241,7 +241,7 @@ Legislation versions fall into three general categories: [enacted/made/adopted v
 
 ##### Enacted/made/adopted versions
 
-The enacted, made or adopted version of legislation reflects the text of the legislation when it became law. Primary legislation is "enacted", while the majority of secondary legislation is "made" (United Kingdom Church Instruments and Ministerial Orders are simply "created") and legislation originating from the EU was "adopted".
+The enacted, made or adopted version of legislation reflects the text of the legislation when it became law. Primary legislation is “enacted”, while the majority of secondary legislation is “made” (United Kingdom Church Instruments and Ministerial Orders are simply “created”) and legislation originating from the EU was “adopted”.
 
 Using the keyword `enacted`, `made`, `created` or `adopted` at the end of a document URI provides the enacted or made version of the legislation, if such is available. The enacted version of legislation is often unavailable for legislation prior to 1988<!-- TODO when origins is done (see our [origins](origins.md) page for an explanation)-->.
 

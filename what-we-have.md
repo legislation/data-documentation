@@ -21,8 +21,8 @@ We do not hold text of any of the following types of legislation, although we do
 
 We do hold some legislation originating from the EU, to fulfil our obligations under [Schedule 5 of the European Union (Withdrawal) Act 2018](http://www.legislation.gov.uk/id/ukpga/2018/16/schedule/5). The EU origin legislation we hold is:
 
- * All EU legislation classified as "legal acts" in the EUR-Lex database (sector 3), plus their consolidated versions (sector 0) and any [corrigenda](glossary.md#correction-slip--corrigendum)
- * the following EU treaties, both the "Official Journal" version and any consolidated versions:
+ * All EU legislation classified as “legal acts” in the EUR-Lex database (sector 3), plus their consolidated versions (sector 0) and any [corrigenda](glossary.md#correction-slip--corrigendum)
+ * the following EU treaties, both the “Official Journal” version and any consolidated versions:
     + the Treaty on European Union,
     + the Treaty on the Functioning of the European Union,
     + the Euratom Treaty, and
@@ -34,7 +34,7 @@ The [EU Exit Web Archive](https://webarchive.nationalarchives.gov.uk/eu-exit) ho
 
 We normally only record amendments _from_ amending documents enacted or made in 1994 onwards. There are some notable exceptions:
 
- * We have recorded some amendments from "EU implementing" secondary legislation made from 1972 onwards.
+ * We have recorded some amendments from “EU implementing” secondary legislation made from 1972 onwards.
  * We have uploaded all amendments by EU documents on other EU documents, which date from 1953, the first year from which legislation was enacted by the European Communities.
 
 There are some types of legislation for which we do not record either changes made by them, changes made to them, or either.
@@ -91,9 +91,9 @@ There are some types of legislation for which we do not record either changes ma
 
 #### Legislation originating from the EU
 
-|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
-|---|---|---|---|
-|{::nomarkdown}<p>All Regulations, Decisions and Directives in [sector 3](https://eur-lex.europa.eu/content/tools/TableOfSectors/types_of_documents_in_eurlex.html), plus their consolidated versions and any [corrigenda](glossary.md#correction-slip--corrigendum)</p><p>Almost all EU documents adopted from 2004 onwards are available as XML and original PDFs. Most EU documents adopted before 2004 are only available as original PDF, except for a small number that have consolidated versions in XML</p>{:/}|We are applying domestic "EU Exit" amendments to these documents only—as of the end of the implementation period no further EU amendments apply|Yes, all known amendments from the EU origin documents we hold have been recorded|Yes, but only for domestic "EU Exit" amendments and any EU amendments made before the end of the implementation period|
+|Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
+|---|---|---|---|---|
+|All Regulations, Decisions and Directives in [sector 3](https://eur-lex.europa.eu/content/tools/TableOfSectors/types_of_documents_in_eurlex.html), plus their consolidated versions and any [corrigenda](glossary.md#correction-slip--corrigendum)|Almost all EU documents adopted from 2004 onwards are available as XML and original PDFs. Most EU documents adopted before 2004 are only available as original PDF, except for a small number that have consolidated versions in XML|We are applying domestic “EU Exit” amendments to these documents only—as of the end of the implementation period no further EU amendments apply|Yes, all known amendments from the EU origin documents we hold have been recorded|Yes, but only for domestic “EU Exit” amendments and any EU amendments made before the end of the implementation period|
 
 ## Limitations
 

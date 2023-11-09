@@ -12,7 +12,7 @@ You can get lists using the API (including those of newly published legislation)
 
 ## What is the Legislation API?
 
-The legislation.gov.uk website is also an [API](https://en.wikipedia.org/wiki/API) (short for "application programming interface"), which means it is designed for software applications to use as well as human readers. Applications can use the API to search for and download legislation and information about it.
+The legislation.gov.uk website is also an [API](https://en.wikipedia.org/wiki/API) (short for “application programming interface”), which means it is designed for software applications to use as well as human readers. Applications can use the API to search for and download legislation and information about it.
 
 The API serves the pages you can view on legislation.gov.uk. This means that (almost) every page or resource on the website is also available via the API, often in multiple formats, and the content available via both routes is updated at the same time. 
 
@@ -29,9 +29,9 @@ The API has the following features:
 
 You can get the content of a legislation document (or part of it) through the API.
 
-For example, you can get the content of the Pension Schemes Act 2021 through the following [URLs]|(../model/uris/introduction.md):
+For example, you can get the content of the Pension Schemes Act 2021 through the following [URLs](../model/uris/introduction.md):
 
-* [https://www.legislation.gov.uk/ukpga/2021/1/data.xml](https://www.legislation.gov.uk/ukpga/2021/1/data.xml) returns the content of the **latest version** of the Pension Schemes Act 2021 as [CLML]|(../formats/xml.md), our XML dialect for legislation.
+* [https://www.legislation.gov.uk/ukpga/2021/1/data.xml](https://www.legislation.gov.uk/ukpga/2021/1/data.xml) returns the content of the **latest version** of the Pension Schemes Act 2021 as [CLML](../formats/xml.md), our XML dialect for legislation.
 * [https://www.legislation.gov.uk/ukpga/2021/1/enacted/data.xml](https://www.legislation.gov.uk/ukpga/2021/1/enacted/data.xml) returns the content of the **as enacted version** of the Pension Schemes Act 2021 as CLML.
 * [https://www.legislation.gov.uk/ukpga/2021/1/part/1/data.xml](https://www.legislation.gov.uk/ukpga/2021/1/part/1/data.xml) returns the content of the **latest version of Part 1** of the Act as CLML.
 
@@ -54,7 +54,7 @@ The `<ukm:Metadata>` element in CLML (see the section on [namespaces](xml-intro.
 * any “alternative” formats of the item, such as a PDF;
 * any associated documents, such as Impact Assessments and Explanatory Memoranda;
 * the date(s) of enactment, making, laying and/or coming into force of the item (where present in the data);
-* any powers to make secondary legislation conferred by the item (present only in [revised data]|(../model/legislation.md#versions)); and
+* any powers to make secondary legislation conferred by the item (present only in [revised data](../model/legislation.md#versions)); and
 * any unapplied changes outstanding for the document.
 
 The CLML Reference Guide has guidance on how to interpret [metadata in CLML](https://legislation.github.io/clml-schema/userguide.html#part-5-metadata).

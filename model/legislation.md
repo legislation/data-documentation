@@ -151,10 +151,10 @@ We do not currently hold the text of quashed items of legislation on legislation
 
 Each extant version of an item of legislation has at least one *manifestation*, which is a representation of that version in a digital format.
 
-We represent the text of almost all digitally published and edited legislation as XML, in a bespoke XML dialect called [Crown Legislation Markup Language]|(../formats/xml.md) (or CLML for short). 
+We represent the text of almost all digitally published and edited legislation as XML, in a bespoke XML dialect called [Crown Legislation Markup Language](../formats/xml.md) (or CLML for short). 
 
 We convert legislation to CLML when we ingest it in machine-readable formats from other sources, including new legislation from legislatures ([Parliament](https://www.parliament.uk/), the [Welsh Sennedd](https://www.senedd.cymru), the [Scottish Parliament](https://www.parliament.scot/) or the [Northern Ireland Assembly](http://www.niassembly.gov.uk/)) and government departments, as well as some legislation from historical sources. We then generate other formats from the CLML on demand, including the HTML views for our website, dynamically generated PDFs and other XML formats such as Akoma Ntoso (AKN).
 
-The XML schema for Crown Legislation Markup Language describes the permitted structure of a valid CLML document. The schema is [available on our website](https://www.legislation.gov.uk/schema/legislation.xsd), along with [schema documentation](https://legislation.github.io/clml-schema/) that contains a guide to its use and a reference for the schema’s features. The [XML]|(../formats/xml.md) section of this guide gives a basic explanation for how to interpret CLML.
+The XML schema for Crown Legislation Markup Language describes the permitted structure of a valid CLML document. The schema is [available on our website](https://www.legislation.gov.uk/schema/legislation.xsd), along with [schema documentation](https://legislation.github.io/clml-schema/) that contains a guide to its use and a reference for the schema’s features. The [XML](../formats/xml.md) section of this guide gives a basic explanation for how to interpret CLML.
 
 We also store some legislation in its original enacted or made version as PDF, as well as some revised versions of legislation produced by third parties. (For example, the Department for Work and Pensions used to produce revised versions of social security Acts and supplied them to us as PDF.)

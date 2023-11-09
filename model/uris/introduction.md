@@ -1,6 +1,6 @@
 # URIs (Uniform Resource Identifiers)
 
-We identify things in our data using URIs (short for "uniform resource identifier"). A URI is an identifier that looks like an address of a page or resource on a website. In many cases these URIs *are* functioning web addresses: we say that it is possible to **resolve** these URIs, which means that if you open the URI in a web browser or other suitable application, you can get a page or resource that represents the thing that the URI identifies.
+We identify things in our data using URIs (short for “uniform resource identifier”). A URI is an identifier that looks like an address of a page or resource on a website. In many cases these URIs *are* functioning web addresses: we say that it is possible to **resolve** these URIs, which means that if you open the URI in a web browser or other suitable application, you can get a page or resource that represents the thing that the URI identifies.
 
 The following are examples of legislation.gov.uk URIs:
 
