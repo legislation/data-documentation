@@ -33,7 +33,7 @@ The list also provides the following metadata in the `http://www.legislation.gov
 * `<ukm:Number>` gives the number of the legislation
 * `<ukm:CreationDate>` gives the enactment or made date of the legislation
 
-For each entry, we provide links to the [XML](formats/xml.md) (CLML and Akoma Ntoso) and [HTML](../developer/formats/html.md) (XHTML and HTML5) formats of the legislation as well as to the XML [table of contents](../developer/formats/xml#toc) for the legislation. For example:
+For each entry, we provide links to the [XML](xml.md) (CLML and Akoma Ntoso) and [HTML](../developer/formats/html.md) (XHTML and HTML5) formats of the legislation as well as to the XML [table of contents](../developer/formats/xml#toc) for the legislation. For example:
 
 ```
 <entry>
@@ -68,7 +68,7 @@ For each entry, we provide links to the [XML](formats/xml.md) (CLML and Akoma Nt
 
 ## Changes to legislation feeds
 
-The changes to legislation feeds list [effects](model/effects.md). Each entry contains a single effect, represented by a `<ukm:Effect>` element (in the `http://www.legislation.gov.uk/namespaces/metadata` namespace). You can find out more about the XML representation of effects in the [Effects section of the CLML user guide](https://legislation.github.io/clml-schema/userguide.html#effects).
+The changes to legislation feeds list [effects]|(../model/effects.md). Each entry contains a single effect, represented by a `<ukm:Effect>` element (in the `http://www.legislation.gov.uk/namespaces/metadata` namespace). You can find out more about the XML representation of effects in the [Effects section of the CLML user guide](https://legislation.github.io/clml-schema/userguide.html#effects).
 
 For example, below is an effect from [paragraph 2(3) of Schedule 7 of the Occupational Pension Schemes (Collective Money Purchase Schemes) Regulations 2022](http://www.legislation.gov.uk/id/uksi/2022/255/schedule/7/paragraph/2/3), inserting a new regulation 32EA into the [Occupational and Personal Pension Schemes (Automatic Enrolment) Regulations 2010](http://www.legislation.gov.uk/id/uksi/2010/772):
 

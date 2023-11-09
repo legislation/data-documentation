@@ -11,7 +11,7 @@ The website and API also allow you to get listings of [changes to legislation](#
 
 ### Formats
 
-Every list on the website of search results, or of legislation or changes to legislation, is available as a feed in [Atom](formats/atom.md) XML format by appending `/data.feed` to the end of the path of the address of the search request or list page (before the "query string" part of the address, which if present begins with a `?` character). The HTML and Atom formats contain the same information, but presented differently. 
+Every list on the website of search results, or of legislation or changes to legislation, is available as a feed in [Atom](../formats/atom.md) XML format by appending `/data.feed` to the end of the path of the address of the search request or list page (before the "query string" part of the address, which if present begins with a `?` character). The HTML and Atom formats contain the same information, but presented differently. 
 
 ### Paging
 
