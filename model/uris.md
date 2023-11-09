@@ -132,7 +132,12 @@ Could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 
 
 #### Legislation numbers
 
-The legislation number is an integer that reflects the legislation’s chapter number according to the primary numbering sequence for the type. Legislation is sometimes assigned one or more secondary numbers. Secondary numbering schemes are:
+The legislation number is an integer that reflects the legislation’s chapter or other series number according to the primary numbering sequence for the type. For example:
+
+ * the Financial Services and Markets Act 2000 has the chapter number 8, and so its URI is [http://www.legislation.gov.uk/id/ukpga/2000/8]](http://www.legislation.gov.uk/id/ukpga/2000/8);
+ * the Universal Credit Regulations 2013 has the number 376 in the UK Statutory Instrument series, and so its URI is [http://www.legislation.gov.uk/id/uksi/2013/376](http://www.legislation.gov.uk/id/uksi/2013/376).
+
+Secondary legislation is sometimes assigned one or more additional numbers in different numbering series. Secondary numbering schemes are:
 
 |Numbering Scheme|Description|URI Number Prefix|
 |---|---|---|
@@ -140,9 +145,9 @@ The legislation number is an integer that reflects the legislation’s chapter n
 |Legal series (L)|Relate to fees or procedures in Courts in England and Wales.|`l`|
 |Scottish series (S)|Instruments covering reserved matters applying to Scotland only, not to be confused with Scottish Statutory Instruments made under powers devolved under the [Scotland Act 1998](http://www.legislation.gov.uk/id/ukpga/1998/46).|`s`|
 |Northern Ireland series (NI)|Orders in Council made under [section 1(3) of the Northern Ireland (Temporary Provisions) Act 1972](http://www.legislation.gov.uk/id/ukpga/1972/22/section/1/3) or [paragraph 1 of Schedule 1 to the Northern Ireland Act 1974](http://www.legislation.gov.uk/id/ukpga/1974/28/schedule/1/paragraph/1).|`ni`|
-|National Assembly for Wales series (W/Cy)|Statutory Instruments made by the National Assembly for Wales and applying to Wales only. Such instruments will generally be made in both the English and Welsh languages.|`w`|
+|Welsh series (W/Cy)|Statutory Instruments made by Senedd Cymru (formerly the National Assembly for Wales) and applying to Wales only. Such instruments will generally be made in both the English and Welsh languages.|`w`|
 
-It’s possible to use a secondary number within a URI by prefixing the number with the appropriate prefix as shown in the above table. This will result in a `301 Moved Permanently` redirection to the URI using the main numbering scheme. For example, requesting
+It is possible to use a secondary number within a URI by prefixing the number with the appropriate prefix as shown in the above table. This will result in a `301 Moved Permanently` redirection to the URI using the main numbering scheme. For example, requesting
 
 `http://www.legislation.gov.uk/id/wsi/2002/w89`
 
@@ -160,10 +165,10 @@ The name of the division that is used depends on the type of the legislation as 
 
 |Legislation Type|Division Name|
 |---|---|
-|Act, Scheme|section|
-|Order, Order in Council or Order of Council|article|
-|Regulations|regulation|
-|Rules|rule|
+|Act, Scheme|`section`|
+|Order, Order in Council or Order of Council, EU origin legislation|`article`|
+|Regulations|`regulation`|
+|Rules|`rule`|
 
 For example, regulation 6 of the Overseas Life Insurance Companies Regulations 2004 can be referenced with:
 
@@ -191,10 +196,22 @@ To refer to other structures within a piece of legislation, such as parts, chapt
 
 The allowed keywords here are:
 
-*   group
-*   part
-*   chapter
-*   schedule
+* `group`
+* `part`
+* `chapter`
+* `schedule`
+* `crossheading`
+* `title` (for EU documents only)
+* `annex` (for EU documents only)
+* `attachment` (for EU documents only)
+
+Within schedules, sections are referred to by the keyword `paragraph`:
+
+`http://www.legislation.gov.uk/id/ukpga/1984/27/schedule/4/paragraph/3`
+
+Within EU annexes and attachments, sections are referred to by the keyword `division`—unusually, the keyword `division` is repeated for every nested division:
+
+`http://www.legislation.gov.uk/eur/2006/1907/annex/II/part/A/division/0.2/division/0.2.1`
 
 Note that these are URI keywords, and always in English regardless of the language used in the legislation. However, the numbers used for parts, chapters and so on reflect the numbers used within the legislation; some legislation may contain Part II while another contains Part 2, and the URIs will reflect this difference rather than normalising on decimal numbers.
 

@@ -8,7 +8,7 @@ For each item of legislation that we record, we assign that item a URI that uniq
 
 `http://www.legislation.gov.uk/id/ukpga/2011/20`
 
-We use the same URI to identify an item of legislation across our whole dataset. We encourage you to use these URIs in your own data to uniquely identify items of UK legislation and retained EU origin legislation.
+We use the same URI to identify an item of legislation across our whole dataset. We encourage you to use these URIs in your own data to uniquely identify items of UK legislation and EU origin legislation.
 
 ## Structure of a legislation document
 

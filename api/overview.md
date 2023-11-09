@@ -66,7 +66,7 @@ If you only want the metadata for a document, the `/resources` sub-resource cont
 
 #### Legislation Linked Data via the SPARQL endpoint
 
-We now have a SPARQL endpoint that allows for querying of core legislation data, including a near-complete list of all UK and retained EU law. For more information, see the [SPARQL](sparql.md) section of this documentation.
+We now have a SPARQL endpoint that allows for querying of core legislation data, including a near-complete list of all UK law, as well as of EU origin law up to the end of the implementation period. For more information, see the [SPARQL](sparql.md) section of this documentation.
 
 ### Changes to legislation
 
