@@ -235,4 +235,4 @@ You can find out more information about UK legislation on [Legislation.gov.uk](h
 
 ## Licence
 
-For information on licensing and re-using our data, please see the [Licence](../licence.md) page.
+For information on licensing and re-using our data, please see the [Licence](../reuse-licence.md) page.

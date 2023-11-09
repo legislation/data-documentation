@@ -105,7 +105,7 @@ For more information, see the section on [search, lists and feeds](search.md).
 
 You can connect to our API using any HTTP client (such as a web browser, or an HTTP request library for your programming language). This page contains addresses for some example resources available through the API.
 
-We encourage users to use our API in their own applications, including crawling and bulk access, and whether commercial or non-commercial. The data in the API are available under open licences. For more information on licensing, see the [licence](../licence.md) section of this guide.
+We encourage users to use our API in their own applications, including crawling and bulk access, and whether commercial or non-commercial. The data in the API are available under open licences. For more information on licensing, see the [licence](../reuse-licence.md) section of this guide.
 
 ### Fair Use Policy
 

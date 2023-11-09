@@ -2,7 +2,7 @@
 
 ## Open data
 
-The information on legislation.gov.uk is available for you to reuse **free of charge**, under a [permissive licence](licence.md), for commercial and non-commercial uses.
+The information on legislation.gov.uk is available for you to reuse **free of charge**, under a [permissive licence](reuse-licence.md), for commercial and non-commercial uses.
 
 You can download the following data from us, in a variety of formats:
 

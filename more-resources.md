@@ -4,7 +4,7 @@
 
 We publish some of our code and documentation on Github at [@legislation](https://github.com/legislation).
 
-We don’t accept pull requests on our repositories, although you are welcome to fork them and reuse the code for your own purposes if you follow the [Open Government Licence](licence.md). If you’ve built something using our code and want to tell us about it, please [contact us](index.md#contact-us) to let us know.
+We don’t accept pull requests on our repositories, although you are welcome to fork them and reuse the code for your own purposes if you follow the [Open Government Licence](reuse-licence.md). If you’ve built something using our code and want to tell us about it, please [contact us](index.md#contact-us) to let us know.
 
 ## Schema
 
