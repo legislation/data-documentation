@@ -243,7 +243,7 @@ Legislation versions fall into three general categories: [enacted/made/adopted v
 
 The enacted, made or adopted version of legislation reflects the text of the legislation when it became law. Primary legislation is "enacted", while the majority of secondary legislation is "made" (United Kingdom Church Instruments and Ministerial Orders are simply "created") and legislation originating from the EU was "adopted".
 
-Using the keyword `enacted`, `made`, `created` or `adopted` at the end of a document URI provides the enacted or made version of the legislation, if such is available. The enacted version of legislation is often unavailable for legislation prior to 1988 (see our [origins](origins.md) page for an explanation).
+Using the keyword `enacted`, `made`, `created` or `adopted` at the end of a document URI provides the enacted or made version of the legislation, if such is available. The enacted version of legislation is often unavailable for legislation prior to 1988<!-- TODO when origins is done (see our [origins](origins.md) page for an explanation)-->.
 
 For example, the enacted version of the Childcare Act 2006 can be found at:
 

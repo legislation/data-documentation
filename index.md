@@ -16,7 +16,7 @@ You can also search or query for legislation, download lists of legislation or s
 
 Our dataset **is not yet complete** and only contains data for some items of legislation. You can read about [what data we have](what-we-have.md), including limitations of the data in our dataset.
 
-We acquire new and historical legislation data from multiple sources. You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. You can also read about how to track [updates](api/publication-log.md) to our data.
+We acquire new and historical legislation data from multiple sources. <!-- TODO add in when origins page is ready You can read about the [origins](origins.md) of the data in our dataset, including information about when we update our data. -->You can read about how to track [updates](api/publication-log.md) to our data.
 
 ## Understand our data
 
