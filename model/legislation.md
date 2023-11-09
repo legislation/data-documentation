@@ -72,7 +72,7 @@ In our data model, we map the FRBR concepts onto the following legislation conce
 
 ### Points in time
 
-**Note that some items of legislation have revised versions available as static PDFs, which do not use the below URIs. For more information on these, see the [legislation PDFs](uris/reference.md#legislation-pdfs) section of the URI scheme reference.**
+**Note that some items of legislation have revised versions available as static PDFs, which do not use the below URIs. For more information on these, see the [legislation PDFs](uris.md#legislation-pdfs) section of the URI scheme reference.**
 
 Each newly published item (and each of its sections) has an enacted, made or created version that shows the text of the item as it was passed into law.
 

@@ -63,7 +63,7 @@ If the address does not contain a `?` character, you can append `/data.feed` to 
 Note that the default sort order on list web pages is different to that of feeds:
 
  * By default, list web pages are ordered by:
-    * Legislation type in descending alphabetical order (the [internal type name](../model/uris/reference.md#legislation-types) is used for sorting)
+    * Legislation type in descending alphabetical order (the [internal type name](../model/uris.md#legislation-types) is used for sorting)
     * Legislation year in descending order (most recent first)
     * Legislation number in descending order
  * By default, feeds are sorted by last modification date in descending order (where the last modification date is the last date any enacted or revised version of the item was created or changed)
@@ -86,7 +86,7 @@ The parameters permit the following values:
 
 |Parameter|Meaning|Permitted values (`/search`)|Permitted values (list page)|
 |---|---|---|---|
-|`type`|The type of the legislation (e.g. UK Public General Act)|Supports any of the [short type codes](../model/uris/reference.md#legislation-types), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, use the parameter more than once (e.g. `type=ukpga&type=asp`)|Supports any of the [short type codes](../model/uris/reference.md#legislation-types), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, separate them using the `+` character (e.g. `ukpga+asp`)|
+|`type`|The type of the legislation (e.g. UK Public General Act)|Supports any of the [short type codes](../model/uris.md#legislation-types), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, use the parameter more than once (e.g. `type=ukpga&type=asp`)|Supports any of the [short type codes](../model/uris.md#legislation-types), the super-categories `primary`, `secondary` and `eu-origin`, and the `all` wildcard type. To specify multiple values, separate them using the `+` character (e.g. `ukpga+asp`)|
 |`year`|The calendar year of the enactment or registration of the item of legislation|Supports any four-digit year.||
 |`start-year`|The lower limit of the desired range of calendar years of items of legislation|Supports any four-digit year. Must be less than or equal to `end-year`.||
 |`end-year`|The upper limit of the desired range of calendar years of items of legislation|Supports any four-digit year. Must be greater than or equal to `start-year`.||
@@ -142,7 +142,7 @@ You can specify the following sort orders for a legislation search/list using th
 |`title`|Sort by title ascending in alphabetical order, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`modified`|Sort by last modified date descending, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`created`|Sort by category (EU, then primary, then secondary), then year descending, then enacted/made date descending|
-|`type`|Sort by legislation type ascending in alphabetical order (using the [long type code](../model/uris/reference.md#legislation-types)), then year descending, then enacted/made date descending|
+|`type`|Sort by legislation type ascending in alphabetical order (using the [long type code](../model/uris.md#legislation-types)), then year descending, then enacted/made date descending|
 |"Basic" sort order|Default sort order for search result and list web pages. Also used if any other value apart from the above values is passed to the `sort` parameter, including an empty string. Sort by category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending)|
 
 Note that the HTML and Atom view of the feeds have a different default sort order:
