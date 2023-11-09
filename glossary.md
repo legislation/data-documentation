@@ -110,7 +110,7 @@ A provision, usually numbered, constituting on SLD the lowest level of division 
 
 A successive version of a provision (or higher level of division of legislation) is a new version that replaces an earlier version. A new version is created whenever the text is amended.
 
-# Statutes in Force
+## Statutes in Force
 
 A printed compilation of revised UK Public General Acts, available as a set of loose-leaf binders, and updated regularly up to 1<sup>st</sup> February 1991.
 
