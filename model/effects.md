@@ -12,6 +12,8 @@ When a provision of legislation makes a change to one or more provisions of legi
 
 An effect is a record of the change that helps our editors track where (and when) to apply amendments and commencements. Effects help our readers and data re-users find changes made by legislation both before and after we have applied them.
 
+Our API represents effects as XML using [CLML](../formats/xml.md). The [Effects section of the CLML User Guide](https://legislation.github.io/clml-schema/userguide.html#effects) contains more information on how to interpret effects in XML.
+
 ## Effect data
 
 An effect contains information on the following:

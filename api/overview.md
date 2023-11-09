@@ -82,7 +82,7 @@ To get a list of effects, see the [changes to legislation](search.md#changes-to-
 
 <!--For more information on how to request lists of effects, see the changes section of our API reference.--> 
 
-For more information on how to interpret effects, see the [effects section](https://legislation.github.io/clml-schema/userguide.html#effects) of the CLML reference guide.
+For more information on how to interpret effects, see the [Effects](../model/effects.md) section of this documentation.
 
 ### Search, lists and feeds
 
