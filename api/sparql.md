@@ -108,14 +108,14 @@ prefix @leg: <http://www.legislation.gov.uk/def/legislation>
 In this example:
 
  * the URI ending `/ukpga/2021/10` is the subject,
- * `leg:title` is the predicate (short for `<http://www.legislation.gov.uk/def/legislation/title>`, read more about [ontologies and vocabularies](#Ontologies) below) and
+ * `leg:title` is the predicate (short for `<http://www.legislation.gov.uk/def/legislation/title>`, read more about [ontologies and vocabularies](#ontologies) below) and
  * `"Trade Act 2021"@en` is the object – in this case, a string with an `@en` (English) language tag.
 
 Here, the URI ending `/ukpga/2021/10` is the subject, `leg:title` (short for `<http://www.legislation.gov.uk/def/legislation/title>`) is the predicate and `"Trade Act 2021"@en` is the object – in this case, a string with an `@en` (English) language tag.
 
 #### Ontologies and vocabularies<a id="ontologies"></a>
 
-The Linked Data service uses a bespoke legislation ontology. The ontology specifies a vocabulary of classes and properties that entities in the data can use, such as `ScottishAct` or `title`. There is [documentation for the ontology](../def/legislation/).
+The Linked Data service uses a bespoke legislation ontology. The ontology specifies a vocabulary of classes and properties that entities in the data can use, such as `ScottishAct` or `title`. There is [documentation for the ontology](https://www.legislation.gov.uk/def/legislation/).
 
 The most commonly used vocabularies in the Linked Data service are:
 

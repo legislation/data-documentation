@@ -24,7 +24,7 @@ Our [data model](model/introduction.md) overview explains what our data represen
 
 ## Start using our data
 
-You can get our data via our website and **[API]**.
+You can get our data via our website and **API**.
 
 <!-- TODO: Replace above para with this one once bulk downloads available You can read get our data through one of two routes:
 
