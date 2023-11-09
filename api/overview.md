@@ -111,7 +111,7 @@ We encourage users to use our API in their own applications, including crawling 
 
 We do have a [Fair Use Policy](../fair-use.md) for the API. To use the API, you must follow the requirements of the policy: 
 
- * If you make requests to the API, they must specify a **user agent** (if you are making requests from a web browser, it will specify a user agent automatically). TODO in future we may require that the user agent contains descriptive information such as a web address
+ * If you make requests to the API, they must specify a **user agent** (if you are making requests from a web browser, it will specify a user agent automatically).<!-- TODO in future we may require that the user agent contains descriptive information such as a web address-->
  * We currently limit each IP address to 3,000 API requests every 5 minutes.<!-- TODO: add back in when Bulk Downloads is working; If you want to download a large amount of legislation data at once, it may be quicker to use our [bulk downloads]() service, which allows you to download all or part of our set of legislation as a ZIP file.-->
 
 ### URI scheme
