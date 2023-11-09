@@ -20,7 +20,7 @@ When you request an identifier URI, the response will usually be a `303 See Othe
 
 Identifier URIs generally follow the template:
 
-<code>http://[]()www[]().legislation.gov.uk/id/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]</code>
+<code>http://www.legislation.gov.uk/id/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]</code>
 
 However, legislation is often quoted without a chapter number, which can make it hard to automatically construct these URIs. If you don’t know the chapter number for a piece of legislation, you can use a search URI of the form:
 
@@ -204,7 +204,7 @@ Requesting a division that does not exist within the legislation will result in 
 
 Document URIs are used to refer to particular documents on the web: versions of the legislation. Document URIs follow the template:
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]\[/{[authority](../../developer/uris#authority)}\]\[/{[extent](../../developer/uris#extent)}\]\[/{[version](../../developer/uris#version)}\]</code>
+<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]\[/{[extent](#legislation-extents)}\]\[/{[version](#legislation-versions)}\]</code>
 
 #### Legislation extents
 
@@ -237,7 +237,7 @@ which will request all version of Section 6 of The Transport Act 1985 that are a
 
 #### Legislation versions
 
-Legislation versions fall into three general categories: [enacted/made/adopted versions](../../developer/uris#enacted), [dated versions](../../developer/uris#dated) and [prospective versions](../../developer/uris#prospective).
+Legislation versions fall into three general categories: [enacted/made/adopted versions](#enactedmadeadopted-versions), [dated versions](#dated-versions) and [prospective versions](#prospective-versions).
 
 ##### Enacted/made/adopted versions
 
@@ -303,13 +303,13 @@ If there are no Explanatory Notes or no Explanatory Note for a specific section 
 
 **Note that these URIs only apply to _dynamic_ representations of legislation and associated documents. For static PDFs and images, see the [static resources](#static-resources) section below.**
 
-Each document is available in multiple [formats](../../developer/formats). The URI for a particular format follows the template:
+Each document is available in multiple [formats](../../formats/overview.md). The URI for a particular format follows the template:
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]\[/{[authority](../../developer/uris#authority)}\]\[/{[extent](../../developer/uris#extent)}\]\[/{[version](../../developer/uris#version)}\]/data.\[ext\]</code>
+<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]\[/{[extent](#legislation-extents)}\]\[/{[version](#legislation-versions)}\]/data.\[ext\]</code>
 
 for legislation and
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}\[/{[section](../../developer/uris#section)}\]/notes/data.\[ext\]</code>
+<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]/notes/data.\[ext\]</code>
 
 for explanatory notes.
 
@@ -393,6 +393,6 @@ TODO explain how to find images-->
 
 Static HTML versions of explanatory notes, where available, use the below URI pattern:
 
-<code>http://[]()www.[]()legislation.gov.uk/{[type](../../developer/uris#type)}/{[year](../../developer/uris#year)}/{[number](../../developer/uris#number)}/notes/division/\[number\]/index.htm</code>
+<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}/notes/division/\[number\]/index.htm</code>
 
 where `[number]` is a whole number starting from 1 for the first division of the notes and increasing by 1 for each subsequent division. 

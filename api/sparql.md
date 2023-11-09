@@ -113,7 +113,7 @@ In this example:
 
 Here, the URI ending `/ukpga/2021/10` is the subject, `leg:title` (short for `<http://www.legislation.gov.uk/def/legislation/title>`) is the predicate and `"Trade Act 2021"@en` is the object – in this case, a string with an `@en` (English) language tag.
 
-#### Ontologies and vocabularies
+#### Ontologies and vocabularies<a id="ontologies"></a>
 
 The Linked Data service uses a bespoke legislation ontology. The ontology specifies a vocabulary of classes and properties that entities in the data can use, such as `ScottishAct` or `title`. There is [documentation for the ontology](../def/legislation/).
 
@@ -175,7 +175,7 @@ The Linked Data store contains provenance information, which explains when and h
 
 ### Limitations and future developments
 
-#### Limitations
+#### Limitations<a id="limitations"></a>
 
 The Legislation Linked Data service is **currently in beta** and so its functionality may change, including:
 
@@ -189,7 +189,7 @@ However, we do not expect to make many breaking changes to the ontology, or to r
 
 The Linked Data service does not not currently support querying legislation document structure or text.
 
-#### Future developments
+#### Future developments<a id="future"></a>
 
 In future, we intend to release a Linked Data API that will allow users to retrieve metadata from the Linked Data service for individual legislation items and entities. It will augment the existing Legislation API available on legislation.gov.uk by providing metadata from the Linked Data service both as individual metadata resources and embedded within legislation documents.
 
@@ -203,11 +203,11 @@ We also plan for the Linked Data service to provide the following additonal data
  * Subject classifications, e.g. Statutory Instrument subject headings, EU legislation subject categories
  * Metadata in the European Legislation Identifier (ELI) ontology
 
-Please [contact us](index.md#contact-us) if you want to request or suggest other legislation data that we could make available through the Linked Data service.
+Please [contact us](../index.md#contact-us) if you want to request or suggest other legislation data that we could make available through the Linked Data service.
 
-### Querying using SPARQL
+### Querying using SPARQL<a id="sparql"></a>
 
-You can query the data in the Linked Data store directly through a [SPARQL endpoint](../sparql), either with our in-browser query editor or connecting directly or using your own software. The endpoint is compliant with the SPARQL 1.1 Query Language specification. For more information on using SPARQL to query linked data, read the [specification for the SPARQL query language](https://www.w3.org/TR/sparql11-query/).
+You can query the data in the Linked Data store directly through a [SPARQL endpoint](https://www.legislation.gov.uk/sparql), either with our in-browser query editor or connecting directly or using your own software. The endpoint is compliant with the SPARQL 1.1 Query Language specification. For more information on using SPARQL to query linked data, read the [specification for the SPARQL query language](https://www.w3.org/TR/sparql11-query/).
 
 The SPARQL endpoint allows you to query all data available from the Linked Data service. For example, the following SPARQL query returns all the data units containing data about the Kew Gardens (Leases) Act 2019 (c. 25) and its interpretations, along with information about each of the provenance events that affected them:
 
@@ -230,8 +230,6 @@ SELECT DISTINCT ?dataunit ?prov ?provProperty ?provValue WHERE {
 }
 ORDER BY ?dataunit ?prov ?provProperty</pre>
 ```
-
-You can find out more information about UK legislation on [Legislation.gov.uk](https://www.legislation.gov.uk/).
 
 ## Licence
 

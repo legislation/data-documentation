@@ -33,7 +33,7 @@ The list also provides the following metadata in the `http://www.legislation.gov
 * `<ukm:Number>` gives the number of the legislation
 * `<ukm:CreationDate>` gives the enactment or made date of the legislation
 
-For each entry, we provide links to the [XML](xml.md) (CLML and Akoma Ntoso) and [HTML](../developer/formats/html.md) (XHTML and HTML5) formats of the legislation as well as to the XML [table of contents](../developer/formats/xml#toc) for the legislation. For example:
+For each entry, we provide links to the [XML](xml.md) (CLML and Akoma Ntoso) and [HTML](html.md) (XHTML and HTML5) formats of the legislation as well as to the XML [table of contents](xml.md#tables-of-contents) for the legislation. For example:
 
 ```
 <entry>

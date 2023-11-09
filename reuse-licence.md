@@ -47,17 +47,17 @@ The following wording for acknowledgement is suggested:
 We have reproduced below the [original copyright notice from EUR-Lex](https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419/https://eur-lex.europa.eu/content/legal-notice/legal-notice.html#2.%20droits):
 
 > © European Union, 1998-2020
-
+>
 > The Commission’s document reuse policy is based on [Decision 2011/833/EU](https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833). Unless otherwise specified, you can re-use the legal documents published in EUR-Lex for commercial or non-commercial purposes.
-
+>
 > Some documents, like the International Accounting Standards, may be subject to special conditions of use; these are mentioned in the respective Official Journal/document. You can also consult the [rules on on reproducing euro coin/note images](​​[https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://ec.europa.eu/info/business-economy-euro/euro-area/euro-coins-and-notes/copyright-and-reproduction-rules-euro-coins-and-notes_en#reproduction-rules-for-coins](https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://ec.europa.eu/info/business-economy-euro/euro-area/euro-coins-and-notes/copyright-and-reproduction-rules-euro-coins-and-notes_en#reproduction-rules-for-coins)).
-
+>
 > The copyright for the editorial content of this website, the summaries of EU legislation and the consolidated texts, which is owned by the EU, is licensed under the [Creative Commons Attribution 4.0 International licence​​](https://creativecommons.org/licenses/by/4.0/). This means that you can re-use the content provided you acknowledge the source and indicate any changes you have made.
-
+>
 > You may be required to clear additional rights if certain content depicts identifiable private individuals or includes third-party works. To use or reproduce content not owned by the EU, you may need to seek permission directly from the rights holders. Software or documents covered by industrial property rights, such as patents, trademarks, registered designs, logos and names, are excluded from the Commission’s reuse policy and are not licensed to you.
-
+>
 > To use the EUR-Lex logo, you first need the prior consent of the Publications Office.
-
+>
 > EUR-Lex metadata is dedicated to the public domain in accordance with the [Creative Commons CC0 1.0 Universal Public Domain Dedication deed​​](https://creativecommons.org/publicdomain/zero/1.0/).
 
 For all other copyright issues, please contact: [op-copyright@publications.europa.eu](mailto:op-copyright@publications.europa.eu)​​.
