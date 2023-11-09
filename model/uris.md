@@ -121,7 +121,7 @@ On a few occasions, a pre-1963 calendar year in a URI does not uniquely identify
 
 `http://www.legislation.gov.uk/id/ukpga/1955/19`
 
-Could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 (c.19). These items of legislation have different regnal years, but the same calendar years. The above request will result in a `300 Multiple Choices` response, and the result will be XHTML that includes:
+could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 (c.19). These items of legislation have different regnal years, but the same calendar years. The above request will result in a `300 Multiple Choices` response, and the result will be XHTML that includes:
 
 ```
 <ul>
