@@ -20,7 +20,7 @@ When you request an identifier URI, the response will usually be a `303 See Othe
 
 Identifier URIs generally follow the template:
 
-<code>http://www.legislation.gov.uk/id/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]</code>
+<code>http://www.legislation.gov.uk/id/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}]</code>
 
 However, legislation is often quoted without a chapter number, which can make it hard to automatically construct these URIs. If you don’t know the chapter number for a piece of legislation, you can use a search URI of the form:
 
@@ -55,7 +55,7 @@ The legislation type codes used in the API are as follows:
 
 |Description|Document Main Type|URI abbreviation|
 |---|---|---|
-| **Primary Legislation** |
+| **Primary Legislation** |||
 |UK Public General Acts|`UnitedKingdomPublicGeneralAct`|`ukpga`|
 |UK Local Acts|`UnitedKingdomLocalAct`|`ukla`|
 |UK Private and Personal Acts|`UnitedKingdomPrivateOrPersonalAct`|`ukppa`|
@@ -73,7 +73,7 @@ The legislation type codes used in the API are as follows:
 |Measures of the Welsh Assembly|`WelshAssemblyMeasure`|`mwa`|
 |Acts of the Welsh Assembly|`WelshNationalAssemblyAct`|`anaw`|
 |Acts of Senedd Cymru|`WelshParliamentAct`|`asc`|
-| **Secondary Legislation** |
+| **Secondary Legislation** |||
 |UK Statutory Instruments|`UnitedKingdomStatutoryInstrument`|`uksi`|
 |Scottish Statutory Instruments|`ScottishStatutoryInstrument`|`ssi`|
 |Wales Statutory Instruments|`WelshStatutoryInstrument`|`wsi`|
@@ -82,7 +82,7 @@ The legislation type codes used in the API are as follows:
 |Northern Ireland Orders in Council|`NorthernIrelandOrderInCouncil`|`nisi`|
 |UK Ministerial Orders|`UnitedKingdomMinisterialOrder`|`ukmo`|
 |Northern Ireland Statutory Rules and Orders|`NorthernIrelandStatutoryRuleOrOrder`|`nisro`|
-| **Draft Legislation** |
+| **Draft Legislation** |||
 |UK Draft Statutory Instruments|`UnitedKingdomDraftStatutoryInstrument`|`ukdsi`|
 |Scottish Draft Statutory Instruments|`ScottishDraftStatutoryInstrument`|`sdsi`|
 |Northern Ireland Statutory Rules|`NorthernIrelandDraftStatutoryRule`|`nidsr`|
@@ -204,7 +204,7 @@ Requesting a division that does not exist within the legislation will result in 
 
 Document URIs are used to refer to particular documents on the web: versions of the legislation. Document URIs follow the template:
 
-<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]\[/{[extent](#legislation-extents)}\]\[/{[version](#legislation-versions)}\]</code>
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}][/{<a href="#legislation-extents">extent</a>}][/{<a href="#legislation-versions">version</a>}]</code>
 
 #### Legislation extents
 
@@ -305,11 +305,11 @@ If there are no Explanatory Notes or no Explanatory Note for a specific section 
 
 Each document is available in multiple [formats](../../formats/overview.md). The URI for a particular format follows the template:
 
-<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]\[/{[extent](#legislation-extents)}\]\[/{[version](#legislation-versions)}\]/data.\[ext\]</code>
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}][/{<a href="#legislation-extents">extent</a>}][/{<a href="#legislation-versions">version</a>}]/data.\[ext\]</code>
 
 for legislation and
 
-<code>http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}\[/{[section](#legislation-sections)}\]/notes/data.\[ext\]</code>
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}[/{<a href="#legislation-sections">section</a>}]/notes/data.\[ext\]</code>
 
 for explanatory notes.
 
@@ -393,6 +393,6 @@ TODO explain how to find images-->
 
 Static HTML versions of explanatory notes, where available, use the below URI pattern:
 
-`http://www.legislation.gov.uk/{[type](#legislation-types)}/{[year](#legislation-years)}/{[number](#legislation-numbers)}/notes/division/\[number\]/index.htm`
+<code>http://www.legislation.gov.uk/{<a href="#legislation-types">type</a>}/{<a href="#legislation-years">year</a>}/{<a href="#legislation-numbers">number</a>}/notes/division/\[number\]/index.htm</code>
 
 where `[number]` is a whole number starting from 1 for the first division of the notes and increasing by 1 for each subsequent division. 
