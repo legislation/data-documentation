@@ -68,6 +68,6 @@ You can find details about our code and schemas on the [More Resources](more-res
 
 ## Contact us
 
-If you have any questions about using our data or API, please contact data.legislation@nationalarchives.gov.uk. We’re happy to help with enquiries from individuals, business, organisations and government departments.
+If you have any questions about using our data or API, please contact [data.legislation@nationalarchives.gov.uk](mailto:data.legislation@nationalarchives.gov.uk). We’re happy to help with enquiries from individuals, business, organisations and government departments.
 
 You can also follow us on X (formerly Twitter) at [@legislation](https://twitter.com/legislation).
