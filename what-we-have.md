@@ -8,9 +8,9 @@
 
 We hold the text of almost all UK primary and secondary legislation published since 1988, plus the text of some UK legislation published before that date.
 
-Of the legislation we hold published since 1988, we hold most of it in a machine-readable format called [XML](formats/xml.md). All legislation held in XML format is available as HTML web pages and [dynamically generated PDF files](formats/pdf.md#dynamically-generated-pdfs), and is also available for full-text search. We also hold revised XML versions of most UK Public General Acts enacted before 1988, as these were rekeyed from the [Statutes in Force](glossary.md#statutes-in-force) volumes.
+Of the legislation we hold published since 1988, we hold most of it in a machine-readable format called [XML](formats/xml.md). All legislation held in XML format is available as HTML web pages and [dynamically generated PDF files](formats/pdf.md#dynamically-generated-pdfs), and is also available for full-text search. We also hold revised XML versions of most pre-1988 UK Public General Acts in force as of 1<sup>st</sup> February 1991, as these were rekeyed from the [Statutes in Force](glossary.md#statutes-in-force) volumes.
 
-Most UK legislation we hold that was enacted or made before 1988 is currently only available as PDF.
+Most UK primary legislation we hold that was enacted before 1988 is currently only available as PDF. Most UK secondary legislation we hold that was made before 1987 is currently only available as XML as it was derived from XML provided by [Westlaw](reuse-licence.md#content-derived-from-westlaw).
 
 We do not hold text of any of the following types of legislation, although we do hold [metadata](api/sparql.md) for them:
 
@@ -45,12 +45,12 @@ There are some types of legislation for which we do not record either changes ma
 
 |Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
 |---|---|---|---|---|
-|UK Public General Acts (1801–)|{::nomarkdown}<p>All UK Public General Acts from 1988 onwards</p><p>Some UK Public General Acts from before 1988—mostly those still in force as of 1 February 1991 (the [base date](glossary.md#base-date))</p>{:/}|Yes, although not older UK Public General Acts only available as King’s Printer PDF|Yes, but normally only for UK Public General Acts enacted in 1994 onwards|Yes|
+|UK Public General Acts (1801–)|{::nomarkdown}<p>All UK Public General Acts from 1988 onwards</p><p>Some UK Public General Acts from before 1988—mostly those still in force as of 1 February 1991 (the <a href="glossary.md#base-date">base date</a>)</p>{:/}|Yes, although not older UK Public General Acts only available as King’s Printer PDF|Yes, but normally only for UK Public General Acts enacted in 1994 onwards|Yes|
 |UK Local Acts (1801–)|{::nomarkdown}<p>All UK Local Acts from 1991 onwards</p><p>Some UK Public General Acts from before 1991—mostly only available as King’s Printer PDF</p>{:/}|Yes, although not older UK Local Acts only available as King’s Printer PDF|Yes, but  only for UK Local Acts enacted in 1994 onwards|Yes|
 |Measures and Acts of the National Assembly for Wales (2008–2020), Acts of Senedd Cymru (2020–)|All Welsh primary legislation|Yes, but only in English|Yes|Yes|
 |Acts of the Scottish Parliament (1999–)|All Acts of the Scottish Parliament|Yes|Yes|Yes|
 |Acts of the Northern Ireland Assembly (2000–)|All Acts of the Northern Ireland Assembly|Yes|Yes|Yes|
-|Northern Ireland Orders in Council (1972–)|{::nomarkdown}<p>All Northern Ireland Orders in Council from 1987 onwards</p><p>Some Northern Ireland Orders in Council from before 1987—mostly those still in force as of 1 January 2006 (the [NI base date](glossary.md#base-date))</p>{:/}|Yes, although not older Northern Ireland Orders in Council only available as King’s Printer PDF|Yes, but normally only for Northern Ireland Orders in Council made in 1994 onwards|Yes|
+|Northern Ireland Orders in Council (1972–)|{::nomarkdown}<p>All Northern Ireland Orders in Council from 1987 onwards</p><p>Some Northern Ireland Orders in Council from before 1987—mostly those still in force as of 1 January 2006 (the <a href="glossary.md#base-date">NI base date</a>)</p>{:/}|Yes, although not older Northern Ireland Orders in Council only available as King’s Printer PDF|Yes, but normally only for Northern Ireland Orders in Council made in 1994 onwards|Yes|
 |UK Church Measures (1920–)|{::nomarkdown}<p>All UK Church Measures from 1988 onwards, as XML and King’s Printer PDFs</p><p>Some UK Church Measures from before 1988</p>{:/}|Yes|Yes, but only for UK Church Measures enacted in 1994 onwards|Yes|
 
 ### Secondary legislation (current types)
@@ -59,12 +59,12 @@ There are some types of legislation for which we do not record either changes ma
 
 |Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
 |---|---|---|---|---|
-|UK Statutory Instruments (1948–)|{::nomarkdown}<p>All UK Statutory Instruments since 1987, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print UK Statutory Instruments since 2011 (only available as King’s Printer PDFs)</p>{:/}|Yes, but only where available as XML|Yes, but normally only for UK Statutory Instruments made in 1994 onwards, plus selected UK Statutory Instruments made between 1972 and 1993|Yes|
+|UK Statutory Instruments (1948–)|{::nomarkdown}<p>All UK Statutory Instruments since 1987, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print UK Statutory Instruments since 2011 (only available as King’s Printer PDFs)</p><p>Most UK Statutory Instruments made before 1987 (most only available as XML)</p>{:/}|Yes, but only where available as XML|Yes, but normally only for UK Statutory Instruments made in 1994 onwards, plus selected UK Statutory Instruments made between 1972 and 1993|Yes|
 |Welsh Statutory Instruments (1999–)|{::nomarkdown}<p>All Welsh Statutory Instruments, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print Welsh Statutory Instruments since 2011 (only available as King’s Printer PDFs)</p>{:/}|Yes, but only in English and where available as XML|Yes|Yes|
 |Scottish Statutory Instruments (1999–)|{::nomarkdown}<p>All Scottish Statutory Instruments, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print Scottish Statutory Instruments since 2007 (only available as King’s Printer PDFs)</p>{:/}|Yes, but only where available as XML|Yes|Yes|
 |Northern Ireland Statutory Rules (1974–)|{::nomarkdown}<p>All Northern Ireland Statutory Rules since 1996, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print Northern Ireland Statutory Rules since 2011 (only available as King’s Printer PDFs)</p>{:/}|Yes, but only where available as XML|Yes, but only for Northern Ireland Statutory Rules made from 1994 onwards|Yes|
 |UK Ministerial Directions (2023–)|All UK Ministerial Directions from 2023 onwards (only available as King’s Printer PDFs)|No|Yes|Yes|
-|UK Ministerial Orders (1953–)|All UK Ministerial Orders from 2013 onwards (only available as King’s Printer PDFs)|No|No|No|
+|UK Ministerial Orders (1953–)|{::nomarkdown}<p>All UK Ministerial Orders from 2013 onwards (only available as King’s Printer PDFs)<p>Select UK Ministerial Orders from 1972 to 2012 (only available as King’s Printer PDFs){:/}|No|No|No|
 
 ### Historical legislation types
 

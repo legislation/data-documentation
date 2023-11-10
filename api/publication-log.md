@@ -33,31 +33,31 @@ The fields that appear in Publication Log entries are:
 
 |Field|Representing element|Meaning|
 |---|---|---|
-|Entry ID|`<atom:id>`|{::nomarkdown}<p>A unique identifier for the event<p><strong>Note:</strong> the Publication Log records the (dis)association of a UK Impact Assessment with an item of legislation as two separate entries (one for the UKIA-legislation association, and one for the legislation-UKIA association). These entries have the same Entry ID, but different Item IDs (one for the legislation item and the other for the UKIA){:/}|
+|Entry ID|`<atom:id>`|{::nomarkdown}<p>A unique identifier for the event.<p><strong>Note:</strong> the Publication Log records the (dis)association of a UK Impact Assessment with an item of legislation as two separate entries (one for the UKIA-legislation association, and one for the legislation-UKIA association). These entries have the same Entry ID, but different Item IDs (one for the legislation item and the other for the UKIA){:/}|
 |Item ID|`<dc:identifier>`|The identifier of the item of legislation or UK Impact Assessment which the resource manifests or to which it is associated.|
-|Updated|`<atom:updated>`|The date and time at which the event (publication or withdrawal) occurred|
-|Published|`<atom:published>`|{::nomarkdown}<p>If present, the first date and time at which a resource was published at this URI<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If this field is absent, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date. If this field is present, the date may not be the true date and time of original publication if it is on or after 5<sup>th</sup> July 2023{:/}|
-|Title|`<atom:title>`|The title of the resource. This is usually the title of the legislation item, but for associated documents it will normally be the title of the associated legislation item followed by the type of the associated document|
-|Author|`<atom:author>`|{::nomarkdown}<p>The publisher of the resource<p><strong>Note:</strong> the Publication Log always shows the author for XML versions of revised legislation as “editorial.legislation.gov.uk”, but in the XML for the revised legislation itself the `dc:publisher` is usually “Statute Law Database”{:/}|
-|Content type|`<pbl:ContentType>`|The type of content being published or withdrawn (`legislation`, `draft`, `associated-documents` or `changes`)|
-|Event|`<pbl:Event>`|The type of event (`published` or `withdrawn`)|
-|Republished|`<pbl:Republished>`|{::nomarkdown}<p>Indicates whether the resource has ever previously been published at this URI<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If the value of this field is `false`, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date{:/}|
-|New|`<pbl:New>`|Indicates whether the item of legislation existed on legislation.gov.uk before this publication event|
-|Newly issued|`<pbl:NewlyIssued>`|Indicates whether a new item of legislation has just been issued (is actually “new”), or whether it was issued in the past but has only just been uploaded|
-|Document|`<pbl:Document>`|The [expression](../model/legislation.md#frbr-functional-requirements-for-bibliographic-records) (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item|
-|Link|`<atom:link>`|For XML resources, a link to an alternate representation of the resource| 
-|Item|{::nomarkdown}<code>&lt;pbl:Item_Published&gt;</code><br><code>&lt;pbl:Item_Withdrawn&gt;</code>{:/}|The URI of the resource being published or withdrawn|
-|Format|`<pbl:Format>`|The format of the resource (`xml`, `pdf` or `html5`)|
-|Print|`<pbl:Print>`|Indicates whether a legislation PDF represents the version of the document that is to be printed|
-|Direction|`<pbl:Direction>`|For changes, indicates whether the effects were updated for the affecting or affected item|
-|Correction slip number|`<pbl:CorrectionSlipNumber>`|For correction slips, records the sequential number of the correction slip|
-|Document category|`<ukm:DocumentCategory>`|The category of the item of legislation to which the resource relates|
-|Document main type|`<ukm:DocumentMainType>`|The long name of the document type of the item to which the resource relates|
-|Year|`<ukm:Year>`|The year of the item to which the resource relates|
-|Number|`<ukm:Number>`|The number of the item (in its primary numbering series) to which the resource relates|
-|ISBN|`<ukm:ISBN>`|For legislation items that are not numbered, the ISBN of the item of legislation to which the resource relates|
-|Alternative number|`<ukm:AlternativeNumber>`|{::nomarkdown}<p>A number in an alternative numbering series for the item to which the resource relates<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation{:/}|
-|Supersedes|`<ukm:Supersedes>`|{::nomarkdown}<p>For legislation that supersedes other legislation, the item of legislation superseded by the item to which the resource relates<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation{:/}|
+|Updated|`<atom:updated>`|The date and time at which the event (publication or withdrawal) occurred.|
+|Published|`<atom:published>`|{::nomarkdown}<p>If present, the first date and time at which a resource was published at this URI.<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If this field is absent, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date. If this field is present, the date may not be the true date and time of original publication if it is on or after 5<sup>th</sup> July 2023{:/}|
+|Title|`<atom:title>`|The title of the resource. This is usually the title of the legislation item, but for associated documents it will normally be the title of the associated legislation item followed by the type of the associated document.|
+|Author|`<atom:author>`|{::nomarkdown}<p>The publisher of the resource<p><strong>Note:</strong> the Publication Log always shows the author for XML versions of revised legislation as “editorial.legislation.gov.uk”, but in the XML for the revised legislation itself the `dc:publisher` is usually “Statute Law Database”.{:/}|
+|Content type|`<pbl:ContentType>`|The type of content being published or withdrawn (`legislation`, `draft`, `associated-documents` or `changes`).|
+|Event|`<pbl:Event>`|The type of event (`published` or `withdrawn`).|
+|Republished|`<pbl:Republished>`|{::nomarkdown}<p>Indicates whether the resource has ever previously been published at this URI.<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If the value of this field is `false`, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date{:/}|
+|New|`<pbl:New>`|Indicates whether the item of legislation existed on legislation.gov.uk before this publication event.|
+|Newly issued|`<pbl:NewlyIssued>`|Indicates whether a new item of legislation has just been issued (is actually “new”), or whether it was issued in the past but has only just been uploaded.|
+|Document|`<pbl:Document>`|The [expression](../model/legislation.md#frbr-functional-requirements-for-bibliographic-records) (version) of the item that the resource manifests. For associated documents, this will normally be the same as the Item.|
+|Link|`<atom:link>`|For XML resources, a link to an alternate representation of the resource.| 
+|Item|{::nomarkdown}<code>&lt;pbl:Item_Published&gt;</code><br><code>&lt;pbl:Item_Withdrawn&gt;</code>{:/}|The URI of the resource being published or withdrawn.|
+|Format|`<pbl:Format>`|The format of the resource (`xml`, `pdf` or `html5`).|
+|Print|`<pbl:Print>`|Indicates whether a legislation PDF represents the version of the document that is to be printed.|
+|Direction|`<pbl:Direction>`|For changes, indicates whether the effects were updated for the affecting or affected item.|
+|Correction slip number|`<pbl:CorrectionSlipNumber>`|For correction slips, records the sequential number of the correction slip.|
+|Document category|`<ukm:DocumentCategory>`|The category of the item of legislation to which the resource relates.|
+|Document main type|`<ukm:DocumentMainType>`|The long name of the document type of the item to which the resource relates.|
+|Year|`<ukm:Year>`|The year of the item to which the resource relates.|
+|Number|`<ukm:Number>`|The number of the item (in its primary numbering series) to which the resource relates.|
+|ISBN|`<ukm:ISBN>`|For legislation items that are not numbered, the ISBN of the item of legislation to which the resource relates.|
+|Alternative number|`<ukm:AlternativeNumber>`|{::nomarkdown}<p>A number in an alternative numbering series for the item to which the resource relates.<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation{:/}|
+|Supersedes|`<ukm:Supersedes>`|{::nomarkdown}<p>For legislation that supersedes other legislation, the item of legislation superseded by the item to which the resource relates.<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation{:/}|
 
 ## Filtering
 

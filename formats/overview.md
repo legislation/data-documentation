@@ -1,6 +1,6 @@
 # Formats
 
-The Legislation API currently offers legislation in the following formats:
+The Legislation API currently offers legislation and associated content in the following formats:
 
 |Format|MIME Type|Filename|
 |---|---|---|
@@ -33,7 +33,7 @@ Where an item of legislation is available as XML, we provide its content in two 
 
 We provide the following types of document as PDF:
 
- * dynamically generated PDFs of legislation available as XML;
+ * dynamically generated PDFs of legislation, derived from the enacted or revised XML;
  * static PDFs of legislation as enacted, made, created or adopted;
  * static PDFs of certain revised legislation, such as DWP legislation and legislation originating from the EU;
  * static PDFs of associated documents such as Impact Assessments and Correction slips.

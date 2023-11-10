@@ -135,26 +135,11 @@ We [cache](caching.md) the output of the API for performance reasons, so sometim
 The API offers multiple representations of some types of content:
 
  * The text content of legislation for which we hold structured XML data is available via the API as HTML, XML (in multiple dialects) and as PDF (dynamically generated). 
- * Search results and lists are available as HTML and as Atom feeds.
+ * Search results and lists are available as HTML and as [Atom](https://en.wikipedia.org/wiki/Atom_(web_standard)) feeds.
  
-This means that any legislation available as HTML is also available as XML and in other formats.
+This means that any legislation available as HTML is also available as XML and in other formats, and any search results or list page is also available as an Atom feed in XML.
 
-The formats the API currently provides are:
-
-|Format|MIME Type|Resource name|
-|---|---|---|
-|XML|`application/xml`|`/data.xml` (CLML) or `/data.akn` (Akoma Ntoso)|
-|HTML|`application/xhtml+xml` (XHTML) or `text/html` (HTML5)|`/data.xht` (XHTML) or `/data.html` (HTML5)|
-|PDF (dynamically generated)|`application/pdf`|`/data.pdf`|
-|Atom|`application/atom+xml`|`/data.feed`|
-
-The API returns legislation [XML](../formats/xml.md) in the CLML and Akoma Ntoso dialects.
-
-The API also generates PDFs from items of legislation and any part or version of them.
-
-The API can provide pre-generated XHTML and HTML5 snippets for you to use in your own applications.
-
-For [lists of legislation](../search.md) and [effects](../model/effects.md), the API returns feeds in Atom format.
+For more information on the formats the API currently provides, see the [Formats](../formats/overview.md) section of this guide.
 
 #### XML is the recommended format
 
