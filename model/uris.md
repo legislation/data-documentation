@@ -134,7 +134,7 @@ could refer to the Friendly Societies Act 1955 (c.19) or the Air Force Act 1955 
 
 The legislation number is an integer that reflects the legislation’s chapter or other series number according to the primary numbering sequence for the type. For example:
 
- * the Financial Services and Markets Act 2000 has the chapter number 8, and so its URI is [http://www.legislation.gov.uk/id/ukpga/2000/8]](http://www.legislation.gov.uk/id/ukpga/2000/8);
+ * the Financial Services and Markets Act 2000 has the chapter number 8, and so its URI is [http://www.legislation.gov.uk/id/ukpga/2000/8](http://www.legislation.gov.uk/id/ukpga/2000/8);
  * the Universal Credit Regulations 2013 has the number 376 in the UK Statutory Instrument series, and so its URI is [http://www.legislation.gov.uk/id/uksi/2013/376](http://www.legislation.gov.uk/id/uksi/2013/376).
 
 Secondary legislation is sometimes assigned one or more additional numbers in different numbering series. Secondary numbering schemes are:
@@ -215,7 +215,7 @@ Within EU annexes and attachments, sections are referred to by the keyword `divi
 
 Note that these are URI keywords, and always in English regardless of the language used in the legislation. However, the numbers used for parts, chapters and so on reflect the numbers used within the legislation; some legislation may contain Part II while another contains Part 2, and the URIs will reflect this difference rather than normalising on decimal numbers.
 
-Requesting a division that does not exist within the legislation will result in a `404 Not Found` response.
+Requesting a section that does not exist within the latest available version of the legislation will result in a `404 Not Found` response. Normally, a repeal of all or part of a legislation item will leave the sections and higher-level structures in place, but remove any sub-sections below the level of the repeal. This means that if a section or sub-section is repealed, a request for any sub-sections below it will return a `404 Not Found` response once the repeal has been applied to the text.
 
 ### Document URIs
 

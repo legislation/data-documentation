@@ -2,7 +2,7 @@
 
 ## Overview
 
-**We only hold a partial dataset of UK and EU legislation texts and metadata**, although we are acquiring more data. This page explains what data we do and do not hold.<!-- TODO add in when origins text is ready For an explanation as to why we only hold some data, read our description of the [origins of our data](origins.md).-->
+**We only hold a partial dataset of UK legislation texts and metadata**, although we are acquiring more data. We also only hold a partial dataset of EU legislation texts and metadata, to which no further items will be added following the UK’s withdrawal from the European Union (although we will continue to apply EU Exit amendments to the texts currently present). This page explains what data we do and do not hold.<!-- TODO add in when origins text is ready For an explanation as to why we only hold some data, read our description of the [origins of our data](origins.md).-->
 
 ### Legislation texts
 
@@ -44,7 +44,7 @@ There are some types of legislation for which we do not record all changes (eith
 
 ### Primary legislation (current types)
 
-|Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
+|Legislation type|Which documents do we have?|Are we revising (updating) these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
 |---|---|---|---|---|
 |UK Public General Acts (1801–)|{::nomarkdown}<p>All UK Public General Acts from 1988 onwards</p><p>Some UK Public General Acts from before 1988—mostly those still in force as of 1<sup>st</sup> February 1991 (the <a href="glossary.md#base-date">base date</a>)</p>{:/}|Yes, although not older UK Public General Acts only available as King’s Printer PDF|Yes, but normally only for UK Public General Acts enacted in 1994 onwards|Yes|
 |UK Local Acts (1801–)|{::nomarkdown}<p>All UK Local Acts from 1991 onwards</p><p>Some UK Public General Acts from before 1991—mostly only available as King’s Printer PDF</p>{:/}|Yes, although not older UK Local Acts only available as King’s Printer PDF|Yes, but  only for UK Local Acts enacted in 1994 onwards|Yes|
@@ -58,7 +58,7 @@ There are some types of legislation for which we do not record all changes (eith
 
 <!--TODO: find out what associated documents are / are not present-->
 
-|Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
+|Legislation type|Which documents do we have?|Are we revising (updating) these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
 |---|---|---|---|---|
 |UK Statutory Instruments (1948–)|{::nomarkdown}<p>All UK Statutory Instruments since 1987, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print UK Statutory Instruments since 2011 (only available as King’s Printer PDFs)</p><p>Most UK Statutory Instruments made before 1987 (most only available as XML)</p>{:/}|Yes, but only where available as XML|Yes, but normally only for UK Statutory Instruments made in 1994 onwards, plus selected UK Statutory Instruments made between 1972 and 1993|Yes|
 |Welsh Statutory Instruments (1999–)|{::nomarkdown}<p>All Welsh Statutory Instruments, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print Welsh Statutory Instruments since 2011 (only available as King’s Printer PDFs)</p>{:/}|Yes, in English and Welsh, but only where available as XML|Yes|Yes|
@@ -71,7 +71,7 @@ There are some types of legislation for which we do not record all changes (eith
 
 #### Primary
 
-|Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
+|Legislation type|Which documents do we have?|Are we revising (updating) these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
 |---|---|---|---|---|
 |Acts of the Parliament of Northern Ireland (1921–1972)|Some Acts of the Parliament of Northern Ireland from 1921 onwards|Yes|No|Yes|
 |Measures of the Northern Ireland Assembly (1974)|Some Measures of the Northern Ireland Assembly (available as revised XML only)|Yes|No|No|
@@ -84,7 +84,7 @@ There are some types of legislation for which we do not record all changes (eith
 
 #### Secondary
 
-|Legislation type|Which documents do we have?|Are we updating these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
+|Legislation type|Which documents do we have?|Are we revising (updating) these items?|Do we record amendments made _by_ these items?|Do we record amendments made _to_ these items?|
 |---|---|---|---|---|
 |UK Statutory Rules and Orders (1894–1947)|{::nomarkdown}<p>Some UK Statutory Orders from 1894 onwards, as King’s Printer PDFs only</p><p>(The UK SR&O series only officially began in 1894, but currently we publish some older instruments in that category as well)</p>{:/}|No|No|Yes|
 |Northern Ireland Statutory Rules and Orders (1922–1973)|Some Northern Ireland Statutory Rules and Orders from 1922 onwards, as King’s Printer PDFs only|No|No|Yes|
@@ -143,7 +143,7 @@ Any document which is especially complex in terms of its size or its typography 
 
 We sometimes alter legislation data after we first publish it. This can occur in a few scenarios: a formal correction of the legislation (e.g. a correction slip); the correction of data versions to better represent the official PDF version; or a reprint/reissue of the relevant legislation item.
 
-It is possible to subscribe to the [legislation feeds](formats/atom.md) to get details of the latest legislation as soon as it is published without having to check the new legislation page each day.
+It is possible to subscribe to the [legislation feeds](formats/atom.md) to get details of the latest legislation and any updates to content as soon as they are published, without having to check the new legislation page each day.
 
 For revised legislation, information about [effects](model/effects.md) are extracted and added to the [Changes to Legislation page](https://www.legislation.gov.uk/changes) (and underlying [feeds](formats/atom.md#changes-to-legislation-feeds)) as quickly as we can, although it can take up to six weeks if the document is large or if there is a high volume of new legislation<!-- TODO link to Editorial practices when available (for more information see Our editorial practice and timescales)-->.
 
