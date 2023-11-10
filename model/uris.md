@@ -250,7 +250,7 @@ When a selection for an exact extent is needed, the '=' operator can precede the
 
 `http://www.legislation.gov.uk/ukpga/1985/67/section/6/=england+wales`
 
-which will request all version of Section 6 of The Transport Act 1985 that are applicable to both England and Wales.
+which will request all version of Section 6 of The Transport Act 1985 that are applicable to **both** England and Wales.
 
 #### Legislation versions
 

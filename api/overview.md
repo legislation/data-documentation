@@ -29,7 +29,7 @@ The API has the following features:
 
 You can get the content of a legislation document (or part of it) through the API.
 
-For example, you can get the content of the Pension Schemes Act 2021 through the following [URLs](../model/uris/introduction.md):
+For example, you can get the content of the Pension Schemes Act 2021 through the following [URLs](../model/uris.md):
 
 * [https://www.legislation.gov.uk/ukpga/2021/1/data.xml](https://www.legislation.gov.uk/ukpga/2021/1/data.xml) returns the content of the **latest version** of the Pension Schemes Act 2021 as [CLML](../formats/xml.md), our XML dialect for legislation.
 * [https://www.legislation.gov.uk/ukpga/2021/1/enacted/data.xml](https://www.legislation.gov.uk/ukpga/2021/1/enacted/data.xml) returns the content of the **as enacted version** of the Pension Schemes Act 2021 as CLML.

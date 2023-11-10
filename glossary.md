@@ -74,7 +74,7 @@ Every version of every provision, and every higher level of division, within a p
 
 The date on which a Statutory Instrument, or other item of secondary legislation, is formally brought into being. It may come into force at a different date. Secondary legislation is usually said to be “made”, as opposed to Acts and other primary legislation which are usually said to be “enacted”. For this reason, the phrase “made or enacted” may be used in Help when referring to legislation generally.
 
-# non-textual amendment
+## non-textual amendment
 
 An effect when the meaning, scope or application of an item or provision of legislation is changed in some way, but without there being any authority in the amending provision to alter the text of the amended provision. Typical expressions of effects of this kind are ‘modified’, ‘applied’, ‘excluded’, ‘extended’, ‘restricted’, and so on.
 

@@ -1,6 +1,6 @@
 # Effects (amendments and commencements)
 
-The text of a provision of legislation may *amend* (change) one or more other provisions of legislation (or, very rarely, itself). 
+The text of a provision of legislation may *amend* (change) one or more provisions of another item, or items, of legislation (or, very rarely, itself). 
 
 For example, [paragraph 7 of schedule 2 of the Civil Partnership (Scotland) Act 2020](https://www.legislation.gov.uk/asp/2020/15/schedule/2/paragraph/7) contains the following amendment to the Marriage and Civil Partnership (Scotland) Act 2014:
 
@@ -26,15 +26,16 @@ An effect contains information on the following:
 |Savings|One or more provisions that qualify the meaning of the effect, usually to preserve the previous meaning of the amended provisions in certain contexts|
 |In force dates|This specifies one or more dates on which the amendment comes into force (if it is already in force or is due to come into force). An amendment may come wholly into force once, or may partly come into force one or many times for specific geographic extents or purposes|
 |Commencement authority|One or more provisions that specify when the amendment comes into force (as an amending provision may come into force some time after it is enacted or made)|
-|Extent and territorial application|The extent (see also the geographical extent of provisions) and territorial application of the amending provision (or the amendment itself, if it has a different extent or TA) and the amended provision (or the amended text or meaning, if it has a different extent or TA)|
-|“Applied” and “requires applied” statuses|Indicates whether the amendment has been applied and whether it needs to be applied. An amendment may not need to be applied if its amending or amended provisions were repealed before it came into force, or if we do not hold the text of the amended item. The Notes field will usually indicate why an effect does not need to be applied|
+|Extent and territorial application|The extent (see also the [geographical extent of provisions](legislation.md#geographical-extents)) and territorial application of the amending provision (or the amendment itself, if it has a different extent or TA) and of the amended provision (or the amended text or meaning, if that has a different extent or TA)|
+|“Applied” and “requires applied” statuses|Indicates whether the amendment has been applied (to the English text, for dual-language items) and whether it needs to be applied. An amendment may not need to be applied if its amending or amended provisions were repealed before it came into force, or if we do not hold the text of the amended item. The Notes field will usually indicate why an effect does not need to be applied|
+|“Welsh applied” and “requires Welsh applied” statuses|Indicates whether the amendment has been applied to the Welsh text of an item (where it exists) and whether it needs to be applied.|
 |Effect notes|Explains to a reader any information relating to the effect, for example why it is marked as not to be applied|
 
-An effect may also contain other information, such as the titles of the affecting and affected items, appended information for the amendment’s commentary (the AppendedCommentary attribute), plus other information used internally within legislation.gov.uk.
+An effect may also contain other information, such as the titles of the affecting and affected items, appended information for the amendment’s commentary (the `AppendedCommentary`` attribute), plus other information used internally within legislation.gov.uk.
 
 The effect does not contain the amending text, and nor does it contain machine-readable instructions on how to apply the amendment to the amended provision (although our Editorial system can apply certain effects automatically, such as repeals, commencements and [non-textual amendments](../glossary.md#non-textual-amendment)).
 
-The effect does link to the amending provision, which allows our editors to research how to apply any amendments, and our readers to consult it themselves.
+The effect does link to the amending provision(s), which allows our editors to research how to apply the effect, and our readers to consult the text of any amendments themselves.
 
 ## URIs
 
@@ -75,8 +76,8 @@ For example, [section 116 of the Adoption and Children Act 2002](http://www.legi
 Our editor read the whole document to identify the amendments and research the context for them, and noted the following:
 
 *  The [introduction](https://www.legislation.gov.uk/ukpga/2002/38/introduction/enacted) of the Act states that the date of Royal Assent is the 7<sup>th</sup> November 2002, which is the date on which the Act’s provisions come into force unless otherwise stated.
-*  [Section 148(1) of the Act](http://www.legislation.gov.uk/id/ukpga/2002/38/section/148/1) requires that the Secretary of State must bring the Act into force by order, but excludes section 116. As there is no other provision specifying when section 116 comes into force, section 116 and its child provisions come wholly into force on the date of Royal Assent.
-*  [Schedule 4](http://www.legislation.gov.uk/id/ukpga/2002/38/schedule/4) contains transitory provisions and “savings” (provisions that qualify effects in the Act). [Paragraphs 6-8](https://www.legislation.gov.uk/ukpga/2002/38/schedule/4#schedule-4-paragraph-6) of Schedule 4 all begin with “Nothing in this Act affects”, and so are treated as [savings](../glossary.md#saving) that qualify all effects in the Act.
+*  [Section 148(1) of the Act](http://www.legislation.gov.uk/id/ukpga/2002/38/section/148/1) requires that the Secretary of State must bring the Act into force by order, but specifically excludes section 116 from that requirement. As there is no other provision specifying when section 116 comes into force, section 116 and its child provisions come wholly into force on the date of Royal Assent.
+*  [Schedule 4](http://www.legislation.gov.uk/id/ukpga/2002/38/schedule/4) contains transitory provisions and [savings](../glossary.md#saving) (provisions that qualify effects in the Act). [Paragraphs 6-8](https://www.legislation.gov.uk/ukpga/2002/38/schedule/4#schedule-4-paragraph-6) of Schedule 4 all begin with “Nothing in this Act affects”, and so are treated as [savings](../glossary.md#saving) that qualify all effects in the Act.
 
 The editor then recorded the amendments in the above section as the following effects:
 

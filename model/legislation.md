@@ -25,12 +25,12 @@ We assign each of these features a URI, so that it is possible to identify and l
 
 For example:
 
- * `http://www.legislation.gov.uk/id/ukpga/2000/8/introduction` is the URI of the [preliminary text of the Financial Services and Markets Act 2000](http://www.legislation.gov.uk/id/ukpga/2000/8/introduction) (c. 8). 
+<!--> * `http://www.legislation.gov.uk/id/ukpga/2000/8/introduction` is the URI of the [preliminary text of the Financial Services and Markets Act 2000](http://www.legislation.gov.uk/id/ukpga/2000/8/introduction) (c. 8).-->
  * `http://www.legislation.gov.uk/id/asc/2021/4/section/2` is the URI of [section 2 of the Curriculum and Assessment (Wales) Act 2021](http://www.legislation.gov.uk/id/asc/2021/4/section/2) (asc 4).
  * `http://www.legislation.gov.uk/id/asp/2019/17/part/2/chapter/2` is the URI of [Chapter 2 of Part 2 of the Transport (Scotland) Act 2019](http://www.legislation.gov.uk/id/asp/2019/17/part/2/chapter/2) (asp 17). 
  * `http://www.legislation.gov.uk/id/nia/2016/15/schedule/2` is the URI of [Schedule 2 of the Employment Act (Northern Ireland) 2016](http://www.legislation.gov.uk/id/nia/2016/15/schedule/2) (c. 15 (N.I.)).
- * `http://www.legislation.gov.uk/id/uksi/2013/376/note` is the URI of the [explanatory note for the Universal Credit Regulations 2013 ](http://www.legislation.gov.uk/id/uksi/2013/376/note).
- * `http://www.legislation.gov.uk/id/eur/2016/679/signature` is the URI of the signature block of the UK [GDPR (General Data Protection Regulation)](http://www.legislation.gov.uk/id/eur/2016/679/signature). 
+<!-- * `http://www.legislation.gov.uk/id/uksi/2013/376/note` is the URI of the [explanatory note for the Universal Credit Regulations 2013 ](http://www.legislation.gov.uk/id/uksi/2013/376/note).
+ * `http://www.legislation.gov.uk/id/eur/2016/679/signature` is the URI of the signature block of the UK [GDPR (General Data Protection Regulation)](http://www.legislation.gov.uk/id/eur/2016/679/signature).-->
 
 Each of these features may have one or more versions (see below).
 
@@ -38,14 +38,14 @@ Each of these features may have one or more versions (see below).
 
 Each item of legislation has an original version (although we do not always hold its text), or two original versions for dual-language legislation in English and Welsh.
 
-The original text of an item does not change once it is passed, except that for secondary legislation one of the following may occur:
+The original text of an item does not change once it is passed, except that one of the following may occur:
 
- * the department or body who submitted the legislation may issue a [correction slip](../glossary.md#correction-slip--corrigendum) to correct errors that do not substantially change the meaning of the text; 
- * a court may partly or wholly [quash](https://en.wikipedia.org/wiki/Judicial_review_in_English_law#Quashing_order) the item of legislation (declare it unlawful) if it determines that the government lacked the legal authority to make all or part of the legislation.
+ * the legislature, department or body who submitted the legislation for publication may issue a [correction slip](../glossary.md#correction-slip--corrigendum) to correct typographical errors that do not substantially change the meaning of the text; 
+ * for secondary legislation, a court may partly or wholly [quash](https://en.wikipedia.org/wiki/Judicial_review_in_English_law#Quashing_order) the item of legislation (declare it unlawful) if it determines that the government lacked the legal authority to make all or part of the legislation.
 
 An item of legislation may have one or more revised versions. A revised version is a version of the item’s text that shows the item as it applied at a particular point in time or in a particular legal jurisdiction within the UK. A revised version includes applicable amendments and/or other editorial commentary, such as information on which provisions are in force.
 
-A section of an item of legislation also has one or more versions. Each version of a section is contained within a version of its parent item or section
+A section of an item of legislation also has one or more versions. Each version of a section is contained within a version of its parent item or section.
 
 Each revised version of an item or section of legislation may embody that item or section as it stood:
 
@@ -78,9 +78,9 @@ Each newly published item (and each of its sections) has an enacted, made or cre
 
 For items we have updated (or are planning to update in the near future), the item and its sections will also have one or more edited or revised versions, each at a dated point in time. They will also have a “current” version (shown on the website as “latest available (revised)”) which contains the same text and annotations as the latest point in time version.
 
-The date of the first revised version for a item or section of legislation is normally the day the item or section first comes fully or partly into force, and contains extent and commencement information about the sections of the item in addition to their text. If any amendments apply to the item at or immediately before the time it comes into force, the first dated version will also contain those amendments. There will then be a subsequent dated version on each day on which an amendment or commencement comes into force.
+The first revised version for a item or section of legislation normally has as its date the day the item or section first comes fully or partly into force, and contains extent and commencement information about the sections of the item in addition to their text. If any amendments apply to the item at or immediately before the time it comes into force, the first dated version will also contain those amendments. There will then be a subsequent dated version on each day on which an amendment or commencement comes into force.
 
-For items of legislation originally published before our [base date](glossary.md#base-date) of 1<sup>st</sup> February 1991 and whose first revised version was published before the 7<sup>th</sup> March 2019, the first revised version will normally fall on that base date. This “base date” version will contain all amendments and commencements that applied as of the base date, as well as extent information. Legislation that was first revised after the 7<sup>th</sup> March 2019 will have a first revised version for the first date on which the legislation came wholly or partly into force.
+For items of legislation originally published before our [base date](../glossary.md#base-date) of 1<sup>st</sup> February 1991 (or 1<sup>st</sup> January 2006 for Northern Ireland legislation) and whose first revised version was published before the 7<sup>th</sup> March 2019, the first revised version will normally fall on or after that base date. This “base date” version will contain all amendments and commencements that applied as of the base date, as well as extent information. Legislation that was first revised after the 7<sup>th</sup> March 2019 will have a first revised version for the first date on which the legislation came wholly or partly into force, which may be earlier than either of the base dates above.
 
 For example, the URI for the version dated 4<sup>th</sup> May 2022 of the Universal Credit Regulations is:
 
@@ -109,7 +109,7 @@ For example, section 3 of the Dogs Act 1906 began to diverge between the legal j
 
 The URI for the version of section 3 of that Act as it was in force on that date in Scotland is:
 
-`http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/england+wales/1992-04-01`
+`http://www.legislation.gov.uk/ukpga/Edw7/6/32/section/3/scotland/1992-04-01`
 
 Section 3 was repealed in England and Wales on the 6<sup>th</sup> April 2008, but is still in force in Scotland. The URI for the latest version of section 3 as it is in force in Scotland is:
 

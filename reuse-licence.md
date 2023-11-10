@@ -66,7 +66,7 @@ For all other copyright issues, please contact: [op-copyright@publications.europ
  
 Westlaw UK have contributed electronic versions of Statutory Instruments and Statutory Rules and Orders, as they were first made, to legislation.gov.uk. These are the original versions of the legislation, so do not show how the information has changed or how it stands today. The legislation contributed by Westlaw UK was all made prior to 1987 and is in its original form.
 
-Westlaw UK provide a commercial (pay for) service which provides the current version of these Statutory Instruments, Rules and Orders, showing how they are currently in force. For more information about Westlaw’s commercial services, including an online demo and free trial, visit their [website](https://uk.westlaw.com/). Other companies provide similar commercial services.
+Westlaw UK provide a commercial (pay for) service which provides the current version of these Statutory Instruments, Rules and Orders, showing how they are currently in force. For more information about Westlaw’s commercial services, including an online demo and free trial, visit [the Westlaw UK website](https://uk.westlaw.com/). Other companies provide similar commercial services.
 
 Westlaw UK’s contribution to legislation.gov.uk means that the government is able to make secondary legislation from before 1987 available to the public, free of charge. The National Archives thanks Westlaw UK for their significant and important contribution, enabling greater public access to legislation.
 

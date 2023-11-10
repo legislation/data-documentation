@@ -41,7 +41,7 @@ An XML document can declare the namespace of an element using the `xmlns` attrib
 
 The legislation.gov.uk dataset uses multiple XML namespaces, including but not limited to the following:
 
-|Namespace|Namespace URI|Default prefix*|
+|Namespace|Namespace URI|Default prefix|
 |---|---|---|
 |Legislation|`http://www.legislation.gov.uk/namespaces/legislation`|`leg:`|
 |Metadata|`http://www.legislation.gov.uk/namespaces/metadata`|`ukm:`|
@@ -51,7 +51,9 @@ The legislation.gov.uk dataset uses multiple XML namespaces, including but not l
 |Atom|`http://www.w3.org/2005/Atom`|`atom:`|
 |XHTML|`http://www.w3.org/1999/xhtml`|No prefix|
 
-\* Although most legislation.gov.uk XML data uses the default prefixes for these namespaces, some XML data use a different prefix or none at all, and these prefixes may change in future or vary between different contexts, even within a single document. **You must not use prefixes to identify elements or attributes unless you are parsing the XML with a properly configured XML parser.** Read carefully the following sections on prefixes, particularly [Prefixes are context-dependent](#prefixes-are-context-dependent) and [A note on namespaces in XPath](#a-note-on-namespaces-in-xpath).
+#### A note on default prefixes
+
+Although most legislation.gov.uk XML data uses the default prefixes for these namespaces, some XML data use a different prefix or none at all, and these prefixes may change in future or vary between different contexts, even within a single document. **You must not use prefixes to identify elements or attributes unless you are parsing the XML with a properly configured XML parser.** Read carefully the following sections on prefixes, particularly [Prefixes are context-dependent](#prefixes-are-context-dependent) and [A note on namespaces in XPath](#a-note-on-namespaces-in-xpath).
 
 ### Namespace prefixes
 

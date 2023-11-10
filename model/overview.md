@@ -22,4 +22,4 @@ The following are examples of legislation.gov.uk URIs:
 
 A URI identifies the same item or resource across legislation.gov.uk. Whatever part of our data set you use, a given URI will always refer to the same thing.
 
-All our URIs start with `http://www.legislation.gov.uk/` and follow a consistent **URI scheme**. You can find out more about the URIs for each type of data in the section for that type, and about the scheme in the [URI scheme reference](uris.md) section of the guide.
+All our URIs start with `http://www.legislation.gov.uk/` and follow a consistent **URI scheme**. You can find out more about the URIs for each type of data (legislation, versions and effects) in the section linked above for that type, and about the scheme in general in the [URI scheme reference](uris.md) section of the guide.

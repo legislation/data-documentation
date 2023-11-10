@@ -1,6 +1,6 @@
 # Atom feeds
 
-We provide lists of [legislation](../api/search.md#listings) and [effects](../api/search.md#changes) in [Atom](http://tools.ietf.org/html/rfc4287).
+We provide lists of [legislation](../api/search.md#listings) and [effects](../api/search.md#changes-to-legislation) in [Atom](http://tools.ietf.org/html/rfc4287).
 
 We also provide the [Publication Log](../api/publication-log.md), which is a feed of all updates to the website, including the publication and republication of individual versions of legislation, associated documents and effects, plus the withdrawal of legislation and associated documents.
 

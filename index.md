@@ -20,7 +20,7 @@ We acquire new and historical legislation data from multiple sources. <!-- TODO 
 
 ## Understand our data
 
-Our [data model](model/introduction.md) overview explains what our data represent and how to interpret them.
+Our [data model](model/overview.md) overview explains what our data represent and how to interpret them.
 
 ## Start using our data
 

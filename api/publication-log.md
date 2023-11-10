@@ -12,12 +12,12 @@ The Publication Log feed contains one entry for every publication or republicati
 The feed allows you to find out when we have:
 
  * published new items of legislation;
- * published new, updated Points in Time for an existing item of legislation;
+ * published new, updated Points in Time (revised versions) for an existing item of legislation;
  * published associated documents or Impact Assessments;
  * recorded changes to legislation (effects) from or to an item of legislation; and
  * republished or withdrawn any content already on the website.
 
-The full feed, containing all entries, is available at [https://www.legislation.gov.uk/update/data.feed](https://www.legislation.gov.uk/update/data.feed). You can also filter the feed for entries about a specific item, type or category of legislation, or use various other combinations of filters (see [Filtering](#filtering) below).
+The full feed, containing all entries, is available at [https://www.legislation.gov.uk/update/data.feed](https://www.legislation.gov.uk/update/data.feed). **We recommend that you do not directly request the full feed**, but instead request a filtered view of the feed as this will return results much faster. You can filter the feed for entries from a particular date, about a specific item, type or category of legislation, or use various other combinations of filters (see [Filtering](#filtering) below).
 
 ## Paging
 
@@ -36,9 +36,9 @@ The fields that appear in Publication Log entries are:
 |Entry ID|`<atom:id>`|{::nomarkdown}<p>A unique identifier for the event.<p><strong>Note:</strong> the Publication Log records the (dis)association of a UK Impact Assessment with an item of legislation as two separate entries (one for the UKIA-legislation association, and one for the legislation-UKIA association). These entries have the same Entry ID, but different Item IDs (one for the legislation item and the other for the UKIA){:/}|
 |Item ID|`<dc:identifier>`|The identifier of the item of legislation or UK Impact Assessment which the resource manifests or to which it is associated.|
 |Updated|`<atom:updated>`|The date and time at which the event (publication or withdrawal) occurred.|
-|Published|`<atom:published>`|{::nomarkdown}<p>If present, the first date and time at which a resource was published at this URI.<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If this field is absent, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date. If this field is present, the date may not be the true date and time of original publication if it is on or after 5<sup>th</sup> July 2023{:/}|
+|Published|`<atom:published>`|{::nomarkdown}<p>If present, the first date and time at which a resource was published at this URI.<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If this field is absent, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date. If this field is present, the date may not be the true date and time of original publication if it is on or after 5<sup>th</sup> July 2023.{:/}|
 |Title|`<atom:title>`|The title of the resource. This is usually the title of the legislation item, but for associated documents it will normally be the title of the associated legislation item followed by the type of the associated document.|
-|Author|`<atom:author>`|{::nomarkdown}<p>The publisher of the resource<p><strong>Note:</strong> the Publication Log always shows the author for XML versions of revised legislation as “editorial.legislation.gov.uk”, but in the XML for the revised legislation itself the `dc:publisher` is usually “Statute Law Database”.{:/}|
+|Author|`<atom:author>`|{::nomarkdown}<p>The publisher of the resource.<p><strong>Note:</strong> the Publication Log always shows the author for XML versions of revised legislation as <code>editorial.legislation.gov.uk</code>, but in the XML for the revised legislation itself the value of <code>dc:publisher</code> is usually <code>Statute Law Database</code>.{:/}|
 |Content type|`<pbl:ContentType>`|The type of content being published or withdrawn (`legislation`, `draft`, `associated-documents` or `changes`).|
 |Event|`<pbl:Event>`|The type of event (`published` or `withdrawn`).|
 |Republished|`<pbl:Republished>`|{::nomarkdown}<p>Indicates whether the resource has ever previously been published at this URI.<p><strong>Note:</strong> Due to deficiencies in the admin log, which recorded publication events before the Publication Log was released, some resources were published to legislation.gov.uk without a log entry. If the value of this field is `false`, it means that the resource was not previously published on or after 5<sup>th</sup> July 2023, but might have been published before that date{:/}|
@@ -56,8 +56,8 @@ The fields that appear in Publication Log entries are:
 |Year|`<ukm:Year>`|The year of the item to which the resource relates.|
 |Number|`<ukm:Number>`|The number of the item (in its primary numbering series) to which the resource relates.|
 |ISBN|`<ukm:ISBN>`|For legislation items that are not numbered, the ISBN of the item of legislation to which the resource relates.|
-|Alternative number|`<ukm:AlternativeNumber>`|{::nomarkdown}<p>A number in an alternative numbering series for the item to which the resource relates.<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation{:/}|
-|Supersedes|`<ukm:Supersedes>`|{::nomarkdown}<p>For legislation that supersedes other legislation, the item of legislation superseded by the item to which the resource relates.<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation{:/}|
+|Alternative number|`<ukm:AlternativeNumber>`|{::nomarkdown}<p>A number in an alternative numbering series for the item to which the resource relates.<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation.{:/}|
+|Supersedes|`<ukm:Supersedes>`|{::nomarkdown}<p>For legislation that supersedes other legislation, the item of legislation superseded by the item to which the resource relates.<p><strong>Note:</strong> this field does not appear for entries for associated documents or changes, even if it applies to the related item of legislation.{:/}|
 
 ## Filtering
 
@@ -73,7 +73,7 @@ The Publication Log feeds support the following path parameters:
 |Content type|The type of content to which the event relates|{::nomarkdown}One of the following values:<ul><li><code>legislation</code><li><code>draft</code><li><code>associated-documents</code><li><code>changes</code></li>{:/}|[https://www.legislation.gov.uk/update/draft/data.feed](https://www.legislation.gov.uk/update/draft/data.feed)|
 |Direction|**For effects only:** Whether the effects were recorded against the affecting item or the affected item|{::nomarkdown}One of the following values:<ul><li><code>affecting</code><li><code>affected</code></li>{:/}|[https://www.legislation.gov.uk/update/changes/affected/data.feed](https://www.legislation.gov.uk/update/changes/affected/data.feed)|
 |Document category|**For legislation and associated documents:** The category of legislation|{::nomarkdown}One of the following values:<ul><li><code>primary</code><li><code>secondary</code><li><code>eu-origin</code></li>{:/}|[https://www.legislation.gov.uk/update/legislation/eu-origin/data.feed](https://www.legislation.gov.uk/update/legislation/eu-origin/data.feed)|
-|Document main type|The type of the document to which the resource relates|One of the values in the [legislation types](../model/uris.md) list|[https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed](https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed) (Document main type = wsi)|
+|Document main type|The type of the document to which the resource relates|One of the values in the “Document Main Type” column of the [legislation types](../model/uris.md#legislation-types) table|[https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed](https://www.legislation.gov.uk/update/2023-07-05/wsi/data.feed) (Document main type = wsi)|
 |Treaty name|**For EU treaties only:** The short name of the EU treaty|{::nomarkdown}One of the following values:<ul><li><code>teec</code><li><code>euratom</code><li><code>teu</code><li><code>eea-agreement</code><li><code>withdrawal-agreement</code></li>{:/}|[https://www.legislation.gov.uk/update/eut/withdrawal-agreement/data.feed](https://www.legislation.gov.uk/update/eut/withdrawal-agreement/data.feed)|
 |Year|The year assigned to the document|A four digit year|[https://www.legislation.gov.uk/update/2014/data.feed](https://www.legislation.gov.uk/update/2014/data.feed)|
 |Regnal year|**For regnal year-numbered items only:** The monarch and session assigned to the document|A regnal year string (see examples)|[https://www.legislation.gov.uk/update/legislation/ukpga/Eliz2/6-7/51/data.feed](https://www.legislation.gov.uk/update/legislation/ukpga/Eliz2/6-7/51/data.feed) (Regnal = Eliz2/6-7)|
@@ -86,11 +86,11 @@ The Publication Log feeds support the following query parameters:
 |Parameter|Filters|Permitted values|
 |---|---|---|
 |event|The type of event|`published` or `withdrawn`|
-|new|{::nomarkdown}<p>**For items of legislation and UK Impact Assessments:** whether the item of legislation or UK Impact Assessment associated with the event is new to legislation.gov.uk<p>**For other associated documents:** whether the associated document has been published before at this URI{:/}|`true` or `false`|
-|format|The format of the resource|`xml`, `pdf` or `html5`|
-|language|A language of the resource|`en` or `cy` (dual-language resources will match either value)|
-|title|The title of the resource or the document to which it is associated, or any contiguous sequence of words within its title|Any text string|
-|republished|Whether the resource has been published before at this URI|`true` or `false`|
+|new|{::nomarkdown}<p><strong>For items of legislation and UK Impact Assessments:</strong> whether the item of legislation or UK Impact Assessment associated with the event is new to legislation.gov.uk.<p><strong>For other associated documents:</strong> whether the associated document has been published before at this URI.{:/}|`true` or `false`|
+|format|The format of the resource.|`xml`, `pdf` or `html5`|
+|language|A language of the resource.|`en` or `cy` (dual-language resources will match either value)|
+|title|The title of the resource or the document to which it is associated, or any contiguous sequence of words within its title.|Any text string|
+|republished|Whether the resource has been published before at this URI.|`true` or `false`|
 
 The Publication Log feeds also support the `page` parameter for selecting a results page (see [Paging](#paging) above), and the `sort` and `sortorder` parameters for sorting (see below).
 
@@ -101,17 +101,17 @@ The Publication Log feeds support various sort criteria, and allow you to specif
 |Name|Sort|
 |---|---|
 |`date`|Sort by the date and time at which the event occurred.|
-|`title`|Sort by title in alphabetical order|
-|`language`|Sort by the language of the resource|
-|`republished`|Sort by whether or not the resource was being republished in the event|
-|`format`|Sort by the format of the resource|
-|`new`|Sort by whether the event was for the first resource of a new item of legislation|
-|`event`|Sort by whether the resource was published or withdrawn|
-|`contenttype`|Sort by the type of the content of the resource being published or withdrawn|
-|`legislationtype`|Sort by the category of legislation (primary, secondary, EU)|
-|`documenttype`|Sort by the type of the item for which the resource was published or withdrawn|
-|`year`|Sort by the year of the item for which the resource was published or withdrawn|
-|`number`|Sort by the number of the item for which the resource was published or withdrawn|
+|`title`|Sort by title in alphabetical order.|
+|`language`|Sort by the language of the resource.|
+|`republished`|Sort by whether or not the resource was being republished in the event.|
+|`format`|Sort by the format of the resource.|
+|`new`|Sort by whether the event was for the first resource of a new item of legislation.|
+|`event`|Sort by whether the resource was published or withdrawn.|
+|`contenttype`|Sort by the type of the content of the resource being published or withdrawn.|
+|`legislationtype`|Sort by the category of legislation (primary, secondary, EU).|
+|`documenttype`|Sort by the type of the item for which the resource was published or withdrawn.|
+|`year`|Sort by the year of the item for which the resource was published or withdrawn.|
+|`number`|Sort by the number of the item for which the resource was published or withdrawn.|
 
 You may only sort by a single sort criterion at any one time.
 
@@ -157,7 +157,7 @@ The following is the example of the publication of XML for the 1/3/2021 revised 
 </entry>
 ```
 
-The following is an example of the withdrawal of a non-print PDF of the made English version of W.S.I. 2023/754 (from [https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf](https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf)):
+The following is an example of the withdrawal of a non-print PDF of the made English version of W.S.I. 2023/754 (from [https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf&language=en](https://www.legislation.gov.uk/update/wsi/2023/754/data.feed?event=withdrawn&format=pdf&language=en)):
 
 ```
 <entry>
@@ -220,7 +220,7 @@ The feed contains one entry for each publication, republication or withdrawal of
 
 The following is an example of the publication of a UKIA associated with an item of legislation. There are two entries, one from the feed for the item of legislation with which it is associated, and one from the feed for the UKIA itself. Both entries have the same ID as they represent the same event, the same document (which represents the link between the two items) and the same metadata about the resource itself. However, the metadata in the feed entry for the item of legislation (the type, year, number and publisher) all relate to the item of legislation, whereas in the feed entry for the UKIA they relate to the UKIA.
 
-The entry for the item of legislation appears as follows (from [https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed](https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed)):
+The entry for the association to the item of legislation appears as follows (from [https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed](https://www.legislation.gov.uk/update/2023-07-05/associated-documents/uksi/2022/633/data.feed)):
 
 ```
 <entry>
@@ -246,7 +246,7 @@ The entry for the item of legislation appears as follows (from [https://www.legi
 </entry>
 ```
 
-The entry for the UKIA appears as follows (from [https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed](https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed)):
+The entry for the association to the UKIA appears as follows (from [https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed](https://www.legislation.gov.uk/update/2023-07-05/ukia/2022/107/data.feed)):
 
 ```
 <entry>
@@ -273,7 +273,7 @@ The entry for the UKIA appears as follows (from [https://www.legislation.gov.uk/
 
 ### Changes to legislation
 
-The feed contains one entry for each publication or republication of the set of effects made by, or to, an item of legislation. The entry only specifies the item of legislation and whether it was the affecting or affected document in relation to the set of changes published—it does not list details of individual effects.
+The feed contains one entry for each publication or republication of the set of [effects](../model/effects.md) made by, or to, an item of legislation. The entry only specifies the item of legislation and whether it was the affecting or affected document in relation to the set of changes published—it does not list details of individual effects. (To view details of individual effects, you can retrieve a [feed of the effects](search.md#changes-to-legislation) for the item of legislation.)
 
 Changes can only be republished, not withdrawn. However, a publication of a set of changes may delete some or all of the existing effects. This is still recorded as a “published” event.
 
