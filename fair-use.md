@@ -9,7 +9,7 @@ The non-human traffic we receive on legislation.gov.uk falls into several catego
  *	Other commercial data re-users (e.g. legal data services)
  *	Academic/individual data re-users (usually independent researchers looking to extract data)
 
-The legislation.gov.uk website contains over 300,000 documents and there are often many hundreds of ways users can view (sections of) each one. Some individual documents can also contain more than 10,000 pages worth of text. You can find information about our data and formats available through our API on our [formats](formats/overview.md) page.
+The legislation.gov.uk website contains over 300,000 documents and there are often many hundreds of ways users can view (sections of) each one. Some individual documents can also contain more than 10,000 pages worth of text. You can find information about our data and formats available through our API on our [Formats](formats/overview.md) page.
 
 Some users can, accidentally or intentionally, place a greater demand on website services than others. For instance, users running automated scripts that request a very large number of pages within a short amount of time.
 

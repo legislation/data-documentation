@@ -10,7 +10,7 @@ All content on legislation.gov.uk, and on our [Github page](https://github.com/l
  * adapt our content;
  * exploit our content commercially and non-commercially (for example, by combining it with other data, or by including it in your own product or application).
 
-If you publish, distribute or transmit our content or data you have adapted from it, the licence requires you to provide or link to an attribution statement that acknowledges the copyright, source and licence, and if possible to link to the original licence. The following wording for acknowledgement is suggested:
+If you publish, distribute or transmit our content or data you have adapted from it, the licence requires you to provide or link to an attribution statement within your content, product or application that acknowledges the copyright, source and licence. If possible, the attribution statement should also link to the original licence. The following wording for acknowledgement is suggested:
 
  > © Crown and database right. Derived from content available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) from [legislation.gov.uk](https://www.legislation.gov.uk).
 
@@ -50,7 +50,7 @@ We have reproduced below the [original copyright notice from EUR-Lex](https://we
 >
 > The Commission’s document reuse policy is based on [Decision 2011/833/EU](https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011D0833). Unless otherwise specified, you can re-use the legal documents published in EUR-Lex for commercial or non-commercial purposes.
 >
-> Some documents, like the International Accounting Standards, may be subject to special conditions of use; these are mentioned in the respective Official Journal/document. You can also consult the [rules on on reproducing euro coin/note images](​​[https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://ec.europa.eu/info/business-economy-euro/euro-area/euro-coins-and-notes/copyright-and-reproduction-rules-euro-coins-and-notes_en#reproduction-rules-for-coins](https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://ec.europa.eu/info/business-economy-euro/euro-area/euro-coins-and-notes/copyright-and-reproduction-rules-euro-coins-and-notes_en#reproduction-rules-for-coins)).
+> Some documents, like the International Accounting Standards, may be subject to special conditions of use; these are mentioned in the respective Official Journal/document. You can also consult the [rules on on reproducing euro coin/note images](​​https://webarchive.nationalarchives.gov.uk/eu-exit/20201231140419mp_/https://ec.europa.eu/info/business-economy-euro/euro-area/euro-coins-and-notes/copyright-and-reproduction-rules-euro-coins-and-notes_en#reproduction-rules-for-coins).
 >
 > The copyright for the editorial content of this website, the summaries of EU legislation and the consolidated texts, which is owned by the EU, is licensed under the [Creative Commons Attribution 4.0 International licence​​](https://creativecommons.org/licenses/by/4.0/). This means that you can re-use the content provided you acknowledge the source and indicate any changes you have made.
 >
@@ -64,9 +64,9 @@ For all other copyright issues, please contact: [op-copyright@publications.europ
 
 ## Content derived from Westlaw
  
-To support the government’s deregulation initiative, Westlaw UK have contributed electronic versions of Statutory Instruments, Statutory Rules and Orders, as they were first made, to legislation.gov.uk. These are the original versions of the legislation, so do not show how the information has changed or how it stands today. The legislation contributed by Westlaw UK was all made prior to 1987 and is in its original form.
+Westlaw UK have contributed electronic versions of Statutory Instruments and Statutory Rules and Orders, as they were first made, to legislation.gov.uk. These are the original versions of the legislation, so do not show how the information has changed or how it stands today. The legislation contributed by Westlaw UK was all made prior to 1987 and is in its original form.
 
-Westlaw UK provide a commercial (pay for) service which provides the current version of these Statutory Instruments, Rules and Orders, showing how they currently in force. For more information about Westlaw’s commercial services, including an online demo and free trial, visit their [website](https://uk.westlaw.com/). Other companies provide similar commercial services.
+Westlaw UK provide a commercial (pay for) service which provides the current version of these Statutory Instruments, Rules and Orders, showing how they are currently in force. For more information about Westlaw’s commercial services, including an online demo and free trial, visit their [website](https://uk.westlaw.com/). Other companies provide similar commercial services.
 
 Westlaw UK’s contribution to legislation.gov.uk means that the government is able to make secondary legislation from before 1987 available to the public, free of charge. The National Archives thanks Westlaw UK for their significant and important contribution, enabling greater public access to legislation.
 
