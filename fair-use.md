@@ -39,7 +39,7 @@ You must follow the rules in our robots.txt file (http://www.legislation.gov.uk/
 
 ### Stay under the rate limit
 
-You must not exceed our request rate limit of 3,000 requests in any 5 minute period for each IP address. If you exceed the rate limit, our API will block your IP address until the average number of requests over the previous 5 minutes falls below the rate limit.
+You must not exceed our request rate limit of 3,000 requests in any 5 minute period. If you exceed the rate limit, our API may block your requests until the average number of requests over the previous 5 minutes falls below the rate limit. This limit applies to users not IP addresses, so you will be exceeding the limit if you use multiple IP addresses that collectively make more than 3,000 requests in a 5 minute period.
 
 Use a reasonable crawl rate to prevent overloading the website with requests. Follow the crawl-delay setting in our robots.txt, if provided. If the crawl-delay setting is not provided, use a conservative crawl rate (e.g. 10 requests per 5-10 seconds).
 
