@@ -138,7 +138,7 @@ You can specify the following sort orders for a legislation search/list using th
 
 |Name|Order|
 |---|---|
-|`published`|{::nomarkdown}<p>Sort by first publication date/time descending\*, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending <p>(\* If a correction slip has been issued for a document, the first publication date will be treated as the issuance date of the most recent correction slip for the document, not the date the document was originally published.){:/}|
+|`published`|{::nomarkdown}<p>Sort by first publication date/time descending\\\*, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending </p><p>(\\\* If a correction slip has been issued for a document, the first publication date will be treated as the issuance date of the most recent correction slip for the document, not the date the document was originally published.)</p>{:/}|
 |`title`|Sort by title ascending in alphabetical order, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`modified`|Sort by last modified date descending, then category (EU, then primary, then secondary), then year descending, then number descending, then enacted/made date descending|
 |`created`|Sort by category (EU, then primary, then secondary), then year descending, then enacted/made date descending|

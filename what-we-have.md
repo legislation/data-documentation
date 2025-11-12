@@ -65,7 +65,7 @@ There are some types of legislation for which we do not record all changes (eith
 |Scottish Statutory Instruments (1999–)|{::nomarkdown}<p>All Scottish Statutory Instruments, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print Scottish Statutory Instruments since 2007 (only available as King’s Printer PDFs)</p>{:/}|Yes, but only where available as XML|Yes|Yes|
 |Northern Ireland Statutory Rules (1974–)|{::nomarkdown}<p>All Northern Ireland Statutory Rules since 1996, except for Local Statutory Instruments and non-prints (all except Local and non-prints available as XML, most available as King’s Printer PDF)</p><p>All Local and non-print Northern Ireland Statutory Rules since 2011 (only available as King’s Printer PDFs)</p>{:/}|Yes, but only where available as XML|Yes, but only for Northern Ireland Statutory Rules made from 1994 onwards|Yes|
 |UK Ministerial Directions (2023–)|All UK Ministerial Directions from 2023 onwards (only available as King’s Printer PDFs)|No|Yes|Yes|
-|UK Ministerial Orders (1953–)|{::nomarkdown}<p>All UK Ministerial Orders from 2013 onwards (only available as King’s Printer PDFs)<p>Select UK Ministerial Orders from 1972 to 2012 (only available as King’s Printer PDFs){:/}|No|No|No|
+|UK Ministerial Orders (1953–)|{::nomarkdown}<p>All UK Ministerial Orders from 2013 onwards (only available as King’s Printer PDFs)</p><p>Select UK Ministerial Orders from 1972 to 2012 (only available as King’s Printer PDFs)</p>{:/}|No|No|No|
 
 ### Historical legislation types
 
@@ -98,7 +98,7 @@ There are some types of legislation for which we do not record all changes (eith
 
 ## Limitations
 
-<!-- TODO: Re-add when history is ready As shown in the History of our Data Collection and Data Completeness sections, the --> Our database is both large and complex, with more than 300,000 items of legislation from data collections deriving from different sources. As a result, the content held within the database has some limitations.
+Our database is both large and complex, with more than 300,000 items of legislation from data collections deriving from different sources. As a result, the content held within the database has some limitations.<!-- TODO: Re-add when history is ready As shown in the History of our Data Collection and Data Completeness sections, the --> 
 
 ### Missing legislation
 
